@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Mortum Aeternum Permadeath Guild Kismet Roller</title>
+  <meta name="description" content="Mortum Aeternum, DDO Permadeath Guild;
+  Dungeons &amp; Dragons Online with permanent death.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png"
+  href="https://mortum-aeternum.neocities.org/favicon.png">
+  <script src="js/roller.js"></script>
+</head>
+
+<body>
+  <div class="section" id="section-0">
+    <div class="inner-section">
+      <header id="main-header">
+        <div id="header-div">
+          <h1>Mortum Aeternum Permadeath</h1>
+
+          <p class="subheader">Dungeons &amp; Dragons Online with permanent
+          death</p>
+        </div>
+
+        <div id="main-logo-container">
+          <img src="mortem-aeternum.svg" id="main-logo" alt="Mortum Aeternum
+          Permadeath" title="Shield by Calvin Goodman from the Noun Project;
+          Death by Srinivas Agra from the Noun Project">
+        </div>
+      </header>
+
+      <nav>
+        <ol class="navlist">
+          <li><a href="https://mortum-aeternum.neocities.org/">Home</a></li>
+          <li><a
+          href="https://mortum-aeternum.neocities.org/rules.html">Rules</a></li>
+          <li><a href="kismet.html">Kismet Characters</a></li>
+        </ol>
+      </nav>
+
+      <div class="centering">
+        <div>
+          <blockquote
+          cite="https://web.archive.org/web/20180930095702/http://danteinferno.info/translations/canto3.html">
+            The land of tears gave forth a blast of wind, <br>
+            And fulminated a vermilion light, <br>
+            Which overmastered in me every sense, <br>
+            And as a man whom sleep hath seized, I fell. <br>
+          </blockquote>
+          <p class="cite">—&nbsp;D. Alighieri, “Divina Commedia,” canto
+            <span class="serif">III</span>, trans. H. W. Longfellow 1867</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="section-1">
+    <div class="inner-section">
+      <h2><a href="kismet.html">Kismet Character</a> Roller App</h2>
+
+      <p>This <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>
+        app is intended to aid the creation of <a href="kismet.html">Kismet
+        characters</a>. The code is compiled from <a
+        href="https://en.wikipedia.org/wiki/Microsoft_TypeScript">TypeScript</a>
+        source, which can be <a href="#TODO-github">obtained here</a>.</p>
+    </div>
+  </div>
+
+  <div class="section" id="section-2">
+    <div class="inner-section">
+      <h3>Roll Ability Scores &amp; Race</h3>
+
+      <div class="form">
+        <label for="build-points">Build points:</label>
+
+        <select id="build-points">
+          <option value="28">28</option>
+          <option value="32">32</option>
+          <option value="34">34</option>
+          <option value="36">36</option>
+        </select>
+      </div>
+
+      <div class="form">
+        <div><input id="drow-elf" type="checkbox" checked>
+          <label for="drow-elf">Drow Elf</label></div>
+
+        <div><input id="warforged" type="checkbox" checked>
+          <label for="warforged">Warforged</label></div>
+
+        <div><input id="half-orc" type="checkbox" checked>
+          <label for="half-orc">Half-Orc</label></div>
+
+        <div><input id="half-elf" type="checkbox" checked>
+          <label for="half-elf">Half-Elf</label></div>
+
+        <div><input id="aasimar" type="checkbox" checked>
+          <label for="aasimar">Aasimar</label></div>
+
+        <div><input id="dragonborn" type="checkbox" checked>
+          <label for="dragonborn">Dragonborn</label></div>
+
+        <div><input id="gnome" type="checkbox" checked>
+          <label for="gnome">Gnome</label></div>
+
+        <div><input id="wood-elf" type="checkbox" checked>
+          <label for="wood-elf">Wood Elf</label></div>
+
+        <div><input id="tiefling" type="checkbox" checked>
+          <label for="tiefling">Tiefling</label></div>
+      </div>
+
+      <div class="form">
+        <button id="roll-abilities-and-race" type="button">Roll!</button>
+      </div>
+
+      <p>Race: <span id="race">Human</span></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Ability</th>
+            <th>Score</th>
+            <th>Modifier</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>STR</td>
+            <td id="str">8</td>
+            <td id="str-mod">-1</td>
+          </tr>
+          <tr>
+            <td>DEX</td>
+            <td id="dex">8</td>
+            <td id="dex-mod">-1</td>
+          </tr>
+          <tr>
+            <td>CON</td>
+            <td id="con">8</td>
+            <td id="con-mod">-1</td>
+          </tr>
+          <tr>
+            <td>INT</td>
+            <td id="int">8</td>
+            <td id="int-mod">-1</td>
+          </tr>
+          <tr>
+            <td>WIS</td>
+            <td id="wis">8</td>
+            <td id="wis-mod">-1</td>
+          </tr>
+          <tr>
+            <td>CHA</td>
+            <td id="cha">8</td>
+            <td id="cha-mod">-1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <footer>
+      <p>All HTML, CSS, &amp; JavaScript content licensed under the <a
+      href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General
+      Public License version 3+</a>. Images licensed under the <a
+      href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+      Attribution-ShareAlike 4.0 International</a> license.</p>
+    </footer>
+  </div>
+
+</body>
+
+</html>

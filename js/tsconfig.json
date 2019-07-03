@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+        "module": "esnext",
+        "newLine": "LF",
+        "noEmitOnError": false,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": false,
+        "outDir": ".",
+        "pretty": true,
+        "alwaysStrict": true,
+        "strict": true,
+        "target": "esnext"
+    },
+    "files": ["roller.ts"],
+    "include": ["./**/*.ts", "../ts/*.ts"]
+}
