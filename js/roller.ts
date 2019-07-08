@@ -116,7 +116,7 @@ ROLL_ABILITIES_AND_RACE.addEventListener("click", () => {
         ab.textContent = `${score}`;
         const abilityMod_ = abilityMod(score);
         const sign =
-            abilityMod_ < 0 ? "-" : abilityMod_ > 0 ? "+" : "\u{00b1}";
+            abilityMod_ < 0 ? "" : abilityMod_ > 0 ? "+" : "\u{00b1}";
         abMod.textContent = `${sign}${abilityMod_}`;
     });
 });
