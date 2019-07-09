@@ -255,20 +255,23 @@
         <code>1d2</code> to determine how many classes you will have in
         addition to your initial class. Then, randomly roll for what class(es)
         they are by rolling <code>1dN</code> for each, where <code>N</code> is
-        the number of classes that you have access to. You may have to cross
-        classes off of the list due to <a
-        href="https://ddowiki.com/page/Alignment">alignment</a> restrictions
-        (e.g. if Bard is already one of your classes, you can't also be Paladin
-        and/or Monk since both of those classes require lawful alignment)
+        the number of classes that you have access to and haven't already
+        chosen/rolled for. You may also have to cross classes off of the list
+        due to <a href="https://ddowiki.com/page/Alignment">alignment</a>
+        restrictions (e.g. if Bard is already one of your classes, you can't
+        also be Paladin and/or Monk since both of those classes require lawful
+        alignment)
       </p>
 
       <h3 id="step-5-rolling-for-feats">Step 5: Rolling for <a
       href="https://ddowiki.com/page/Feats">Feats</a></h3>
 
       <p>
-        All feats (including feats like e.g. <a
-        href="https://ddowiki.com/page/Aasimar">Aasimar</a>'s <a
-        href="https://ddowiki.com/page/Bond">Bond</a> feat) must be randomly
+        Before you roll for feats, make sure you've spent your skill points,
+        since they may affect what feats are available to you. All feats
+        (including feats like e.g. <a
+        href="https://ddowiki.com/page/Aasimar">Aasimar</a>'s
+        <a href="https://ddowiki.com/page/Bond">Bond</a> feat) must be randomly
         rolled. To roll for a feat, randomly &amp; uniformly select from the
         set of all feats that can be put in the feat slot in question. For the
         purpose of this rule, each of the following groups of feats counts as
@@ -323,24 +326,7 @@
       restricted by alignment, so don't pick one that is incompatible with your
       other classes' alignment restrictions!</p>
 
-      <h3 id="step-6-rolling-for-skills">Step 6: Rolling for <a
-      href="https://ddowiki.com/page/Skills">Skills</a></h3>
-
-      <p>
-        All characters start out with <code>4 * N</code> skill points, where
-        <code>N</code> is some positive <a
-        href="https://en.wikipedia.org/wiki/Integer">integer</a>. Randomly roll
-        for which skills you spend those points on by rolling
-        <code>1d19</code> (if you're not starting as a Rogue or Artificer) or
-        <code>1d21</code> (if you're starting as a Rogue or Artificer)
-        <code>N-1</code> times. Each roll corresponds to a skill to spend 4
-        points on, re-rolling any duplicate results. The last 4 skill points
-        can be rolled for like the others, or you can spend them as you choose.
-        Thus, characters starting with 4 skill points can choose how to spend
-        all of them.
-      </p>
-
-      <h3>Step 7: Rolling for <a
+      <h3>Step 6: Rolling for <a
       href="https://ddowiki.com/page/Alignment">Alignment</a></h3>
 
       <p>
@@ -368,8 +354,9 @@
       <h3>What You <span class="underline">Don't</span> Have to Roll For</h3>
 
       <ul>
+        <li><a href="https://ddowiki.com/page/Skills">Skills</a></li>
         <li><a href="https://ddowiki.com/page/Spell">Spell</a> selection for
-        Bards, Sorcerers, Favored Souls, and Warlocks</li>
+        Bards, Sorcerers, Favored Souls, Wizards, Artificers, and Warlocks</li>
         <li><a
         href="https://ddowiki.com/page/Enhancements">Enhancements</a></li>
       </ul>
@@ -478,16 +465,17 @@
           those products up, and the result will be an integer <code>x</code>
           randomly &amp; <a
           href="https://en.wikipedia.org/wiki/Discrete_uniform_distribution">uniformly</a>
-          selected from the range <code>0 ≤ x ≤ N<sup>K</sup>-1</code>. Ensure
-          that the desired range is <a
+          selected from the range <code>0 ≤ x ≤ N<sup>K</sup>-1</code>. This
+          is, by the way, just rolling one die for each <a
+          href="https://en.wikipedia.org/wiki/Positional_notation">place</a> in
+          a <code>K</code>-digit number in base <code>N</code>; this method is
+          used for so-called <a
+          href="https://en.wikipedia.org/wiki/Dice_notation#Percentile_dice_(d%)">percentile
+          dice</a>, where specifically <code>KdN = 2d10</code>. Ensure that the
+          desired range is <a
           href="https://en.wikipedia.org/wiki/Subset">included</a> in this
-          range, and discard (re-roll) results that are too large or too small.
-          NB: this method can be used to achieve any desired roll by an
-          appropriate number of <a
-          href="https://en.wikipedia.org/wiki/Coin_flipping">flips of a fair
-          coin</a> (effectively <code>Kd2</code>, representing a <a
-          href="https://en.wikipedia.org/wiki/Binary_number">binary
-          number</a>).</li>
+          range, and discard (re-roll) results that are too large or too
+          small.</li>
       </ol>
     </div>
   </div>
