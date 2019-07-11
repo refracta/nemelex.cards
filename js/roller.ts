@@ -200,20 +200,36 @@ const SECOND_CLASS = document.getElementById("second-class") as
     HTMLSpanElement;
 const THIRD_CLASS = document.getElementById("third-class") as HTMLSpanElement;
 const CLASS_QUALIFICATIONS = new Map([
-                                             /* STR DEX CON INT WIS CHA */
-    [PlayerClass.BARBARIAN,    Uint8Array.from([14,  0, 14,  0,  0,  0])],
-    [PlayerClass.BARD,         Uint8Array.from([ 0,  0,  0,  0,  0, 15])],
-    [PlayerClass.CLERIC,       Uint8Array.from([ 0,  0,  0,  0, 14, 10])],
-    [PlayerClass.FIGHTER,      Uint8Array.from([14, 10, 11,  0,  0,  0])],
-    [PlayerClass.PALADIN,      Uint8Array.from([12,  0,  0,  0, 10, 13])],
-    [PlayerClass.RANGER,       Uint8Array.from([ 0, 14,  0,  0, 10,  0])],
-    [PlayerClass.ROGUE,        Uint8Array.from([ 0, 12,  0, 14,  0,  0])],
-    [PlayerClass.SORCERER,     Uint8Array.from([ 0,  0,  0,  0,  0, 16])],
-    [PlayerClass.WIZARD,       Uint8Array.from([ 0,  0,  0, 16,  0,  0])],
-    [PlayerClass.MONK,         Uint8Array.from([ 0, 11,  0,  0, 14,  0])],
-    [PlayerClass.ARTIFICER,    Uint8Array.from([ 0, 10,  0, 15,  0,  0])],
-    [PlayerClass.WARLOCK,      Uint8Array.from([ 0,  0, 13,  0,  0, 14])],
-    [PlayerClass.DRUID,        Uint8Array.from([ 0,  0,  0,  0, 14,  0])],
+                                          /* STR DEX CON INT WIS CHA */
+    [PlayerClass.BARBARIAN, Uint8Array.from([14,  0, 14,  0,  0,  0])],
+    [PlayerClass.BARD,      Uint8Array.from([ 0,  0,  0,  0,  0, 15])],
+    [PlayerClass.CLERIC,    Uint8Array.from([ 0,  0,  0,  0, 14, 10])],
+    [PlayerClass.FIGHTER,   Uint8Array.from([14, 10, 11,  0,  0,  0])],
+    [PlayerClass.PALADIN,   Uint8Array.from([12,  0,  0,  0, 10, 13])],
+    [PlayerClass.RANGER,    Uint8Array.from([ 0, 14,  0,  0, 10,  0])],
+    [PlayerClass.ROGUE,     Uint8Array.from([ 0, 12,  0, 14,  0,  0])],
+    [PlayerClass.SORCERER,  Uint8Array.from([ 0,  0,  0,  0,  0, 16])],
+    [PlayerClass.WIZARD,    Uint8Array.from([ 0,  0,  0, 16,  0,  0])],
+    [PlayerClass.MONK,      Uint8Array.from([ 0, 11,  0,  0, 14,  0])],
+    [PlayerClass.ARTIFICER, Uint8Array.from([ 0, 10,  0, 15,  0,  0])],
+    [PlayerClass.WARLOCK,   Uint8Array.from([ 0,  0, 13,  0,  0, 14])],
+    [PlayerClass.DRUID,     Uint8Array.from([ 0,  0,  0,  0, 14,  0])],
+]);
+const CLASS_ALIGNMENTS = new Map([
+                      /* LG NG CG LN TN CN */
+    [PlayerClass.BARBARIAN, 0b011011],
+    [PlayerClass.BARD,      0b011011],
+    [PlayerClass.CLERIC,    0b111111],
+    [PlayerClass.FIGHTER,   0b111111],
+    [PlayerClass.PALADIN,   0b100000],
+    [PlayerClass.RANGER,    0b111111],
+    [PlayerClass.ROGUE,     0b111111],
+    [PlayerClass.SORCERER,  0b111111],
+    [PlayerClass.WIZARD,    0b111111],
+    [PlayerClass.MONK,      0b100100],
+    [PlayerClass.ARTIFICER, 0b111111],
+    [PlayerClass.WARLOCK,   0b111111],
+    [PlayerClass.DRUID,     0b010111],
 ]);
 
 const character: Character = new Character();
@@ -292,7 +308,15 @@ LOCK_IN_CLASS.addEventListener("click", () => {
     }
 
     const additionalClassNum = unifInt(1, 3);
-
+    const possibleClasses = new Set(CLASSES);
+    possibleClasses.delete(lockedInClass);
+    const class1Alignments = CLASS_ALIGNMENTS.get(lockedInClass) as number;
+    for (const pc of possibleClasses) {
+        const pcAlignments = CLASS_ALIGNMENTS.get(pc) as number;
+        if ((pcAlignments & class1Alignments) === 0) {
+            possibleClasses.delete(pc);
+        }
+    }
 });
 
 ROLL_CLASS.addEventListener("click", () => {
