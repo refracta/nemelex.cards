@@ -89,6 +89,14 @@ button {
     color: revert;
 }
 
+aside {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    float: right;
+    border-left: 0.25rem solid #eeea;
+    background-color: #ffc59e2a;
+}
+
 .cite {
     font-size: small;
     margin-top: 0.25rem;
