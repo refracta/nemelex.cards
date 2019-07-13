@@ -1,21 +1,8 @@
-/**
- * Credit for this function is due to Andrew Shaffer (@ashaffer on GitHub),
- * licensed under the MIT license and available here:
- * [https://github.com/micro-js/popcount](https://github.com/micro-js/popcount)
- */
-function popcount(x: number): number {
-    x -= x >> 1 & 0x55555555;
-    x = (x & 0x33333333) + (x >> 2 & 0x33333333);
-    x = x + (x >> 4) & 0x0f0f0f0f;
-    x += x >> 8;
-    x += x >> 16;
-
-    return x & 0x7f;
-}
+import { popCount, unifInt } from "./utils.js";
 
 class BitSet32Iterator<T> implements Iterator<T> {
     private set: number;
-    private i:   number;
+    private i: number;
 
     public constructor(set: number) {
         this.set = set;
@@ -25,7 +12,7 @@ class BitSet32Iterator<T> implements Iterator<T> {
     public next(): IteratorResult<T> {
         let b = this.set & (1 << this.i);
         while (b === 0 && this.i < 31) {
-            this.i++;
+            ++this.i;
             b = this.set & (1 << this.i);
         }
 
@@ -45,7 +32,7 @@ class BitSet32Iterator<T> implements Iterator<T> {
 
 class BitSet32EntriesIterator<T> implements Iterator<[T, T]> {
     private set: number;
-    private i:   number;
+    private i: number;
 
     public constructor(set: number) {
         this.set = set;
@@ -55,7 +42,7 @@ class BitSet32EntriesIterator<T> implements Iterator<[T, T]> {
     public next(): IteratorResult<[T, T]> {
         let b = this.set & (1 << this.i);
         while (b === 0 && this.i < 31) {
-            this.i++;
+            ++this.i;
             b = this.set & (1 << this.i);
         }
 
@@ -82,7 +69,7 @@ class BitSet32EntriesIterator<T> implements Iterator<[T, T]> {
  * `v < 32` can be stored.
  */
 export class BitSet32<T> implements Iterable<T> {
-    public  size: number;
+    public size: number;
     private bits: number;
 
     public constructor(iter?: Iterable<T>) {
@@ -100,7 +87,7 @@ export class BitSet32<T> implements Iterable<T> {
         const mask = 1 << ((t as any) as number); // yikes lol
         if ((this.bits & mask) === 0) {
             this.bits |= mask;
-            this.size++;
+            ++this.size;
         }
 
         return this;
@@ -118,7 +105,7 @@ export class BitSet32<T> implements Iterable<T> {
         if (this.bits === oldBits) {
             return false;
         } else {
-            this.size--;
+            --this.size;
 
             return true;
         }
@@ -156,12 +143,36 @@ export class BitSet32<T> implements Iterable<T> {
     public intersect(other: BitSet32<T>): BitSet32<T> {
         const intersection = new BitSet32<T>();
         intersection.bits = this.bits & other.bits;
-        intersection.size = popcount(intersection.bits);
+        intersection.size = popCount(intersection.bits);
 
         return intersection;
     }
 
     public disjoint(other: BitSet32<T>): boolean {
         return (this.bits & other.bits) === 0;
+    }
+
+    public empty(): boolean {
+        return this.size === 0;
+    }
+
+    public unifSelect(): T | undefined {
+        if (this.empty()) {
+            return;
+        }
+
+        const getIndex = unifInt(0, this.size);
+
+        for (let bs = this.bits, i = 0, index = 0; bs !== 0; bs >>>= 1, ++i) {
+            if ((bs & 1) !== 0) {
+                if (index === getIndex) {
+                    return (i as any) as T; // yikes lol
+                }
+
+                ++index;
+            }
+        }
+
+        return;
     }
 }

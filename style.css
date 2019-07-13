@@ -125,6 +125,11 @@ aside {
     text-decoration: underline;
 }
 
+.div-label {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 #main-header {
     display: flex;
     flex-flow: row nowrap;
@@ -148,6 +153,12 @@ aside {
 
     float: right;
     margin: auto;
+}
+
+@media (max-width: 640px) {
+    #blurb {
+        display: none;
+    }
 }
 
 #toc {

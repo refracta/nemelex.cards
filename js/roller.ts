@@ -1,15 +1,5 @@
+import { fisherYates, unifInt } from "./utils.js";
 import { BitSet32 } from "./BitSet.js";
-
-type TypedArray = Uint8Array
-                | Uint8ClampedArray
-                | Int8Array
-                | Uint16Array
-                | Int16Array
-                | Uint32Array
-                | Int32Array
-                | Float32Array
-                | Float64Array;
-type Arr<T> = TypedArray | T[];
 
 window.addEventListener("load", () => {
 
@@ -103,22 +93,6 @@ const CLASS_STRINGS = new Map([
     [PlayerClass.WARLOCK,      "Warlock"     ],
     [PlayerClass.DRUID,        "Druid"       ],
 ]);
-const STRING_CLASSES = new Map([
-    ["Barbarian",    PlayerClass.BARBARIAN   ],
-    ["Bard",         PlayerClass.BARD        ],
-    ["Cleric",       PlayerClass.CLERIC      ],
-    ["Fighter",      PlayerClass.FIGHTER     ],
-    ["Paladin",      PlayerClass.PALADIN     ],
-    ["Ranger",       PlayerClass.RANGER      ],
-    ["Rogue",        PlayerClass.ROGUE       ],
-    ["Sorcerer",     PlayerClass.SORCERER    ],
-    ["Wizard",       PlayerClass.WIZARD      ],
-    ["Monk",         PlayerClass.MONK        ],
-    ["Favored Soul", PlayerClass.FAVORED_SOUL],
-    ["Artificer",    PlayerClass.ARTIFICER   ],
-    ["Warlock",      PlayerClass.WARLOCK     ],
-    ["Druid",        PlayerClass.DRUID       ],
-]);
 const CLASSES = [
     PlayerClass.BARBARIAN,
     PlayerClass.BARD,
@@ -134,6 +108,17 @@ const CLASSES = [
     PlayerClass.ARTIFICER,
     PlayerClass.WARLOCK,
     PlayerClass.DRUID,
+];
+const F2P_CLASSES = [
+    PlayerClass.BARBARIAN,
+    PlayerClass.BARD,
+    PlayerClass.CLERIC,
+    PlayerClass.FIGHTER,
+    PlayerClass.PALADIN,
+    PlayerClass.RANGER,
+    PlayerClass.ROGUE,
+    PlayerClass.SORCERER,
+    PlayerClass.WIZARD,
 ];
 const ROLL_ABILITIES_AND_RACE =
     document.getElementById("roll-abilities-and-race") as HTMLButtonElement;
@@ -168,6 +153,33 @@ const RACE_INPUTS = [
     GNOME,
     WOOD_ELF,
     TIEFLING,
+];
+const ARTIFICER: [HTMLInputElement, PlayerClass] = [
+    document.getElementById("artificer") as HTMLInputElement,
+    PlayerClass.ARTIFICER,
+];
+const DRUID: [HTMLInputElement, PlayerClass] = [
+    document.getElementById("druid") as HTMLInputElement,
+    PlayerClass.DRUID,
+];
+const FAVORED_SOUL: [HTMLInputElement, PlayerClass] = [
+    document.getElementById("favored-soul") as HTMLInputElement,
+    PlayerClass.FAVORED_SOUL,
+];
+const MONK: [HTMLInputElement, PlayerClass] = [
+    document.getElementById("monk") as HTMLInputElement,
+    PlayerClass.MONK,
+];
+const WARLOCK: [HTMLInputElement, PlayerClass] = [
+    document.getElementById("warlock") as HTMLInputElement,
+    PlayerClass.WARLOCK,
+];
+const CLASS_INPUTS = [
+    ARTIFICER,
+    DRUID,
+    FAVORED_SOUL,
+    MONK,
+    WARLOCK,
 ];
 const RACE_ABILITY_BONUSES = new Map([
                                   /* STR DEX CON INT WIS CHA */
@@ -227,69 +239,75 @@ const CLASS_QUALIFICATIONS = new Map([
     [PlayerClass.DRUID,     Uint8Array.from([ 0,  0,  0,  0, 14,  0])],
 ]);
 const CLASS_ALIGNMENTS = new Map([
-    [PlayerClass.BARBARIAN, new BitSet32([Alignment.NEUTRAL_GOOD,
-                                          Alignment.CHAOTIC_GOOD,
-                                          Alignment.TRUE_NEUTRAL,
-                                          Alignment.CHAOTIC_NEUTRAL])],
-    [PlayerClass.BARD,      new BitSet32([Alignment.NEUTRAL_GOOD,
-                                          Alignment.CHAOTIC_GOOD,
-                                          Alignment.TRUE_NEUTRAL,
-                                          Alignment.CHAOTIC_NEUTRAL])],
-    [PlayerClass.CLERIC,    new BitSet32([Alignment.LAWFUL_GOOD,
-                                          Alignment.NEUTRAL_GOOD,
-                                          Alignment.CHAOTIC_GOOD,
-                                          Alignment.LAWFUL_NEUTRAL,
-                                          Alignment.TRUE_NEUTRAL,
-                                          Alignment.CHAOTIC_NEUTRAL])],
-    [PlayerClass.FIGHTER,   new BitSet32([Alignment.LAWFUL_GOOD,
-                                          Alignment.NEUTRAL_GOOD,
-                                          Alignment.CHAOTIC_GOOD,
-                                          Alignment.LAWFUL_NEUTRAL,
-                                          Alignment.TRUE_NEUTRAL,
-                                          Alignment.CHAOTIC_NEUTRAL])],
-    [PlayerClass.PALADIN,   new BitSet32([Alignment.LAWFUL_GOOD])],
-    [PlayerClass.RANGER,    new BitSet32([Alignment.LAWFUL_GOOD,
-                                          Alignment.NEUTRAL_GOOD,
-                                          Alignment.CHAOTIC_GOOD,
-                                          Alignment.LAWFUL_NEUTRAL,
-                                          Alignment.TRUE_NEUTRAL,
-                                          Alignment.CHAOTIC_NEUTRAL])],
-    [PlayerClass.ROGUE,     new BitSet32([Alignment.LAWFUL_GOOD,
-                                          Alignment.NEUTRAL_GOOD,
-                                          Alignment.CHAOTIC_GOOD,
-                                          Alignment.LAWFUL_NEUTRAL,
-                                          Alignment.TRUE_NEUTRAL,
-                                          Alignment.CHAOTIC_NEUTRAL])],
-    [PlayerClass.SORCERER,  new BitSet32([Alignment.LAWFUL_GOOD,
-                                          Alignment.NEUTRAL_GOOD,
-                                          Alignment.CHAOTIC_GOOD,
-                                          Alignment.LAWFUL_NEUTRAL,
-                                          Alignment.TRUE_NEUTRAL,
-                                          Alignment.CHAOTIC_NEUTRAL])],
-    [PlayerClass.WIZARD,    new BitSet32([Alignment.LAWFUL_GOOD,
-                                          Alignment.NEUTRAL_GOOD,
-                                          Alignment.CHAOTIC_GOOD,
-                                          Alignment.LAWFUL_NEUTRAL,
-                                          Alignment.TRUE_NEUTRAL,
-                                          Alignment.CHAOTIC_NEUTRAL])],
-    [PlayerClass.MONK,      new BitSet32([Alignment.LAWFUL_GOOD,
-                                          Alignment.LAWFUL_NEUTRAL])],
-    [PlayerClass.ARTIFICER, new BitSet32([Alignment.LAWFUL_GOOD,
-                                          Alignment.NEUTRAL_GOOD,
-                                          Alignment.CHAOTIC_GOOD,
-                                          Alignment.LAWFUL_NEUTRAL,
-                                          Alignment.TRUE_NEUTRAL,
-                                          Alignment.CHAOTIC_NEUTRAL])],
-    [PlayerClass.WARLOCK,   new BitSet32([Alignment.LAWFUL_GOOD,
-                                          Alignment.NEUTRAL_GOOD,
-                                          Alignment.CHAOTIC_GOOD,
-                                          Alignment.LAWFUL_NEUTRAL,
-                                          Alignment.TRUE_NEUTRAL,
-                                          Alignment.CHAOTIC_NEUTRAL])],
-    [PlayerClass.DRUID,     new BitSet32([Alignment.NEUTRAL_GOOD,
-                                          Alignment.LAWFUL_NEUTRAL,
-                                          Alignment.TRUE_NEUTRAL,
-                                          Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.BARBARIAN,    new BitSet32([Alignment.NEUTRAL_GOOD,
+                                             Alignment.CHAOTIC_GOOD,
+                                             Alignment.TRUE_NEUTRAL,
+                                             Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.BARD,         new BitSet32([Alignment.NEUTRAL_GOOD,
+                                             Alignment.CHAOTIC_GOOD,
+                                             Alignment.TRUE_NEUTRAL,
+                                             Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.CLERIC,       new BitSet32([Alignment.LAWFUL_GOOD,
+                                             Alignment.NEUTRAL_GOOD,
+                                             Alignment.CHAOTIC_GOOD,
+                                             Alignment.LAWFUL_NEUTRAL,
+                                             Alignment.TRUE_NEUTRAL,
+                                             Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.FIGHTER,      new BitSet32([Alignment.LAWFUL_GOOD,
+                                             Alignment.NEUTRAL_GOOD,
+                                             Alignment.CHAOTIC_GOOD,
+                                             Alignment.LAWFUL_NEUTRAL,
+                                             Alignment.TRUE_NEUTRAL,
+                                             Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.PALADIN,      new BitSet32([Alignment.LAWFUL_GOOD])],
+    [PlayerClass.RANGER,       new BitSet32([Alignment.LAWFUL_GOOD,
+                                             Alignment.NEUTRAL_GOOD,
+                                             Alignment.CHAOTIC_GOOD,
+                                             Alignment.LAWFUL_NEUTRAL,
+                                             Alignment.TRUE_NEUTRAL,
+                                             Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.ROGUE,        new BitSet32([Alignment.LAWFUL_GOOD,
+                                             Alignment.NEUTRAL_GOOD,
+                                             Alignment.CHAOTIC_GOOD,
+                                             Alignment.LAWFUL_NEUTRAL,
+                                             Alignment.TRUE_NEUTRAL,
+                                             Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.SORCERER,     new BitSet32([Alignment.LAWFUL_GOOD,
+                                             Alignment.NEUTRAL_GOOD,
+                                             Alignment.CHAOTIC_GOOD,
+                                             Alignment.LAWFUL_NEUTRAL,
+                                             Alignment.TRUE_NEUTRAL,
+                                             Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.WIZARD,       new BitSet32([Alignment.LAWFUL_GOOD,
+                                             Alignment.NEUTRAL_GOOD,
+                                             Alignment.CHAOTIC_GOOD,
+                                             Alignment.LAWFUL_NEUTRAL,
+                                             Alignment.TRUE_NEUTRAL,
+                                             Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.MONK,         new BitSet32([Alignment.LAWFUL_GOOD,
+                                             Alignment.LAWFUL_NEUTRAL])],
+    [PlayerClass.FAVORED_SOUL, new BitSet32([Alignment.LAWFUL_GOOD,
+                                             Alignment.NEUTRAL_GOOD,
+                                             Alignment.CHAOTIC_GOOD,
+                                             Alignment.LAWFUL_NEUTRAL,
+                                             Alignment.TRUE_NEUTRAL,
+                                             Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.ARTIFICER,    new BitSet32([Alignment.LAWFUL_GOOD,
+                                             Alignment.NEUTRAL_GOOD,
+                                             Alignment.CHAOTIC_GOOD,
+                                             Alignment.LAWFUL_NEUTRAL,
+                                             Alignment.TRUE_NEUTRAL,
+                                             Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.WARLOCK,      new BitSet32([Alignment.LAWFUL_GOOD,
+                                             Alignment.NEUTRAL_GOOD,
+                                             Alignment.CHAOTIC_GOOD,
+                                             Alignment.LAWFUL_NEUTRAL,
+                                             Alignment.TRUE_NEUTRAL,
+                                             Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.DRUID,        new BitSet32([Alignment.NEUTRAL_GOOD,
+                                             Alignment.LAWFUL_NEUTRAL,
+                                             Alignment.TRUE_NEUTRAL,
+                                             Alignment.CHAOTIC_NEUTRAL])],
 ]);
 
 const character: Character = new Character();
@@ -341,21 +359,31 @@ ROLL_ABILITIES_AND_RACE.addEventListener("click", () => {
         classesQualified.add(PlayerClass.FAVORED_SOUL);
     }
 
-    // Get rid of any old options in the "chosen class" dropdown menu, except
-    // for the blank ("_") option, and then fill the options back up with the
+    // Get rid of any classes that the user doesn't have access to
+    CLASS_INPUTS.forEach(([checkbox, pc]) =>
+        checkbox.checked ? 0 : classesQualified.delete(pc));
+
+    // Get rid of any old options in the "chosen class" dropdown menu, and then
+    // fill the options back up with the blank option ("_"), followed by the
     // set of classes that we just obtained previously
-    CHOSEN_CLASS.value = "";
     const classOptions =
         Array.from(CHOSEN_CLASS.getElementsByTagName("option"));
-    for (let i = classOptions.length - 1; i > 0; --i) {
-        CHOSEN_CLASS.removeChild(classOptions[i]);
+    for (const classOption of classOptions) {
+        CHOSEN_CLASS.removeChild(classOption);
     }
+    const blankOption = document.createElement("option");
+    blankOption.value = "";
+    blankOption.textContent = "_";
+    CHOSEN_CLASS.appendChild(blankOption);
     classesQualified.forEach(pclass => {
         const newClassOption = document.createElement("option");
         newClassOption.value = `${pclass}`;
         newClassOption.textContent = classString(pclass);
         CHOSEN_CLASS.appendChild(newClassOption);
     });
+
+    // Set the "chosen class" to none
+    CHOSEN_CLASS.value = "";
 
     // Reset the displayed values for the second & third classes
     SECOND_CLASS.textContent = "_";
@@ -386,20 +414,7 @@ LOCK_IN_CLASS.addEventListener("click", () => {
         }
     }
 
-    // Figure out how many more class(es) in addition to the first (chosen)
-    // class we'll roll for
-    const additionalClassCount = unifInt(1, 3);
-
-    // Get a set of possible classes for our second and third(?) classes
-    const possibleClasses = new BitSet32(CLASSES);
-    possibleClasses.delete(lockedInClass);
-    const class1Alignments = CLASS_ALIGNMENTS.get(lockedInClass)!;
-    for (const pc of possibleClasses) {
-        const pcAlignments = CLASS_ALIGNMENTS.get(pc)!;
-        if (class1Alignments.disjoint(pcAlignments)) {
-            possibleClasses.delete(pc);
-        }
-    }
+    rollSecondaryClasses();
 });
 
 ROLL_CLASS.addEventListener("click", () => {
@@ -409,12 +424,13 @@ ROLL_CLASS.addEventListener("click", () => {
         return;
     }
 
-    // Freely roll a random one of all classes
-    const rolledClass = CLASSES[unifInt(0, CLASSES.length)];
-    character.class1 = rolledClass;
+    // Roll a random class from the set of all available classes
+    const possibleClasses = F2P_CLASSES.slice();
+    CLASS_INPUTS.forEach(
+        ([checkbox, pc]) => checkbox.checked ? possibleClasses.push(pc) : 0);
+    character.class1 = possibleClasses[unifInt(0, possibleClasses.length)];
 
     // Get rid of any old options in the """chosen class""" dropdown menu
-    CHOSEN_CLASS.value = "";
     const classOptions =
         Array.from(CHOSEN_CLASS.getElementsByTagName("option"));
     for (const classOption of classOptions) {
@@ -424,11 +440,13 @@ ROLL_CLASS.addEventListener("click", () => {
     // Add a new option in the """chosen class""" dropdown menu for the class
     // that we rolled, and set that as selected
     const newClassOption = document.createElement("option");
-    const v = `${rolledClass}`;
+    const v = `${character.class1}`;
     newClassOption.value = v;
-    newClassOption.textContent = classString(rolledClass);
+    newClassOption.textContent = classString(character.class1);
     CHOSEN_CLASS.appendChild(newClassOption);
     CHOSEN_CLASS.value = v;
+
+    rollSecondaryClasses();
 });
 
 /**
@@ -489,25 +507,38 @@ function rollAbilities(buildPoints_: number): Uint8Array {
 }
 
 /**
- * Samples discrete uniform distribution on the integer interval
- * `[min, upper)`.
+ * Rolls for the second & third player classes, and then displays them to the
+ * user. **NOTE:** the first class (`character.class1`) *must* be locked in
+ * before calling this function.
  */
-function unifInt(min: number, upper: number): number {
-    return Math.floor(Math.random() * (upper - min)) + min;
-}
-
-/**
- * Shuffles an array in-place and returns a reference to the array.
- */
-function fisherYates<T, A extends Arr<T>>(a: A): A {
-    for (let i = a.length - 1; i > 0; --i) {
-        const swapIndex = Math.floor(Math.random() * (i + 1));
-        const temp = a[swapIndex];
-        a[swapIndex] = a[i];
-        a[i] = temp;
+function rollSecondaryClasses(): void {
+    // Get a set of possible classes for our second and third(?) classes
+    const possibleClasses = new BitSet32(CLASSES);
+    possibleClasses.delete(character.class1!);
+    const class1Alignments = CLASS_ALIGNMENTS.get(character.class1!)!;
+    for (const pc of possibleClasses) {
+        const pcAlignments = CLASS_ALIGNMENTS.get(pc)!;
+        if (class1Alignments.disjoint(pcAlignments)) {
+            possibleClasses.delete(pc);
+        }
     }
 
-    return a;
+    // Get rid of any classes that the user doesn't have access to
+    CLASS_INPUTS.forEach(([checkbox, pc]) =>
+        checkbox.checked ? 0 : possibleClasses.delete(pc));
+
+    // Roll for the second & third classes
+    character.class2 = possibleClasses.unifSelect();
+    if (Math.random() < 0.5) {
+        character.class3 = possibleClasses.unifSelect();
+    }
+
+    // Display the newly rolled classes to the user
+    SECOND_CLASS.textContent = classString(character.class2!);
+    THIRD_CLASS.textContent =
+        character.class3 === undefined ?
+            "[only two classes]" :
+            classString(character.class3);
 }
 
 /** Gets the corresponding ability mod to a given ability score */
