@@ -530,6 +530,7 @@ function rollSecondaryClasses(): void {
     // Roll for the second & third classes
     character.class2 = possibleClasses.unifSelect();
     if (Math.random() < 0.5) {
+        possibleClasses.delete(character.class2!);
         character.class3 = possibleClasses.unifSelect();
     }
 
