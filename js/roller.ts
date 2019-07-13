@@ -1,3 +1,5 @@
+import { BitSet32 } from "./BitSet.js";
+
 type TypedArray = Uint8Array
                 | Uint8ClampedArray
                 | Int8Array
@@ -12,7 +14,7 @@ type Arr<T> = TypedArray | T[];
 window.addEventListener("load", () => {
 
 enum Race {
-    DWARF,
+    DWARF = 0,
     ELF,
     HALFLING,
     HUMAN,
@@ -28,7 +30,7 @@ enum Race {
 }
 
 enum PlayerClass {
-    BARBARIAN,
+    BARBARIAN = 0,
     BARD,
     CLERIC,
     FIGHTER,
@@ -42,6 +44,15 @@ enum PlayerClass {
     ARTIFICER,
     WARLOCK,
     DRUID,
+}
+
+enum Alignment {
+    LAWFUL_GOOD = 0,
+    NEUTRAL_GOOD,
+    CHAOTIC_GOOD,
+    LAWFUL_NEUTRAL,
+    TRUE_NEUTRAL,
+    CHAOTIC_NEUTRAL,
 }
 
 class Character {
@@ -216,42 +227,97 @@ const CLASS_QUALIFICATIONS = new Map([
     [PlayerClass.DRUID,     Uint8Array.from([ 0,  0,  0,  0, 14,  0])],
 ]);
 const CLASS_ALIGNMENTS = new Map([
-                      /* LG NG CG LN TN CN */
-    [PlayerClass.BARBARIAN, 0b011011],
-    [PlayerClass.BARD,      0b011011],
-    [PlayerClass.CLERIC,    0b111111],
-    [PlayerClass.FIGHTER,   0b111111],
-    [PlayerClass.PALADIN,   0b100000],
-    [PlayerClass.RANGER,    0b111111],
-    [PlayerClass.ROGUE,     0b111111],
-    [PlayerClass.SORCERER,  0b111111],
-    [PlayerClass.WIZARD,    0b111111],
-    [PlayerClass.MONK,      0b100100],
-    [PlayerClass.ARTIFICER, 0b111111],
-    [PlayerClass.WARLOCK,   0b111111],
-    [PlayerClass.DRUID,     0b010111],
+    [PlayerClass.BARBARIAN, new BitSet32([Alignment.NEUTRAL_GOOD,
+                                          Alignment.CHAOTIC_GOOD,
+                                          Alignment.TRUE_NEUTRAL,
+                                          Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.BARD,      new BitSet32([Alignment.NEUTRAL_GOOD,
+                                          Alignment.CHAOTIC_GOOD,
+                                          Alignment.TRUE_NEUTRAL,
+                                          Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.CLERIC,    new BitSet32([Alignment.LAWFUL_GOOD,
+                                          Alignment.NEUTRAL_GOOD,
+                                          Alignment.CHAOTIC_GOOD,
+                                          Alignment.LAWFUL_NEUTRAL,
+                                          Alignment.TRUE_NEUTRAL,
+                                          Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.FIGHTER,   new BitSet32([Alignment.LAWFUL_GOOD,
+                                          Alignment.NEUTRAL_GOOD,
+                                          Alignment.CHAOTIC_GOOD,
+                                          Alignment.LAWFUL_NEUTRAL,
+                                          Alignment.TRUE_NEUTRAL,
+                                          Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.PALADIN,   new BitSet32([Alignment.LAWFUL_GOOD])],
+    [PlayerClass.RANGER,    new BitSet32([Alignment.LAWFUL_GOOD,
+                                          Alignment.NEUTRAL_GOOD,
+                                          Alignment.CHAOTIC_GOOD,
+                                          Alignment.LAWFUL_NEUTRAL,
+                                          Alignment.TRUE_NEUTRAL,
+                                          Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.ROGUE,     new BitSet32([Alignment.LAWFUL_GOOD,
+                                          Alignment.NEUTRAL_GOOD,
+                                          Alignment.CHAOTIC_GOOD,
+                                          Alignment.LAWFUL_NEUTRAL,
+                                          Alignment.TRUE_NEUTRAL,
+                                          Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.SORCERER,  new BitSet32([Alignment.LAWFUL_GOOD,
+                                          Alignment.NEUTRAL_GOOD,
+                                          Alignment.CHAOTIC_GOOD,
+                                          Alignment.LAWFUL_NEUTRAL,
+                                          Alignment.TRUE_NEUTRAL,
+                                          Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.WIZARD,    new BitSet32([Alignment.LAWFUL_GOOD,
+                                          Alignment.NEUTRAL_GOOD,
+                                          Alignment.CHAOTIC_GOOD,
+                                          Alignment.LAWFUL_NEUTRAL,
+                                          Alignment.TRUE_NEUTRAL,
+                                          Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.MONK,      new BitSet32([Alignment.LAWFUL_GOOD,
+                                          Alignment.LAWFUL_NEUTRAL])],
+    [PlayerClass.ARTIFICER, new BitSet32([Alignment.LAWFUL_GOOD,
+                                          Alignment.NEUTRAL_GOOD,
+                                          Alignment.CHAOTIC_GOOD,
+                                          Alignment.LAWFUL_NEUTRAL,
+                                          Alignment.TRUE_NEUTRAL,
+                                          Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.WARLOCK,   new BitSet32([Alignment.LAWFUL_GOOD,
+                                          Alignment.NEUTRAL_GOOD,
+                                          Alignment.CHAOTIC_GOOD,
+                                          Alignment.LAWFUL_NEUTRAL,
+                                          Alignment.TRUE_NEUTRAL,
+                                          Alignment.CHAOTIC_NEUTRAL])],
+    [PlayerClass.DRUID,     new BitSet32([Alignment.NEUTRAL_GOOD,
+                                          Alignment.LAWFUL_NEUTRAL,
+                                          Alignment.TRUE_NEUTRAL,
+                                          Alignment.CHAOTIC_NEUTRAL])],
 ]);
 
 const character: Character = new Character();
 
 ROLL_ABILITIES_AND_RACE.addEventListener("click", () => {
+    // Starting over, remove persistent state
     character.reset();
 
+    // Get an array of races that the user has access to, and then pick one
+    // randomly
     const races = [Race.DWARF, Race.ELF, Race.HALFLING, Race.HUMAN];
     RACE_INPUTS.forEach(
         ([checkbox, r]) => checkbox.checked ? races.push(r) : 0);
     const race = races[unifInt(0, races.length)];
     character.race = race;
 
+    // Get how many effective build points the user has, taking Drow Elf into
+    // consideration
     const buildPoints = +BUILD_POINTS.value;
     const realBuildPoints =
         race === Race.DROW_ELF ? Math.max(28, buildPoints - 4) : buildPoints;
 
+    // Roll ability scores and then adjust them due to racial modifiers
     const abilities = rollAbilities(realBuildPoints);
-    (RACE_ABILITY_BONUSES.get(race) as Int8Array)
-        .forEach((b, i) => abilities[i] += b);
+    RACE_ABILITY_BONUSES.get(race)!.forEach((b, i) => abilities[i] += b);
     character.abilities = abilities;
 
+    // Display race & ability scores to the user
     RACE.textContent = raceString(race);
     ABILITIES.forEach(([ab, abMod], i) => {
         const score = abilities[i];
@@ -262,7 +328,10 @@ ROLL_ABILITIES_AND_RACE.addEventListener("click", () => {
         abMod.textContent = `${sign}${abilityMod_}`;
     });
 
-    const classesQualified = new Set<PlayerClass>();
+    // Use the final ability score values to get a set of all class(es) that
+    // the user can possibly manually choose from as their first ("chosen")
+    // class
+    const classesQualified = new BitSet32<PlayerClass>();
     CLASS_QUALIFICATIONS.forEach((qualif, pclass) =>
         abilities.every((a, i) => a >= qualif[i])
             ? classesQualified.add(pclass)
@@ -272,10 +341,12 @@ ROLL_ABILITIES_AND_RACE.addEventListener("click", () => {
         classesQualified.add(PlayerClass.FAVORED_SOUL);
     }
 
+    // Get rid of any old options in the "chosen class" dropdown menu, except
+    // for the blank ("_") option, and then fill the options back up with the
+    // set of classes that we just obtained previously
     CHOSEN_CLASS.value = "";
     const classOptions =
         Array.from(CHOSEN_CLASS.getElementsByTagName("option"));
-    console.log(classOptions);
     for (let i = classOptions.length - 1; i > 0; --i) {
         CHOSEN_CLASS.removeChild(classOptions[i]);
     }
@@ -285,11 +356,16 @@ ROLL_ABILITIES_AND_RACE.addEventListener("click", () => {
         newClassOption.textContent = classString(pclass);
         CHOSEN_CLASS.appendChild(newClassOption);
     });
+
+    // Reset the displayed values for the second & third classes
     SECOND_CLASS.textContent = "_";
     THIRD_CLASS.textContent = "_";
 });
 
 LOCK_IN_CLASS.addEventListener("click", () => {
+    // If the first part hasn't been done, or the user has already locked in a
+    // class, or if the user has only selected the blank ("_") option, then do
+    // nothing
     if (
         character.race === undefined   ||
         character.class1 !== undefined ||
@@ -298,41 +374,55 @@ LOCK_IN_CLASS.addEventListener("click", () => {
         return;
     }
 
+    // Get which class the user picked and set persistent state accordingly
     const lockedInClass = (+CHOSEN_CLASS.value) as PlayerClass;
     character.class1 = lockedInClass;
 
+    // Remove other options, if any, since we're locking in the currently
+    // selected one
     for (const o of Array.from(CHOSEN_CLASS.getElementsByTagName("option"))) {
         if (o.value !== CHOSEN_CLASS.value) {
             CHOSEN_CLASS.removeChild(o);
         }
     }
 
-    const additionalClassNum = unifInt(1, 3);
-    const possibleClasses = new Set(CLASSES);
+    // Figure out how many more class(es) in addition to the first (chosen)
+    // class we'll roll for
+    const additionalClassCount = unifInt(1, 3);
+
+    // Get a set of possible classes for our second and third(?) classes
+    const possibleClasses = new BitSet32(CLASSES);
     possibleClasses.delete(lockedInClass);
-    const class1Alignments = CLASS_ALIGNMENTS.get(lockedInClass) as number;
+    const class1Alignments = CLASS_ALIGNMENTS.get(lockedInClass)!;
     for (const pc of possibleClasses) {
-        const pcAlignments = CLASS_ALIGNMENTS.get(pc) as number;
-        if ((pcAlignments & class1Alignments) === 0) {
+        const pcAlignments = CLASS_ALIGNMENTS.get(pc)!;
+        if (class1Alignments.disjoint(pcAlignments)) {
             possibleClasses.delete(pc);
         }
     }
 });
 
 ROLL_CLASS.addEventListener("click", () => {
+    // If the user hasn't done the first part, or has already got a first class
+    // locked in, then do nothing
     if (character.race === undefined || character.class1 !== undefined) {
         return;
     }
 
+    // Freely roll a random one of all classes
     const rolledClass = CLASSES[unifInt(0, CLASSES.length)];
     character.class1 = rolledClass;
 
+    // Get rid of any old options in the """chosen class""" dropdown menu
     CHOSEN_CLASS.value = "";
     const classOptions =
         Array.from(CHOSEN_CLASS.getElementsByTagName("option"));
-    for (let i = classOptions.length - 1; i > 0; --i) {
-        CHOSEN_CLASS.removeChild(classOptions[i]);
+    for (const classOption of classOptions) {
+        CHOSEN_CLASS.removeChild(classOption);
     }
+
+    // Add a new option in the """chosen class""" dropdown menu for the class
+    // that we rolled, and set that as selected
     const newClassOption = document.createElement("option");
     const v = `${rolledClass}`;
     newClassOption.value = v;
