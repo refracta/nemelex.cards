@@ -544,7 +544,7 @@ function rollSecondaryClasses(): void {
 
 /** Gets the corresponding ability mod to a given ability score */
 function abilityMod(abilityScore: number): number {
-    return (abilityScore - 10) >> 1;
+    return abilityScore - 10 >> 1;
 }
 
 /**
