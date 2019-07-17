@@ -24,6 +24,13 @@ export function fisherYates<T, A extends MaybeTypedArray<T>>(a: A): A {
 }
 
 /**
+ * Checks if `x` is a real number, i.e. it is not infinite and it is not `NaN`.
+ */
+export function isReal(x: number): boolean {
+    return isFinite(x) && !isNaN(x);
+}
+
+/**
  * Credit for this function is due to Andrew Shaffer (@ashaffer on GitHub),
  * licensed under the MIT license and available here:
  * [https://github.com/micro-js/popcount](https://github.com/micro-js/popcount)

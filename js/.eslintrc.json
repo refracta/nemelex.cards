@@ -111,6 +111,7 @@
         }],
         "@typescript-eslint/unbound-method": "error",
         "@typescript-eslint/unified-signatures": "warn",
-        "@typescript-eslint/no-non-null-assertion": "off"
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "max-len": ["warn", { "code": 79 }]
     }
 }

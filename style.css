@@ -146,7 +146,7 @@ aside {
 }
 
 #main-logo {
-    width: auto;
+    width: 100%;
     height: auto;
     max-height: 6.5rem;
     min-width: 2.5rem;
@@ -206,7 +206,7 @@ footer {
 
 nav {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 
     background-color: rgba(0, 0, 0, 0.2);
@@ -216,12 +216,11 @@ nav {
 
 .navlist {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     flex-direction: row;
 
     width: 100%;
-    height: 100%;
 }
 
 .navlist li {

@@ -200,12 +200,163 @@
         </select>
 
         <button id="lock-in-class" type="button">Lock in this class!</button>
-        <button id="roll-class" type="button">Roll for the first class instead!</button>
+        <button id="roll-class" type="button">Roll for the first class
+        instead!</button>
       </div>
 
       <p>Second class: <span id="second-class">_</span></p>
 
       <p>Third class?: <span id="third-class">_</span></p>
+    </div>
+  </div>
+
+  <div class="section" id="section-4">
+    <div class="inner-section">
+      <h3>Assign Skills</h3>
+
+      <div class="form">
+        <p class="div-label">Skill points remaining: <span
+        id="skill-points-remaining">_</span></p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Skill</th>
+              <th>Ranks</th>
+              <th>Points spent</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Balance</td>
+              <td><span id="balance-ranks">0</span></td>
+              <td><input id="balance" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Bluff</td>
+              <td><span id="bluff-ranks">0</span></td>
+              <td><input id="bluff" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Concentration</td>
+              <td><span id="concentration-ranks">0</span></td>
+              <td><input id="concentration" type="number" min="0" max="4"
+              step="1" value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Diplomacy</td>
+              <td><span id="diplomacy-ranks">0</span></td>
+              <td><input id="diplomacy" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Haggle</td>
+              <td><span id="haggle-ranks">0</span></td>
+              <td><input id="haggle" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Heal</td>
+              <td><span id="heal-ranks">0</span></td>
+              <td><input id="heal" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Hide</td>
+              <td><span id="hide-ranks">0</span></td>
+              <td><input id="hide" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Intimidate</td>
+              <td><span id="intimidate-ranks">0</span></td>
+              <td><input id="intimidate" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Jump</td>
+              <td><span id="jump-ranks">0</span></td>
+              <td><input id="jump" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Listen</td>
+              <td><span id="listen-ranks">0</span></td>
+              <td><input id="listen" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Move Silently</td>
+              <td><span id="move-silently-ranks">0</span></td>
+              <td><input id="move-silently" type="number" min="0" max="4"
+              step="1" value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Perform</td>
+              <td><span id="perform-ranks">0</span></td>
+              <td><input id="perform" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Repair</td>
+              <td><span id="repair-ranks">0</span></td>
+              <td><input id="repair" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Search</td>
+              <td><span id="search-ranks">0</span></td>
+              <td><input id="search" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Spellcraft</td>
+              <td><span id="spellcraft-ranks">0</span></td>
+              <td><input id="spellcraft" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Spot</td>
+              <td><span id="spot-ranks">0</span></td>
+              <td><input id="spot" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Swim</td>
+              <td><span id="swim-ranks">0</span></td>
+              <td><input id="swim" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Tumble</td>
+              <td><span id="tumble-ranks">0</span></td>
+              <td><input id="tumble" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Use Magic Device</td>
+              <td><span id="use-magic-device-ranks">0</span></td>
+              <td><input id="use-magic-device" type="number" min="0" max="4"
+              step="1" value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Disable Device</td>
+              <td><span id="disable-device-ranks">0</span></td>
+              <td><input id="disable-device" type="number" min="0" max="4"
+              step="1" value="0" disabled></td>
+            </tr>
+            <tr>
+              <td>Open Lock</td>
+              <td><span id="open-lock-ranks">0</span></td>
+              <td><input id="open-lock" type="number" min="0" max="4" step="1"
+              value="0" disabled></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 

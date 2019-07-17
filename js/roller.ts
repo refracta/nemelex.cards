@@ -1,4 +1,4 @@
-import { fisherYates, unifInt } from "./utils.js";
+import { fisherYates, isReal, unifInt } from "./utils.js";
 import { BitSet32 } from "./BitSet.js";
 
 window.addEventListener("load", () => {
@@ -45,12 +45,63 @@ enum Alignment {
     CHAOTIC_NEUTRAL,
 }
 
+enum Skill {
+    BALANCE          = 0x00,
+    BLUFF            = 0x01,
+    CONCENTRATION    = 0x02,
+    DIPLOMACY        = 0x03,
+    HAGGLE           = 0x04,
+    HEAL             = 0x05,
+    HIDE             = 0x06,
+    INTIMIDATE       = 0x07,
+    JUMP             = 0x08,
+    LISTEN           = 0x09,
+    MOVE_SILENTLY    = 0x0a,
+    PERFORM          = 0x0b,
+    REPAIR           = 0x0c,
+    SEARCH           = 0x0d,
+    SPELLCRAFT       = 0x0e,
+    SPOT             = 0x0f,
+    SWIM             = 0x10,
+    TUMBLE           = 0x11,
+    USE_MAGIC_DEVICE = 0x12,
+    DISABLE_DEVICE   = 0x13,
+    OPEN_LOCK        = 0x14,
+}
+const SKILL_COUNT    = 0x15;
+
+class Feat {
+    public readonly name: string;
+    public readonly canBeTakenBy: (c: Character) => boolean;
+
+    public constructor(name: string, canBeTakenBy: (c: Character) => boolean) {
+        this.name = name;
+        this.canBeTakenBy = canBeTakenBy;
+    }
+}
+
 class Character {
     public race: Race | undefined;
     public abilities: Uint8Array | undefined;
     public class1: PlayerClass | undefined;
     public class2: PlayerClass | undefined;
     public class3: PlayerClass | undefined;
+    public skillPoints: number | undefined;
+    public bab: number;
+    /**
+     * Ranks, counted in terms of half-ranks, such that a single rank is
+     * represented as `2` in this array
+     */
+    private readonly skills: Uint8Array;
+    private readonly levels: PlayerClass[];
+    private readonly feats: Map<string, Feat>;
+
+    public constructor() {
+        this.bab = 0;
+        this.skills = new Uint8Array(SKILL_COUNT);
+        this.levels = [];
+        this.feats = new Map();
+    }
 
     public reset(): void {
         this.race = undefined;
@@ -58,6 +109,38 @@ class Character {
         this.class1 = undefined;
         this.class2 = undefined;
         this.class3 = undefined;
+        this.skillPoints = undefined;
+        this.bab = 0;
+        this.skills.fill(0x00);
+        this.levels.length = 0;
+        this.feats.clear();
+    }
+
+    public hasBab(bab: number): boolean {
+        return this.bab >= bab;
+    }
+
+    public setRanks(skill: Skill, halfRanks: number): void {
+        this.skills[skill as number] = halfRanks;
+    }
+
+    public addLevel(pc: PlayerClass): void {
+        this.levels.push(pc);
+    }
+
+    public level(): number {
+        return this.levels.length;
+    }
+
+    public levelsIn(pclass: PlayerClass): number {
+        return this.levels.reduce(
+            (accu, pc) => pc === pclass ? accu + 1 : accu,
+            0,
+        );
+    }
+
+    public hasFeat(featName: string): boolean {
+        return this.feats.has(featName);
     }
 }
 
@@ -309,12 +392,191 @@ const CLASS_ALIGNMENTS = new Map([
                                              Alignment.TRUE_NEUTRAL,
                                              Alignment.CHAOTIC_NEUTRAL])],
 ]);
+const CLASS_SKILL_POINTS = new Map([
+    [PlayerClass.BARBARIAN,    4],
+    [PlayerClass.BARD,         6],
+    [PlayerClass.CLERIC,       2],
+    [PlayerClass.FIGHTER,      2],
+    [PlayerClass.PALADIN,      2],
+    [PlayerClass.RANGER,       6],
+    [PlayerClass.ROGUE,        8],
+    [PlayerClass.SORCERER,     2],
+    [PlayerClass.WIZARD,       2],
+    [PlayerClass.MONK,         4],
+    [PlayerClass.FAVORED_SOUL, 2],
+    [PlayerClass.ARTIFICER,    4],
+    [PlayerClass.WARLOCK,      2],
+    [PlayerClass.DRUID,        4],
+]);
+const CLASS_SKILLS = new Map([
+    [PlayerClass.BARBARIAN,    new BitSet32([Skill.INTIMIDATE,
+                                             Skill.JUMP,
+                                             Skill.LISTEN,
+                                             Skill.SWIM])],
+    [PlayerClass.BARD,         new BitSet32([Skill.BALANCE,
+                                             Skill.BLUFF,
+                                             Skill.CONCENTRATION,
+                                             Skill.DIPLOMACY,
+                                             Skill.HAGGLE,
+                                             Skill.HIDE,
+                                             Skill.JUMP,
+                                             Skill.LISTEN,
+                                             Skill.MOVE_SILENTLY,
+                                             Skill.PERFORM,
+                                             Skill.SPELLCRAFT,
+                                             Skill.SWIM,
+                                             Skill.TUMBLE,
+                                             Skill.USE_MAGIC_DEVICE])],
+    [PlayerClass.CLERIC,       new BitSet32([Skill.CONCENTRATION,
+                                             Skill.DIPLOMACY,
+                                             Skill.HEAL,
+                                             Skill.SPELLCRAFT])],
+    [PlayerClass.FIGHTER,      new BitSet32([Skill.REPAIR,
+                                             Skill.SWIM,
+                                             Skill.INTIMIDATE,
+                                             Skill.JUMP])],
+    [PlayerClass.PALADIN,      new BitSet32([Skill.CONCENTRATION,
+                                             Skill.DIPLOMACY,
+                                             Skill.INTIMIDATE,
+                                             Skill.HEAL])],
+    [PlayerClass.RANGER,       new BitSet32([Skill.CONCENTRATION,
+                                             Skill.HEAL,
+                                             Skill.HIDE,
+                                             Skill.JUMP,
+                                             Skill.LISTEN,
+                                             Skill.MOVE_SILENTLY,
+                                             Skill.SEARCH,
+                                             Skill.SPOT,
+                                             Skill.SWIM])],
+    [PlayerClass.ROGUE,        new BitSet32([Skill.BALANCE,
+                                             Skill.BLUFF,
+                                             Skill.DIPLOMACY,
+                                             Skill.DISABLE_DEVICE,
+                                             Skill.HAGGLE,
+                                             Skill.HIDE,
+                                             Skill.INTIMIDATE,
+                                             Skill.JUMP,
+                                             Skill.LISTEN,
+                                             Skill.MOVE_SILENTLY,
+                                             Skill.OPEN_LOCK,
+                                             Skill.REPAIR,
+                                             Skill.SEARCH,
+                                             Skill.SPOT,
+                                             Skill.SWIM,
+                                             Skill.TUMBLE,
+                                             Skill.USE_MAGIC_DEVICE])],
+    [PlayerClass.SORCERER,     new BitSet32([Skill.BLUFF,
+                                             Skill.CONCENTRATION,
+                                             Skill.SPELLCRAFT])],
+    [PlayerClass.WIZARD,       new BitSet32([Skill.REPAIR,
+                                             Skill.CONCENTRATION,
+                                             Skill.SPELLCRAFT])],
+    [PlayerClass.MONK,         new BitSet32([Skill.BALANCE,
+                                             Skill.CONCENTRATION,
+                                             Skill.DIPLOMACY,
+                                             Skill.HIDE,
+                                             Skill.JUMP,
+                                             Skill.LISTEN,
+                                             Skill.MOVE_SILENTLY,
+                                             Skill.SPOT,
+                                             Skill.SWIM,
+                                             Skill.TUMBLE])],
+    [PlayerClass.FAVORED_SOUL, new BitSet32([Skill.CONCENTRATION,
+                                             Skill.DIPLOMACY,
+                                             Skill.HEAL,
+                                             Skill.JUMP,
+                                             Skill.SPELLCRAFT])],
+    [PlayerClass.ARTIFICER,    new BitSet32([Skill.CONCENTRATION,
+                                             Skill.DISABLE_DEVICE,
+                                             Skill.HAGGLE,
+                                             Skill.OPEN_LOCK,
+                                             Skill.REPAIR,
+                                             Skill.SEARCH,
+                                             Skill.SPELLCRAFT,
+                                             Skill.SPOT,
+                                             Skill.USE_MAGIC_DEVICE])],
+    [PlayerClass.WARLOCK,      new BitSet32([Skill.BLUFF,
+                                             Skill.CONCENTRATION,
+                                             Skill.INTIMIDATE,
+                                             Skill.JUMP,
+                                             Skill.SPELLCRAFT,
+                                             Skill.USE_MAGIC_DEVICE])],
+    [PlayerClass.DRUID,        new BitSet32([Skill.CONCENTRATION,
+                                             Skill.DIPLOMACY,
+                                             Skill.HEAL,
+                                             Skill.INTIMIDATE,
+                                             Skill.LISTEN,
+                                             Skill.SPELLCRAFT,
+                                             Skill.SPOT,
+                                             Skill.SWIM])],
+]);
+const SKILL_POINTS_REMAINING =
+    document.getElementById("skill-points-remaining") as HTMLSpanElement;
+const SKILL_POINT_INPUTS = [
+    document.getElementById("balance")          as HTMLInputElement,
+    document.getElementById("bluff")            as HTMLInputElement,
+    document.getElementById("concentration")    as HTMLInputElement,
+    document.getElementById("diplomacy")        as HTMLInputElement,
+    document.getElementById("haggle")           as HTMLInputElement,
+    document.getElementById("heal")             as HTMLInputElement,
+    document.getElementById("hide")             as HTMLInputElement,
+    document.getElementById("intimidate")       as HTMLInputElement,
+    document.getElementById("jump")             as HTMLInputElement,
+    document.getElementById("listen")           as HTMLInputElement,
+    document.getElementById("move-silently")    as HTMLInputElement,
+    document.getElementById("perform")          as HTMLInputElement,
+    document.getElementById("repair")           as HTMLInputElement,
+    document.getElementById("search")           as HTMLInputElement,
+    document.getElementById("spellcraft")       as HTMLInputElement,
+    document.getElementById("spot")             as HTMLInputElement,
+    document.getElementById("swim")             as HTMLInputElement,
+    document.getElementById("tumble")           as HTMLInputElement,
+    document.getElementById("use-magic-device") as HTMLInputElement,
+    document.getElementById("disable-device")   as HTMLInputElement,
+    document.getElementById("open-lock")        as HTMLInputElement,
+];
+const SKILL_RANK_SPANS = [
+    document.getElementById("balance-ranks")          as HTMLSpanElement,
+    document.getElementById("bluff-ranks")            as HTMLSpanElement,
+    document.getElementById("concentration-ranks")    as HTMLSpanElement,
+    document.getElementById("diplomacy-ranks")        as HTMLSpanElement,
+    document.getElementById("haggle-ranks")           as HTMLSpanElement,
+    document.getElementById("heal-ranks")             as HTMLSpanElement,
+    document.getElementById("hide-ranks")             as HTMLSpanElement,
+    document.getElementById("intimidate-ranks")       as HTMLSpanElement,
+    document.getElementById("jump-ranks")             as HTMLSpanElement,
+    document.getElementById("listen-ranks")           as HTMLSpanElement,
+    document.getElementById("move-silently-ranks")    as HTMLSpanElement,
+    document.getElementById("perform-ranks")          as HTMLSpanElement,
+    document.getElementById("repair-ranks")           as HTMLSpanElement,
+    document.getElementById("search-ranks")           as HTMLSpanElement,
+    document.getElementById("spellcraft-ranks")       as HTMLSpanElement,
+    document.getElementById("spot-ranks")             as HTMLSpanElement,
+    document.getElementById("swim-ranks")             as HTMLSpanElement,
+    document.getElementById("tumble-ranks")           as HTMLSpanElement,
+    document.getElementById("use-magic-device-ranks") as HTMLSpanElement,
+    document.getElementById("disable-device-ranks")   as HTMLSpanElement,
+    document.getElementById("open-lock-ranks")        as HTMLSpanElement,
+];
+const GENERAL_FEATS = [
+    new Feat("Cleave", c => c.hasFeat("Power Attack")),
+    new Feat("Great Cleave", c => c.hasFeat("Cleave") && c.hasBab(4)),
+    new Feat("Hamstring", c => c.levelsIn(PlayerClass.ROGUE) > 0),
+];
 
 const character: Character = new Character();
 
 ROLL_ABILITIES_AND_RACE.addEventListener("click", () => {
     // Starting over, remove persistent state
     character.reset();
+    SECOND_CLASS.textContent = "_";
+    THIRD_CLASS.textContent = "_";
+    SKILL_POINTS_REMAINING.textContent = "_";
+    SKILL_RANK_SPANS.forEach(srs => srs.textContent = "0");
+    SKILL_POINT_INPUTS.forEach(spi => {
+        spi.value = "0";
+        spi.disabled = true;
+    });
 
     // Get an array of races that the user has access to, and then pick one
     // randomly
@@ -384,10 +646,6 @@ ROLL_ABILITIES_AND_RACE.addEventListener("click", () => {
 
     // Set the "chosen class" to none
     CHOSEN_CLASS.value = "";
-
-    // Reset the displayed values for the second & third classes
-    SECOND_CLASS.textContent = "_";
-    THIRD_CLASS.textContent = "_";
 });
 
 LOCK_IN_CLASS.addEventListener("click", () => {
@@ -415,6 +673,8 @@ LOCK_IN_CLASS.addEventListener("click", () => {
     }
 
     rollSecondaryClasses();
+
+    setUpSkillInputs();
 });
 
 ROLL_CLASS.addEventListener("click", () => {
@@ -429,6 +689,7 @@ ROLL_CLASS.addEventListener("click", () => {
     CLASS_INPUTS.forEach(
         ([checkbox, pc]) => checkbox.checked ? possibleClasses.push(pc) : 0);
     character.class1 = possibleClasses[unifInt(0, possibleClasses.length)];
+    character.addLevel(character.class1);
 
     // Get rid of any old options in the """chosen class""" dropdown menu
     const classOptions =
@@ -447,6 +708,52 @@ ROLL_CLASS.addEventListener("click", () => {
     CHOSEN_CLASS.value = v;
 
     rollSecondaryClasses();
+
+    setUpSkillInputs();
+});
+
+SKILL_POINT_INPUTS.forEach((spi, i) => {
+    const skill = i as Skill;
+
+    spi.addEventListener("input", () => {
+        // Validate input
+        const userVal = +spi.value;
+        if (!isReal(userVal)) {
+            spi.value = "0";
+        } else if (userVal > 4) {
+            spi.value = "4";
+        } else if (userVal < 0) {
+            spi.value = "0";
+        }
+        spi.value = `${Math.round(+spi.value)}`;
+
+        // Determine how many skill points we have left by iterating over all
+        // skill point inputs and checking their values
+        let remainingSkillPoints =
+            SKILL_POINT_INPUTS.reduce(
+                (accu, inp) => accu - +inp.value, character.skillPoints!);
+
+        // If the user spent too many points, subtract from the points spent on
+        // this skill until that's fixed
+        if (remainingSkillPoints < 0) {
+            spi.value = `${+spi.value + remainingSkillPoints}`;
+            remainingSkillPoints = 0;
+        }
+
+        // Display skill poinst remaining to the user
+        SKILL_POINTS_REMAINING.textContent = `${remainingSkillPoints}`;
+
+        // Update rank count for this skill
+        const newVal = +spi.value;
+        const halfRanks =
+            CLASS_SKILLS.get(character.class1!)!.has(skill) ?
+                2 * newVal :
+                newVal;
+        character.setRanks(skill, halfRanks);
+
+        // Display rank count to user
+        SKILL_RANK_SPANS[i].textContent = `${halfRanks / 2}`;
+    });
 });
 
 /**
@@ -458,14 +765,14 @@ function rollAbilities(buildPoints_: number): Uint8Array {
     const abilityScores = new Uint8Array(6);
 
     for (let iteration = 0; buildPoints > 0 && iteration < 5; ++iteration) {
-        let ix = 1;
-        for (; ix < POINT_COSTS.length; ++ix) {
-            if (POINT_COSTS[ix] > buildPoints) {
+        let i = 1;
+        for (; i < POINT_COSTS.length; ++i) {
+            if (POINT_COSTS[i] > buildPoints) {
                 break;
             }
         }
 
-        const scoreBump = unifInt(buildPoints >= 16 ? 5 : 0, ix);
+        const scoreBump = unifInt(buildPoints >= 16 ? 5 : 0, i);
         abilityScores[iteration] = scoreBump + 9;
         buildPoints -= POINT_COSTS[scoreBump];
     }
@@ -497,9 +804,9 @@ function rollAbilities(buildPoints_: number): Uint8Array {
         }
     }
 
-    for (let ix = 2; ix < abilityScores.length; ++ix) {
-        if (abilityScores[ix] === 0) {
-            abilityScores[ix] = 8;
+    for (let i = 2; i < abilityScores.length; ++i) {
+        if (abilityScores[i] === 0) {
+            abilityScores[i] = 8;
         }
     }
 
@@ -540,6 +847,35 @@ function rollSecondaryClasses(): void {
         character.class3 === undefined ?
             "[only two classes]" :
             classString(character.class3);
+}
+
+/**
+ * Sets up skill inputs so that the player can choose their skills. **NOTE:**
+ * `rollSecondaryClasses()` *must* be called before calling this function.
+ */
+function setUpSkillInputs(): void {
+    if (character.class1 === undefined || character.abilities === undefined) {
+        throw new Error("setUpSkillInputs() needs class and abilities rolled");
+    }
+
+    // Determine how many skill points the character has to spend at character
+    // creation, and display that to the user
+    character.skillPoints = 4 * Math.max(
+        CLASS_SKILL_POINTS.get(character.class1)! +
+            abilityMod(character.abilities[3]),
+        1,
+    );
+    SKILL_POINTS_REMAINING.textContent = `${character.skillPoints}`;
+
+    // Enable skill inputs
+    SKILL_POINT_INPUTS.forEach((spi, i) => {
+        const isTrapperSkill = i as Skill === Skill.OPEN_LOCK ||
+                               i as Skill === Skill.DISABLE_DEVICE;
+        const isNotFirstLvlTrapper =
+            character.class1 !== PlayerClass.ROGUE &&
+            character.class1 !== PlayerClass.ARTIFICER;
+        spi.disabled = isTrapperSkill && isNotFirstLvlTrapper;
+    });
 }
 
 /** Gets the corresponding ability mod to a given ability score */
