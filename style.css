@@ -3,12 +3,13 @@
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     --monospace: "SF Mono", "Monaco", "Inconsolata", "Fira Mono",
         "Droid Sans Mono", "Source Code Pro", "Hack", "Fira Code", monospace;
-    --off-white: #eee;
-    --off-black: #3f3f3f;
-    --color-one: #7f706e;
-    --color-two: #584353;
-    --color-three: #576364;
-    --color-four: #3d323d;
+    --off-white: #f5f5f5;
+    --off-black: #1a1a1a;
+    --color-one: #ff4000;
+    --color-two: #008cc0;
+    --color-three: #cad700;
+    --color-four: #009800;
+    --color-five: #8000ff;
 }
 
 html,
@@ -37,8 +38,45 @@ h6 {
     padding: 0;
 }
 
+h1 {
+    background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-three), var(--color-four), var(--color-five));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--color-one), var(--color-two), var(--color-three), var(--color-four), var(--color-five));
+}
+
+h2 {
+    color: var(--color-two);
+    border-left: 4px solid var(--color-two);
+    padding-left: 1rem;
+}
+
+h3 {
+    color: var(--color-three);
+}
+
 a {
-    color: #92bdeb;
+    color: var(--color-two);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-three);
+    text-shadow: 0 0 5px currentColor;
 }
 
 .hidden {
@@ -46,8 +84,9 @@ a {
 }
 
 body {
-    background-color: var(--color-one);
+    background-color: #0f0f0f;
     font-family: var(--sans);
+    overflow-x: hidden;
 }
 
 li {
@@ -82,19 +121,41 @@ table {
 th, td {
     padding: 0.5rem;
     text-align: left;
-    border: 1px solid #eeeeee80;
+    border: 1px solid #444;
+}
+
+th {
+    background-color: #2a2a2a;
+    color: var(--color-three);
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 button {
-    color: revert;
+    background-color: #2a2a2a;
+    color: var(--off-white);
+    border: 2px solid var(--color-two);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-two);
+    box-shadow: 0 0 15px var(--color-two);
 }
 
 aside {
     margin-bottom: 0.5rem;
-    padding-left: 0.5rem;
+    padding: 0.5rem;
     float: right;
-    border-left: 0.25rem solid #eeea;
-    background-color: #ffc59e2a;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-left: 4px solid var(--color-one);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .cite {
@@ -165,15 +226,15 @@ aside {
     display: inline-block;
     margin: 0 1rem 1rem 1.5rem;
     padding: 1rem 2rem 1rem 2.5rem;
-    background-color: #00000020;
-    border: 2px solid #00000050;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     max-width: 55%;
 
     max-height: 3.25rem;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    box-shadow: inset 0 -1rem 1.5rem -1rem #00000080;
+    box-shadow: inset 0 -1rem 1.5rem -1rem rgba(0, 0, 0, 0.5);
 }
 
 #toc:hover {
@@ -208,10 +269,11 @@ nav {
     display: flex;
     align-items: stretch;
     justify-content: center;
-
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #0f0f0f;
     min-height: 2rem;
     max-height: 4rem;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(to right, var(--color-one), var(--color-two), var(--color-three), var(--color-four), var(--color-five)) 1;
 }
 
 .navlist {
@@ -237,26 +299,182 @@ nav {
     font-weight: bolder;
     color: var(--off-white);
     text-decoration: none;
-
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
 }
 
-.navlist a:hover {
-    color: #fff;
-    text-shadow: 0 0 0.5rem rgb(255, 245, 159);
+.navlist li:nth-child(1) a:hover {
+    color: var(--color-one);
+    border-bottom-color: var(--color-one);
+    text-shadow: 0 0 10px var(--color-one);
+}
+
+.navlist li:nth-child(2) a:hover {
+    color: var(--color-two);
+    border-bottom-color: var(--color-two);
+    text-shadow: 0 0 10px var(--color-two);
+}
+
+.navlist li:nth-child(3) a:hover {
+    color: var(--color-three);
+    border-bottom-color: var(--color-three);
+    text-shadow: 0 0 10px var(--color-three);
 }
 
 .section {
     display: block;
     width: 100%;
+    overflow: hidden;
+}
+
+#section-0,
+#section-5,
+#section-10,
+#section-15,
+#section-20,
+#section-25,
+#section-30 {
+    background: linear-gradient(135deg, #2a2020 0%, #4a1a0a 100%);
+    border-left: 4px solid var(--color-one);
+    position: relative;
+}
+
+#section-0::before,
+#section-5::before,
+#section-10::before,
+#section-15::before,
+#section-20::before,
+#section-25::before,
+#section-30::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at top right, rgba(255, 64, 0, 0.05), transparent 70%);
+    pointer-events: none;
+}
+
+#section-1,
+#section-6,
+#section-11,
+#section-16,
+#section-21,
+#section-26,
+#section-31 {
+    background: linear-gradient(135deg, #1a2025 0%, #003040 100%);
+    border-left: 4px solid var(--color-two);
+    position: relative;
+}
+
+#section-1::before,
+#section-6::before,
+#section-11::before,
+#section-16::before,
+#section-21::before,
+#section-26::before,
+#section-31::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at top right, rgba(0, 140, 192, 0.05), transparent 70%);
+    pointer-events: none;
+}
+
+#section-2,
+#section-7,
+#section-12,
+#section-17,
+#section-22,
+#section-27 {
+    background: linear-gradient(135deg, #252520 0%, #3d4000 100%);
+    border-left: 4px solid var(--color-three);
+    position: relative;
+}
+
+#section-2::before,
+#section-7::before,
+#section-12::before,
+#section-17::before,
+#section-22::before,
+#section-27::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at top right, rgba(202, 215, 0, 0.05), transparent 70%);
+    pointer-events: none;
+}
+
+#section-3,
+#section-8,
+#section-13,
+#section-18,
+#section-23,
+#section-28 {
+    background: linear-gradient(135deg, #1a201a 0%, #003300 100%);
+    border-left: 4px solid var(--color-four);
+    position: relative;
+}
+
+#section-3::before,
+#section-8::before,
+#section-13::before,
+#section-18::before,
+#section-23::before,
+#section-28::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at top right, rgba(0, 152, 0, 0.05), transparent 70%);
+    pointer-events: none;
+}
+
+#section-4,
+#section-9,
+#section-14,
+#section-19,
+#section-24,
+#section-29 {
+    background: linear-gradient(135deg, #201a25 0%, #2d0050 100%);
+    border-left: 4px solid var(--color-five);
+    position: relative;
+}
+
+#section-4::before,
+#section-9::before,
+#section-14::before,
+#section-19::before,
+#section-24::before,
+#section-29::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at top right, rgba(128, 0, 255, 0.05), transparent 70%);
+    pointer-events: none;
 }
 
 .inner-section {
     padding: 0.5rem 25% 0.5rem 25%;
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 640px) {
@@ -276,46 +494,3 @@ nav {
     padding-bottom: 0.5rem;
 }
 
-#section-0,
-#section-4,
-#section-8,
-#section-12,
-#section-16,
-#section-20,
-#section-24,
-#section-28 {
-    background-color: var(--color-one);
-}
-
-#section-1,
-#section-5,
-#section-9,
-#section-13,
-#section-17,
-#section-21,
-#section-25,
-#section-29 {
-    background-color: var(--color-two);
-}
-
-#section-2,
-#section-6,
-#section-10,
-#section-14,
-#section-18,
-#section-22,
-#section-26,
-#section-30 {
-    background-color: var(--color-three);
-}
-
-#section-3,
-#section-7,
-#section-11,
-#section-15,
-#section-19,
-#section-23,
-#section-27,
-#section-31 {
-    background-color: var(--color-four);
-}
