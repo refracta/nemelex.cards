@@ -1,0 +1,175 @@
+/* Combined style - Dark backgrounds with card patterns */
+
+/* Override section backgrounds to be dark like rules.html */
+.section {
+    background-color: #0a0a0a !important;
+    border-left: none !important;
+}
+
+.section::before {
+    display: none !important;
+}
+
+/* Keep the gradient backgrounds but darker */
+#section-0 {
+    background: linear-gradient(135deg, #1a1616 0%, #2a0a05 100%) !important;
+}
+
+#section-1 {
+    background: linear-gradient(135deg, #0d1013 0%, #001520 100%) !important;
+}
+
+#section-2 {
+    background: linear-gradient(135deg, #131310 0%, #1e2000 100%) !important;
+}
+
+#section-3 {
+    background: linear-gradient(135deg, #0d100d 0%, #001a00 100%) !important;
+}
+
+#section-4 {
+    background: linear-gradient(135deg, #100d13 0%, #160028 100%) !important;
+}
+
+/* Content cards with playing card patterns inside dark sections */
+.content-card {
+    background-color: rgba(20, 20, 20, 0.95);
+    border-radius: 12px;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+    padding: 0;
+}
+
+/* Remove old card pattern classes from sections */
+.card-pattern-gray,
+.card-pattern-blue,
+.card-pattern-red {
+    background: inherit !important;
+}
+
+/* Apply card styles to content divs */
+.trump-card {
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+}
+
+/* Specific deck styles */
+.trump-card.gray-deck {
+    background: #393c64;
+    border: 24px solid #a59583;
+    box-shadow: 
+        inset 0 0 0 2px #777777,
+        0 8px 32px rgba(0, 0, 0, 0.7);
+}
+
+.trump-card.blue-deck {
+    background: #0c2382;
+    border: 24px solid #ececee;
+    box-shadow: 
+        inset 0 0 0 2px #717a8c,
+        0 8px 32px rgba(0, 0, 0, 0.7);
+}
+
+.trump-card.red-deck {
+    background: #c7c7c7;
+    border: 24px solid #c4a552;
+    box-shadow: 
+        inset 0 0 0 2px #ab0101,
+        0 8px 32px rgba(0, 0, 0, 0.7);
+}
+
+/* Apply patterns from style_playing_card.css to content areas */
+.inner-section h2,
+.inner-section p,
+.inner-section blockquote {
+    background-color: rgba(20, 20, 20, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    position: relative;
+}
+
+/* Section 1 content gets ornate deck styling */
+#section-1 .inner-section > h2,
+#section-1 .inner-section > p {
+    background: #0c2382;
+    border: 16px solid #ececee;
+    box-shadow: 
+        inset 0 0 0 1px #717a8c,
+        0 4px 20px rgba(0, 0, 0, 0.5);
+    color: #ececee;
+}
+
+/* Section 2 content gets legendary deck styling */
+#section-2 .inner-section > h2,
+#section-2 .inner-section > p {
+    background: #c7c7c7;
+    border: 16px solid #c4a552;
+    box-shadow: 
+        inset 0 0 0 1px #ab0101,
+        0 4px 20px rgba(0, 0, 0, 0.5);
+    color: #2a2a2a;
+}
+
+/* Section 3 content gets plain deck styling */
+#section-3 .inner-section > h2,
+#section-3 .inner-section > p {
+    background: #393c64;
+    border: 16px solid #a59583;
+    box-shadow: 
+        inset 0 0 0 1px #777777,
+        0 4px 20px rgba(0, 0, 0, 0.5);
+    color: #f5f5f5;
+}
+
+/* Ensure text is readable on card backgrounds */
+#section-2 a {
+    color: #0c2382;
+}
+
+#section-2 a:hover {
+    color: #ab0101;
+    text-shadow: 0 0 5px currentColor;
+}
+
+/* Subtle pattern overlays */
+.inner-section > h2::before,
+.inner-section > p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0.1;
+    background: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(255, 255, 255, 0.05) 10px,
+            rgba(255, 255, 255, 0.05) 20px
+        );
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .trump-card,
+    #section-1 .inner-section > h2,
+    #section-1 .inner-section > p,
+    #section-2 .inner-section > h2,
+    #section-2 .inner-section > p,
+    #section-3 .inner-section > h2,
+    #section-3 .inner-section > p {
+        border-width: 12px;
+        padding: 1rem;
+    }
+}

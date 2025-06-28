@@ -1,0 +1,549 @@
+ Dungeon Crawl Stone Soup version 0.34-a0-164-gb288c88578 (webtiles) character file.
+
+Game seed: 7373101301943578876
+
+10182 Dogchiho the Destroyer (level 11, -2/89 HPs)
+             Began as a Yellow Draconian Conjurer on June 25, 2025.
+             Was a Believer of Vehumet.
+             Succumbed to a cane toad's poison
+             ... on level 1 of the Lair of Beasts.
+             The game lasted 00:28:52 (16472 turns).
+
+Dogchiho the Destroyer (Yellow Draconian Conjurer) Turns: 16472, Time: 00:28:53
+
+Health: -2/89      AC: 16    Str:  9    XL:     11   Next: 32%
+Magic:  3/24       EV: 11    Int: 23    God:    Vehumet [**....]
+Gold:   521        SH:  0    Dex: 12    Spells: 18/29 levels left
+
+rFire   + . .        F - +4 war axe "Ughoingi" {speed, rElec rPois Dex+2 SInv}
+rCold   + . .        (no offhand)
+rNeg    . . .        (no helmet)
+rPois   +            b - +0 cloak
+rElec   +            D - +0 pair of gloves
+rCorr   +            E - +2 pair of boots
+SInv    +            (no amulet)
+Will    +....        g - +4 ring of protection
+Stlth   ++           m - ring of willpower
+HPRegen 0.34/turn
+MPRegen 0.19/turn
+
+%: no passive effects
+@: lethally poisoned (-2 -> -25), resistant
+A: caustic breath, AC +7, unfitting armour, cold-blooded, acid resistance,
+armoured tail 1
+a: Caustic Breath, Renounce Religion
+
+
+You were on level 1 of the Lair of Beasts.
+You worshipped Vehumet.
+Vehumet was pleased with you.
+You visited 3 branches of the dungeon, and saw 12 of its levels.
+
+You collected 521 gold pieces.
+
+Inventory:
+
+Hand Weapons
+ F - the +4 war axe "Ughoingi" (weapon) {speed, rElec rPois Dex+2 SInv}
+   (You found it on level 10 of the Dungeon)   
+   
+   rElec:      It insulates you from electricity.
+   rPois:      It protects you from poison.
+   Dex+2:      It affects your dexterity (+2).
+   SInv:       It lets you see invisible.
+Missiles
+ u - 12 poisoned darts
+Armour
+ b - a +0 cloak (worn)
+ D - a +0 pair of gloves (worn)
+ E - a +2 pair of boots (worn)
+ H - a +0 kite shield
+Jewellery
+ g - a +4 ring of protection (worn)
+ m - a ring of willpower (worn)
+Wands
+ v - a wand of digging (12)
+ y - a wand of mindburst (11)
+ A - a wand of flame (97)
+Scrolls
+ a - a scroll of butterflies {unknown}
+ d - a scroll of immolation {unknown}
+ f - a scroll of poison {unknown}
+ h - 2 scrolls of teleportation
+ i - a scroll of noise
+ j - a scroll of blinking {unknown}
+ k - 2 scrolls of enchant weapon {unknown}
+ n - a scroll of fog {unknown}
+ q - a scroll of revelation {unknown}
+ s - a scroll of amnesia {unknown}
+ x - a scroll of silence {unknown}
+ G - a scroll of vulnerability {unknown}
+Potions
+ c - a potion of brilliance
+ e - 2 potions of mutation
+ o - a potion of might
+ B - 4 potions of lignification
+
+
+   Skills:
+ + Level 6.2 Fighting
+ - Level 1.7 Dodging
+ - Level 1.7 Stealth
+ - Level 5.2 Shields
+ + Level 9.9 Spellcasting
+ - Level 12.0 Conjurations
+ - Level 3.0 Translocations
+ + Level 1.1 Ice Magic
+ - Level 3.0 Alchemy
+
+
+You had 18 spell levels left.
+You knew the following spells:
+
+ Your Spells              Type           Power      Damage    Failure   Level
+a - Magic Dart            Conj           100%       1d8       1%          1
+b - Searing Ray           Conj           100%       2d8       1%          2
+c - Fulminant Prism       Conj/Alch      22%        3d12      2%          4
+d - Iskenderun's Mystic   Conj/Tloc      45%        2d10 (+2d52%          4
+
+Your spell library contained the following spells:
+
+ Spells                   Type           Power      Damage    Failure   Level
+ Stone Arrow              Conj/Erth      76%        3d11      1%          3
+ Hailstorm                Conj/Ice       41%        3d9       1%          3
+ Mephitic Cloud           Conj/Alch/Air  34%        N/A       2%          3
+ Ensorcelled Hibernation  Hex/Ice        28%        N/A       7%          2
+ Summon Ice Beast         Ice/Summ       14%        N/A       14%         3
+ Dazzling Flash           Hex/Fire       22%        N/A       17%         3
+ Passwall                 Erth           11%        N/A       17%         3
+ Swiftness                Air            11%        N/A       17%         3
+ Freezing Cloud           Conj/Ice/Air   15%        6-21      26%         5
+ Anguish                  Hex/Necr       5%         N/A       50%         4
+ Cause Fear               Hex            5%         N/A       50%         4
+ Curse of Agony           Necr           11%        N/A       85%         5
+ Silence                  Hex/Air        5%         N/A       85%         5
+ Permafrost Eruption      Ice/Erth       7%         2x4d2     100%        6
+ Enfeeble                 Hex            5%         N/A       100%        7
+ Ozocubu's Refrigeration  Ice            8%         4d9       100%        7
+ Polar Vortex             Ice            8%         12d1*     100%        9
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (10/15)            Temple (1/1) D:7            Lair (1/5) D:8         
+   Orc: D:9-12      
+
+Altars:
+Ashenzari
+Cheibriados
+Dithmenos
+Elyvilon
+Fedhas
+Gozag
+Hepliaklqana
+Kikubaaqudgha
+Makhleb
+Nemelex Xobeh
+Okawaru
+Qazlal
+Ru
+Sif Muna
+Trog
+Uskayaw
+Vehumet
+Wu Jian
+Xom
+Yredelemnul
+Zin
+The Shining One
+
+Shops:
+D:6 :   D:7 *
+
+Annotations:
+D:3 2 transporters
+D:5 5 runed translucent doors
+
+
+Innate Abilities, Weirdness & Mutations
+
+You can breathe corrosive fumes.
+Your lurid yellow scales are hard. (AC +7)
+You cannot fit into any form of body armour.
+You are cold-blooded and may be slowed by cold attacks.
+You are resistant to acid. (rCorr)
+You have an armoured tail.
+
+Message History
+
+You hit the cane toad.
+You feel very sick.
+The cane toad stings you! The yak gores you but does no damage.
+The cane toad closely misses you.
+You hit the yak.
+The yak is severely wounded.
+You closely miss the cane toad. You feel sick.
+The yak gores you but does no damage. The cane toad closely misses you.
+Casting: Iskenderun's Mystic Blast (dangerous; 2% risk of failure)
+Confirm with . or Enter, or press ? or * to list all spells.
+Aiming: Searing Ray (safe; 1% risk of failure)
+Press: ? - help, Shift-Dir - straight line
+Aim: a yak (severely wounded, 90% to hit)
+You focus your ray upon the yak. The searing ray hits the yak!
+You kill the yak!
+Vehumet accepts your kill.
+(Press . to maintain the ray.)
+You feel sick. The cane toad barely misses you.
+You hit the cane toad.
+You tail-slap the cane toad, but do no damage.
+The cane toad is heavily wounded.
+You stop channelling your searing ray. You feel sick.
+The cane toad stings you!!
+You closely miss the cane toad.
+You tail-slap the cane toad, but do no damage.
+The cane toad is heavily wounded.
+You feel sick. The cane toad completely misses you.
+You hit the cane toad but do no damage. You hit the cane toad. You feel sick.
+The cane toad stings you! The cane toad closely misses you.
+The cane toad stings you!
+* * * LOW HITPOINT WARNING * * *
+The cane toad stings you but does no damage.
+You hit the cane toad but do no damage. You hit the cane toad. You feel sick.
+The cane toad stings you but does no damage.
+The cane toad stings you!
+* * * LOW HITPOINT WARNING * * *
+You are lethally poisoned!
+The cane toad poisons you!
+You feel protected.
+You die...
+
+ ................
+ .........#####.
+ .........#
+ ........Y#
+ .........#
+..........#                #
+..........###       ###    #
+..........†.#########.######
+..........F@................
+..........F......(..........
+.............##.##########.#
+.............####        ###
+.......<.....#
+.............#     ###     #
+.............#######.#######
+........[...................
+............................
+
+
+You could see 2 cane toads.
+
+Vanquished Creatures
+  Snorg (D:10)
+  3 two-headed ogres
+  Joseph (D:6)
+  Maggie (D:6)
+  Jeremiah (D:6)
+  A komodo dragon (D:8)
+  2 trolls
+  2 hornets
+  Prince Ribbit (D:6)
+  Sigmund (D:6)
+  2 shadowghasts
+  A wraith (D:7)
+  2 wyverns
+  3 yaks (Lair:1)
+  A steam dragon (D:7)
+  8 water moccasins
+  Duvessa (D:7)
+  2 orc warriors
+  3 ice beasts
+  2 sky beasts
+  2 black bears
+  3 centaurs
+  A kobold brigand (D:6)
+  3 bullfrogs
+  A gnoll sergeant (D:9)
+  2 scorpions
+  8 wights
+  Dowan (D:6)
+  6 killer bees (D:10)
+  4 howler monkeys
+  4 hounds
+  A jelly (D:4)
+  5 orc priests
+  Crazy Yiuf (D:7)
+  A gnoll bouda (D:8)
+  2 iguanas
+  8 orc wizards
+  10 adders
+  8 gnolls
+  2 ufetubi (D:5)
+  3 dart slugs
+  41 orcs
+  A ribbon worm (D:3)
+  12 endoplasms
+  2 giant cockroaches (D:1)
+  8 hobgoblins
+  6 jackals (D:1)
+  7 quokkas
+  6 ball pythons
+  4 bats
+  8 frilled lizards
+  8 goblins
+  15 kobolds
+  8 rats
+241 creatures vanquished.
+
+Notes
+Turn   | Place    | Note
+-------+----------+-------------------------------------------
+     0 | D:1      | Dogchiho the Draconian Conjurer began the quest for the
+                  | Orb.
+     0 | D:1      | Reached XP level 1. HP: 14/14 MP: 3/3
+   328 | D:1      | Reached XP level 2. HP: 21/22 MP: 0/5
+   436 | D:1      | Reached skill level 1 in Fighting
+   757 | D:1      | Learned a level 2 spell: Searing Ray
+   973 | D:1      | Reached XP level 3. HP: 27/28 MP: 0/6
+  1926 | D:2      | Found a bloodstained altar of Trog.
+  1981 | D:2      | Reached XP level 4. HP: 35/35 MP: 4/8
+  2441 | D:2      | Found a faded altar of an unknown god.
+  2945 | D:2      | Learned a level 4 spell: Fulminant Prism
+  3011 | D:3      | Found a shimmering altar of Xom.
+  3011 | D:3      | Found a shimmering blue altar of Sif Muna.
+  3016 | D:3      | Reached skill level 5 in Conjurations
+  3088 | D:3      | Noticed Sigmund
+  3602 | D:4      | Found a blossoming altar of Fedhas.
+  3693 | D:4      | Reached XP level 5. HP: 40/40 MP: 2/10
+  3776 | D:4      | Found a white marble altar of Elyvilon.
+  4468 | D:4      | Reached XP level 6. HP: 47/47 MP: 8/12
+  5146 | D:5      | Entered Level 5 of the Dungeon
+  5146 | D:5      | Noticed a redback
+  5146 | D:5      | Noticed a redback
+  5147 | D:5      | Noticed a redback
+  5155 | D:5      | Noticed a redback
+  5155 | D:5      | Noticed a water moccasin
+  5155 | D:5      | Noticed a water moccasin
+  5155 | D:5      | Noticed a water moccasin
+  5194 | D:5      | Reached skill level 6 in Conjurations
+  5199 | D:5      | Learned a level 4 spell: Iskenderun's Mystic Blast
+  5374 | D:5      | Found the +9 staff of Olgreb {rPois∞}
+  5461 | D:5      | Reached skill level 1 in Translocations
+  5461 | D:5      | Reached skill level 1 in Alchemy
+  5546 | D:5      | Your scales start taking on a lurid yellow colour.
+  5546 | D:5      | Reached XP level 7. HP: 48/52 MP: 1/14
+  5546 | D:5      | Gained mutation: You are resistant to acid. (rCorr) [Yellow
+                  | Draconian growth]
+  5746 | D:5      | Reached skill level 5 in Spellcasting
+  6401 | D:3      | Found a transporter.
+  6418 | D:3      | Found a transporter.
+  6512 | D:3      | Found a broken altar of Ashenzari.
+  6696 | D:6      | Noticed Maggie
+  7021 | D:6      | Noticed Prince Ribbit
+  7123 | D:6      | Reached skill level 7 in Conjurations
+  7123 | D:6      | Reached XP level 8. HP: 57/59 MP: 1/15
+  7537 | D:6      | Noticed Jeremiah
+  7838 | D:6      | Reached skill level 8 in Conjurations
+  7885 | D:6      | Found Oxymehiemi's Vocational Training.
+  8315 | D:7      | Found Uthraush's General Store.
+  8356 | D:7      | Noticed Joseph
+  8405 | D:7      | Found a staircase to the Ecumenical Temple.
+  8459 | Temple   | Entered the Ecumenical Temple
+  8921 | D:7      | Reached skill level 9 in Conjurations
+  8990 | D:7      | Found a radiant altar of Vehumet.
+  9134 | D:7      | Reached XP level 9. HP: 58/69 MP: 7/18
+  9555 | D:7      | Noticed Dowan
+  9628 | D:7      | Became a worshipper of Vehumet
+  9628 | D:7      | Offered knowledge of Sandblast by Vehumet.
+ 10237 | D:8      | Reached skill level 10 in Conjurations
+ 10427 | D:8      | Noticed a komodo dragon
+ 10455 | D:8      | HP: 5/103 [komodo dragon (13)]
+ 10456 | D:8      | Killed a komodo dragon
+ 10456 | D:8      | Reached * piety under Vehumet
+ 10755 | D:8      | Found a staircase to the Lair.
+ 10779 | D:8      | Reached skill level 11 in Conjurations
+ 11431 | D:9      | Reached XP level 10. HP: 77/77 MP: 18/22
+ 11775 | D:9      | Noticed a two-headed ogre
+ 11809 | D:9      | Killed a two-headed ogre
+ 11810 | D:9      | Reached skill level 12 in Conjurations
+ 11822 | D:9      | Noticed a two-headed ogre
+ 12291 | D:9      | Found a shadowy altar of Dithmenos.
+ 12349 | D:9      | Killed a two-headed ogre
+ 12350 | D:9      | Reached skill level 1 in Shields
+ 12574 | D:10     | Entered Level 10 of the Dungeon
+ 12578 | D:10     | Reached ** piety under Vehumet
+ 12579 | D:10     | Offered knowledge of Stone Arrow by Vehumet.
+ 12581 | D:10     | Reached skill level 5 in Fighting
+ 12773 | D:10     | Noticed a two-headed ogre
+ 12786 | D:10     | Killed a two-headed ogre
+ 12967 | D:10     | Found a sacrificial altar of Ru.
+ 13035 | D:10     | Paralysed by a hornet for 3 turns
+ 13204 | D:10     | Identified the +4 war axe "Ughoingi" {speed, rElec rPois
+                  | Dex+2 SInv}
+ 13341 | D:10     | Noticed Snorg
+ 13771 | D:10     | Killed Snorg
+ 13772 | D:10     | Reached XP level 11. HP: 89/89 MP: 7/24
+ 14736 | D:6      | submit
+ 14736 | D:6      | submit
+ 14736 | D:6      | submit
+ 14795 | D:6      | Killed Maggie
+ 15316 | D:7      | Noticed Duvessa
+ 15344 | D:7      | Killed Duvessa
+ 15633 | D:6      | submit
+ 15633 | D:6      | Killed Prince Ribbit
+ 15633 | D:6      | Killed Sigmund
+ 15639 | D:6      | Killed Dowan
+ 15641 | D:6      | Killed Joseph
+ 15642 | D:6      | Reached skill level 5 in Shields
+ 15834 | D:6      | Killed Jeremiah
+ 16251 | D:7      | Noticed Crazy Yiuf
+ 16304 | D:7      | Killed Crazy Yiuf
+ 16383 | Lair:1   | Entered Level 1 of the Lair of Beasts
+ 16462 | Lair:1   | Reached skill level 1 in Ice Magic
+ 16471 | Lair:1   | HP: 3/89 [cane toad (13)]
+ 16472 | Lair:1   | Succumbed to a cane toad's poison
+
+Illustrated notes
+
+...#...........## ##............⌠
+####............#  #.............
+#  #.........<..####..@..........
+#  #......F......................
+   #...........)................⌠
+   #.............................
+####............@................
+...#..@.................)........
+..........#.....@................
+......#.##.......................
+.....#####.......................
+....##  #..............##........
+...#### #..............# ##....#.
+..F...###..............#   ##....
+#.....##..............##     ##..
+....).##.........../..#       ###
+....................[.#         #
+
+Turn 14736 on D:6: submit
+
+...#...........## ##............⌠
+####............#  #.............
+#  #.........<..####..@..........
+#  #......F......................
+   #...........)................⌠
+   #.............................
+####............@................
+...#..@.................)........
+..........#.....@................
+......#.##.......................
+.....#####.......................
+....##  #..............##........
+...#### #..............# ##....#.
+..F...###..............#   ##....
+#.....##..............##     ##..
+....).##.........../..#       ###
+....................[.#         #
+
+Turn 14736 on D:6: submit
+
+.####............#  #............
+.#  #.........<..####............
+##  #..........................§.
+    #...........)................
+    #............................
+#####........§....§§.............
+....#...........§........(.......
+...........#...F@@...............
+.......#.##.....@..........§.....
+......#####......................
+.....##  #..............##.......
+....#### #..............####....#
+#......###.......e......#  ###...
+##.....##..............##    ###.
+.....(.##.........../..#       ##
+.................§...[.#
+......................##
+
+Turn 15633 on D:6: submit
+
+Levels and vault maps discovered:
+D:1:      onia_arrival_mini_spirals, layout_loops_ring, minmay_split_cup_large
+D:2:      layout_loops_ring, basic_altar, hellmonk_ecumenical_altar_zigzags
+D:3:      gammafunk_steamed_eel, layout_basic,
+          mainiacjoe_overflow_surrounded_room, amethyst_overflow_temple_binary,
+          uniq_sigmund
+D:4:      layout_basic, elyvilon_altar_1, mainiacjoe_overflow_paths,
+          kennysheep_flooded_box
+D:5:      layout_gridville, minmay_statues_item,
+          minmay_guarded_unrand_staff_of_olgreb
+D:6:      layout_cave_pods, nicolae_shop_vocational, uniq_maggie, uniq_jeremiah,
+          uniq_prince_ribbit1
+D:7:      layout_loops_corners, lemuel_tele_altar, minmay_temple_entry_junction,
+          serial_shops, shop, uniq_crazy_yiuf_cottage, uniq_duvessa, uniq_joseph
+D:8:      layout_loops_ring, due_lair_maze_entry_diamond,
+          kennysheep_minor_cross, minivault_19
+D:9:      layout_rooms, grunt_dithmenos_smoke_and_mirrors
+D:10:     layout_irregular_city, hangedman_ru_absence, uniq_snorg
+Temple:   eino_temple_water
+Lair:1:   layout_long_grid
+
+Skill      XL: |  1  2  3  4  5  6  7  8  9 10 11 |
+---------------+----------------------------------+-----
+Fighting       |     1                 3     6    |  6.2
+Spellcasting   |        3     4     5  6  8  9    |  9.9
+Conjurations   |           5     6  7  9 11 12    | 12.0
+Translocations |                 1  3             |  3.0
+Alchemy        |                 1  3             |  3.0
+Shields        |                             4  5 |  5.2
+Ice Magic      |                                1 |  1.1
+Dodging        |                                  |  1.7
+Stealth        |                                  |  1.7
+
+Action                     |  1- 3 |  4- 6 |  7- 9 | 10-12 || total
+---------------------------+-------+-------+-------+-------++-------
+  Melee: Unarmed           |    46 |       |       |       ||    46
+         Tailslap          |     3 |     1 |     5 |     4 ||    13
+         Dagger            |     2 |     3 |    27 |       ||    32
+         War axe           |       |       |       |    17 ||    17
+  Throw: Dart              |       |       |       |     1 ||     1
+   Cast: Magic Dart        |   104 |   107 |    79 |    26 ||   316
+         Searing Ray       |     1 |    15 |    47 |    17 ||    80
+         Iskenderun's Myst |       |     1 |    24 |    42 ||    67
+         Fulminant Prism   |       |       |     9 |    38 ||    47
+Ability: Caustic Breath    |       |       |     3 |     2 ||     5
+  Evoke: Wand              |       |       |     9 |     3 ||    12
+    Use: Scroll            |       |     3 |     5 |     7 ||    15
+         Potion            |       |       |     4 |    14 ||    18
+ Armour: Skin              |    41 |    32 |   110 |   162 ||   345
+  Dodge: Dodged            |    51 |    21 |    47 |   103 ||   222
+
+Table legend: (Time is in decaauts)
+ A = Elapsed time spent in this place.
+ B = Non-inter-level travel time spent in this place.
+ C = Inter-level travel time spent in this place.
+ D = Time resting spent in this place.
+ E = Time spent auto-exploring this place.
+ F = Levels seen in this place.
+ G = Mean time per level.
+                   A        B        C        D        E      F       G
+               +--------+--------+--------+--------+--------+-----+--------+
+         Total |  16542 |  15609 |    933 |   2962 |   9589 |  12 | 1378.5 |
+       Dungeon |  16260 |  15327 |    933 |   2773 |   9531 |  10 | 1626.0 |
+        Temple |    193 |    193 |      0 |    189 |      0 |   1 |  193.0 |
+          Lair |     88 |     88 |      0 |      0 |     58 |   1 |   88.0 |
+               +--------+--------+--------+--------+--------+-----+--------+
+
+Top non-repeatable levels by time:
+     D:7: 2363 daAuts
+     D:6: 2230 daAuts
+     D:8: 2028 daAuts
+     D:5: 1760 daAuts
+     D:4: 1693 daAuts
+     D:1: 1666 daAuts
+     D:2: 1359 daAuts
+    D:10: 1160 daAuts
+     D:9: 1105 daAuts
+     D:3: 894 daAuts
+  Temple: 193 daAuts
+  Lair:1: 88 daAuts
+
