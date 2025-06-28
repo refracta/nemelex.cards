@@ -1,0 +1,322 @@
+/* Nemelex Card Designs - Accurate Recreation */
+
+/* Base card structure */
+.nemelex-card {
+    position: relative;
+    width: 200px;
+    height: 280px;
+    border-radius: 12px;
+    padding: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Black card (Deck.png) */
+.nemelex-card-black {
+    background: linear-gradient(135deg, #888 0%, #ccc 50%, #888 100%);
+}
+
+.nemelex-card-black .card-inner {
+    background: #0a0a0a;
+    border: 2px solid #666;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.nemelex-card-black .star-pattern {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+}
+
+.nemelex-card-black .star-pattern::before,
+.nemelex-card-black .star-pattern::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #cad700;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.nemelex-card-black .star-pattern::after {
+    transform: rotate(45deg);
+}
+
+/* Blue card (Deck_2.png) */
+.nemelex-card-blue {
+    background: linear-gradient(135deg, #888 0%, #ccc 50%, #888 100%);
+}
+
+.nemelex-card-blue .card-inner {
+    background: #001c3d;
+    border: 2px solid #4a6fa5;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.nemelex-card-blue .star-pattern {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+}
+
+.nemelex-card-blue .star-pattern::before,
+.nemelex-card-blue .star-pattern::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00ccff;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.nemelex-card-blue .star-pattern::after {
+    transform: rotate(45deg);
+}
+
+/* Red card (Deck_3.png) */
+.nemelex-card-red {
+    background: linear-gradient(135deg, #888 0%, #ccc 50%, #888 100%);
+}
+
+.nemelex-card-red .card-inner {
+    background: #3d0015;
+    border: 2px solid #8b3a3a;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.nemelex-card-red .star-pattern {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+}
+
+.nemelex-card-red .star-pattern::before,
+.nemelex-card-red .star-pattern::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ff9933;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.nemelex-card-red .star-pattern::after {
+    transform: rotate(45deg);
+}
+
+/* Corner decorations for all cards */
+.card-corner {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-corner.top-left {
+    top: 8px;
+    left: 8px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.card-corner.top-right {
+    top: 8px;
+    right: 8px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.card-corner.bottom-left {
+    bottom: 8px;
+    left: 8px;
+    border-right: none;
+    border-top: none;
+}
+
+.card-corner.bottom-right {
+    bottom: 8px;
+    right: 8px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Apply card patterns to site sections */
+#section-0 {
+    position: relative;
+}
+
+#section-0::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 140px;
+    background: linear-gradient(135deg, #888 0%, #ccc 50%, #888 100%);
+    border-radius: 8px;
+    opacity: 0.1;
+    transform: rotate(-10deg);
+}
+
+#section-0::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 90px;
+    height: 130px;
+    background: #0a0a0a;
+    border: 1px solid #666;
+    border-radius: 6px;
+    opacity: 0.1;
+    transform: rotate(-10deg);
+}
+
+/* Card-inspired containers */
+.content-card {
+    position: relative;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+.content-card::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, #666 0%, #999 50%, #666 100%);
+    border-radius: 12px;
+    z-index: -1;
+}
+
+/* Star decoration for headings */
+.star-heading {
+    position: relative;
+    display: inline-block;
+    padding: 0 50px;
+}
+
+.star-heading::before,
+.star-heading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+}
+
+.star-heading::before {
+    left: 0;
+    background: conic-gradient(
+        from 0deg,
+        var(--color-three) 0deg,
+        transparent 45deg,
+        var(--color-three) 90deg,
+        transparent 135deg,
+        var(--color-three) 180deg,
+        transparent 225deg,
+        var(--color-three) 270deg,
+        transparent 315deg,
+        var(--color-three) 360deg
+    );
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star-heading::after {
+    right: 0;
+    background: conic-gradient(
+        from 45deg,
+        var(--color-three) 0deg,
+        transparent 45deg,
+        var(--color-three) 90deg,
+        transparent 135deg,
+        var(--color-three) 180deg,
+        transparent 225deg,
+        var(--color-three) 270deg,
+        transparent 315deg,
+        var(--color-three) 360deg
+    );
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Animated card flip effect */
+@keyframes card-reveal {
+    0% {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+    50% {
+        transform: rotateY(90deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+.card-reveal {
+    animation: card-reveal 0.8s ease-out;
+    transform-style: preserve-3d;
+}
+
+/* Mini card indicators */
+.mini-card-indicator {
+    display: inline-block;
+    width: 20px;
+    height: 28px;
+    border-radius: 2px;
+    border: 1px solid #888;
+    position: relative;
+    margin: 0 2px;
+}
+
+.mini-card-black {
+    background: #0a0a0a;
+}
+
+.mini-card-blue {
+    background: #001c3d;
+}
+
+.mini-card-red {
+    background: #3d0015;
+}
+
+.mini-card-indicator::after {
+    content: '★';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    color: #cad700;
+}

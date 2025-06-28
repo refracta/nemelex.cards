@@ -1,0 +1,255 @@
+/* Nemelex card pattern applied to UI elements */
+
+/* 섹션 전체에 카드 테두리 스타일 적용 */
+.section {
+    border-top: 3px solid #666;
+    border-bottom: 3px solid #666;
+    box-shadow: 
+        inset 0 1px 0 #888,
+        inset 0 -1px 0 #888;
+}
+
+/* 코너 장식을 모든 박스 요소에 추가 */
+.decorated-box {
+    position: relative;
+    padding: 2rem;
+    background: rgba(10, 10, 10, 0.8);
+    border: 2px solid #666;
+}
+
+.decorated-box::before,
+.decorated-box::after,
+.decorated-box .corner-tl,
+.decorated-box .corner-br {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #888;
+}
+
+.decorated-box::before {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.decorated-box::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
+}
+
+/* 페이지 전체 프레임 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid rgba(136, 136, 136, 0.2);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* 헤더에 카드 패턴 적용 */
+#main-header {
+    border-bottom: 2px solid #666;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+#main-header::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        #888 20%,
+        #888 80%,
+        transparent 100%
+    );
+}
+
+/* 메뉴 아이템에 8각 별 장식 */
+.navlist li {
+    position: relative;
+}
+
+.navlist li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: #666;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.navlist li:hover::after {
+    opacity: 1;
+    height: 8px;
+    background: var(--color-three);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* 카드 스타일 패널 */
+.card-panel {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    border: 3px solid #666;
+    position: relative;
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+.card-panel::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(135deg, #888 0%, #aaa 50%, #888 100%);
+    z-index: -1;
+}
+
+/* 제목 장식 */
+h2, h3 {
+    position: relative;
+    padding-left: 30px;
+}
+
+h2::before,
+h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: currentColor;
+    clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+    opacity: 0.3;
+}
+
+/* 구분선 스타일 */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #666 10%,
+        #666 45%,
+        var(--color-three) 48%,
+        var(--color-three) 52%,
+        #666 55%,
+        #666 90%,
+        transparent
+    );
+    margin: 2rem 0;
+    position: relative;
+}
+
+hr::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: var(--color-three);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* 입력 필드 스타일 */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    background: #0a0a0a;
+    border: 2px solid #666;
+    color: var(--off-white);
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-two);
+    box-shadow: 
+        inset 0 0 0 1px var(--color-two),
+        0 0 10px rgba(0, 140, 192, 0.3);
+}
+
+/* 리스트 스타일 */
+ul li::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 0.5rem;
+    background: var(--color-three);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    vertical-align: middle;
+}
+
+/* 스크롤바 스타일 */
+::-webkit-scrollbar {
+    width: 12px;
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+    border: 1px solid #666;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border: 1px solid #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* 페이지 번호 스타일 */
+.page-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #0a0a0a;
+    border: 2px solid #666;
+    margin: 0 5px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.page-number:hover {
+    border-color: var(--color-three);
+    color: var(--color-three);
+}
+
+.page-number.active {
+    background: #1a1a1a;
+    border-color: var(--color-three);
+    box-shadow: inset 0 0 0 1px var(--color-three);
+}
