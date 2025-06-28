@@ -1,0 +1,253 @@
+/* Advanced Playing Card Patterns with High-Quality Geometry */
+
+/* Import Google Fonts for card symbols */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap');
+
+/* Plain Deck - Sophisticated Spiral Shuriken */
+.content-card.plain-deck {
+    background: #393c64;
+    border: 28px solid #a59583;
+    box-shadow: 
+        inset 0 0 0 1px #777777,
+        inset 0 0 0 3px #393c64,
+        inset 0 0 0 4px #a59583,
+        0 12px 40px rgba(0, 0, 0, 0.8),
+        0 0 80px rgba(165, 149, 131, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-card.plain-deck::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+    background: 
+        url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='blur'%3E%3CfeGaussianBlur in='SourceGraphic' stdDeviation='0.5'/%3E%3C/filter%3E%3ClinearGradient id='shuriken-grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23a59583' stop-opacity='0.8'/%3E%3Cstop offset='50%25' stop-color='%23777777' stop-opacity='0.6'/%3E%3Cstop offset='100%25' stop-color='%23a59583' stop-opacity='0.8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg transform='translate(200,200)'%3E%3Ccircle r='35' fill='none' stroke='%23a59583' stroke-width='3' opacity='0.8'/%3E%3Ccircle r='32' fill='none' stroke='%23777777' stroke-width='1' opacity='0.5'/%3E%3Ccircle r='38' fill='none' stroke='%23777777' stroke-width='1' opacity='0.5'/%3E%3Cg id='blade'%3E%3Cpath d='M0,-40 C-5,-35 -8,-25 -10,-15 L-2,-15 L0,-90 L2,-15 L10,-15 C8,-25 5,-35 0,-40' fill='url(%23shuriken-grad)' filter='url(%23blur)'/%3E%3Cpath d='M0,-90 L-3,-88 L0,-15 L3,-88 Z' fill='%23a59583' opacity='0.9'/%3E%3C/g%3E%3Cuse href='%23blade' transform='rotate(45)'/%3E%3Cuse href='%23blade' transform='rotate(90)'/%3E%3Cuse href='%23blade' transform='rotate(135)'/%3E%3Cuse href='%23blade' transform='rotate(180)'/%3E%3Cuse href='%23blade' transform='rotate(225)'/%3E%3Cuse href='%23blade' transform='rotate(270)'/%3E%3Cuse href='%23blade' transform='rotate(315)'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 280px 280px;
+    background-position: center;
+    animation: shuriken-spin 20s linear infinite;
+    pointer-events: none;
+}
+
+.content-card.plain-deck::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+    background:
+        /* Wind spiral effect */
+        repeating-conic-gradient(
+            from 0deg at 50% 50%,
+            transparent 0deg,
+            rgba(165, 149, 131, 0.05) 3deg,
+            transparent 6deg,
+            transparent 12deg
+        ),
+        /* Decorative corners */
+        radial-gradient(circle at 10% 10%, rgba(165, 149, 131, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 90% 10%, rgba(165, 149, 131, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 10% 90%, rgba(165, 149, 131, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 90% 90%, rgba(165, 149, 131, 0.3) 0%, transparent 20%);
+    animation: wind-flow 30s linear infinite reverse;
+    pointer-events: none;
+}
+
+/* Ornate Deck - Elegant Vortex Collision */
+.content-card.ornate-deck {
+    background: #0c2382;
+    border: 28px solid #ececee;
+    box-shadow: 
+        inset 0 0 0 1px #717a8c,
+        inset 0 0 0 3px #0c2382,
+        inset 0 0 0 4px #ececee,
+        0 12px 40px rgba(0, 0, 0, 0.8),
+        0 0 80px rgba(12, 35, 130, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-card.ornate-deck::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+    background:
+        url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='glow'%3E%3CfeGaussianBlur stdDeviation='3' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3CradialGradient id='vortex1' cx='30%25' cy='30%25' r='40%25'%3E%3Cstop offset='0%25' stop-color='%23ececee' stop-opacity='0'/%3E%3Cstop offset='60%25' stop-color='%23ececee' stop-opacity='0.6'/%3E%3Cstop offset='100%25' stop-color='%23717a8c' stop-opacity='0.8'/%3E%3C/radialGradient%3E%3CradialGradient id='vortex2' cx='70%25' cy='70%25' r='40%25'%3E%3Cstop offset='0%25' stop-color='%23ececee' stop-opacity='0'/%3E%3Cstop offset='60%25' stop-color='%23ececee' stop-opacity='0.6'/%3E%3Cstop offset='100%25' stop-color='%23717a8c' stop-opacity='0.8'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cg filter='url(%23glow)'%3E%3Cpath d='M 120,120 Q 200,150 200,200 T 280,280' fill='none' stroke='url(%23vortex1)' stroke-width='20' stroke-linecap='round'/%3E%3Cpath d='M 280,280 Q 200,250 200,200 T 120,120' fill='none' stroke='url(%23vortex2)' stroke-width='20' stroke-linecap='round'/%3E%3Ccircle cx='120' cy='120' r='3' fill='%23ececee'/%3E%3Ccircle cx='280' cy='280' r='3' fill='%23ececee'/%3E%3C/g%3E%3Cg opacity='0.3'%3E%3Cpath d='M 80,80 Q 200,120 200,200 T 320,320' fill='none' stroke='%23717a8c' stroke-width='1'/%3E%3Cpath d='M 320,320 Q 200,280 200,200 T 80,80' fill='none' stroke='%23717a8c' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-position: center;
+    animation: vortex-rotate 25s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.content-card.ornate-deck::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+    background:
+        /* Ornamental frame */
+        linear-gradient(to right, #ececee 0%, transparent 10%, transparent 90%, #ececee 100%),
+        linear-gradient(to bottom, #ececee 0%, transparent 10%, transparent 90%, #ececee 100%),
+        /* Center cross */
+        linear-gradient(to right, transparent 48%, rgba(236, 236, 238, 0.2) 48%, rgba(236, 236, 238, 0.2) 52%, transparent 52%),
+        linear-gradient(to bottom, transparent 48%, rgba(236, 236, 238, 0.2) 48%, rgba(236, 236, 238, 0.2) 52%, transparent 52%);
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Legendary Deck - Majestic Dragon Design */
+.content-card.legendary-deck {
+    background: linear-gradient(135deg, #c7c7c7 0%, #d5d5d5 50%, #c7c7c7 100%);
+    border: 28px solid #c4a552;
+    box-shadow: 
+        inset 0 0 0 1px #ab0101,
+        inset 0 0 0 3px #c7c7c7,
+        inset 0 0 0 4px #c4a552,
+        0 12px 40px rgba(0, 0, 0, 0.8),
+        0 0 80px rgba(196, 165, 82, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-card.legendary-deck::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+    background:
+        url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='shadow' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeDropShadow dx='2' dy='2' stdDeviation='2' flood-opacity='0.3'/%3E%3C/filter%3E%3ClinearGradient id='dragon-grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ab0101'/%3E%3Cstop offset='50%25' stop-color='%23cc0000'/%3E%3Cstop offset='100%25' stop-color='%23ab0101'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg filter='url(%23shadow)'%3E%3Cg transform='translate(100,300)'%3E%3Cpath d='M0,0 C-20,-20 -30,-40 -30,-60 C-30,-70 -25,-75 -20,-75 C-10,-75 -5,-70 0,-60 L5,-50 Q10,-40 15,-30 Q20,-20 25,-10 Q30,0 35,10 Q30,5 20,5 Q10,5 0,0 M-20,-60 Q-15,-55 -10,-50 Q-5,-45 0,-40 Q5,-45 10,-50 Q15,-55 20,-60' fill='url(%23dragon-grad)' opacity='0.8'/%3E%3Cpath d='M-30,-60 Q-20,-50 -10,-40 L0,-30 L10,-40 Q20,-50 30,-60' fill='none' stroke='%23ab0101' stroke-width='2' opacity='0.6'/%3E%3C/g%3E%3Cg transform='translate(300,100) rotate(180)'%3E%3Cpath d='M0,0 C-20,-20 -30,-40 -30,-60 C-30,-70 -25,-75 -20,-75 C-10,-75 -5,-70 0,-60 L5,-50 Q10,-40 15,-30 Q20,-20 25,-10 Q30,0 35,10 Q30,5 20,5 Q10,5 0,0 M-20,-60 Q-15,-55 -10,-50 Q-5,-45 0,-40 Q5,-45 10,-50 Q15,-55 20,-60' fill='url(%23dragon-grad)' opacity='0.8'/%3E%3Cpath d='M-30,-60 Q-20,-50 -10,-40 L0,-30 L10,-40 Q20,-50 30,-60' fill='none' stroke='%23ab0101' stroke-width='2' opacity='0.6'/%3E%3C/g%3E%3C/g%3E%3Cg opacity='0.3'%3E%3Ccircle cx='100' cy='300' r='40' fill='none' stroke='%23c4a552' stroke-width='1'/%3E%3Ccircle cx='300' cy='100' r='40' fill='none' stroke='%23c4a552' stroke-width='1'/%3E%3Cpath d='M100,300 Q200,200 300,100' fill='none' stroke='%23c4a552' stroke-width='1' stroke-dasharray='5,5'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-position: center;
+    animation: dragon-float 15s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.content-card.legendary-deck::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+    background:
+        /* Dragon scales texture */
+        repeating-linear-gradient(
+            60deg,
+            transparent,
+            transparent 10px,
+            rgba(171, 1, 1, 0.1) 10px,
+            rgba(171, 1, 1, 0.1) 11px
+        ),
+        repeating-linear-gradient(
+            -60deg,
+            transparent,
+            transparent 10px,
+            rgba(171, 1, 1, 0.1) 10px,
+            rgba(171, 1, 1, 0.1) 11px
+        ),
+        /* Golden corner ornaments */
+        radial-gradient(circle at 5% 5%, rgba(196, 165, 82, 0.4) 0%, transparent 15%),
+        radial-gradient(circle at 95% 5%, rgba(196, 165, 82, 0.4) 0%, transparent 15%),
+        radial-gradient(circle at 5% 95%, rgba(196, 165, 82, 0.4) 0%, transparent 15%),
+        radial-gradient(circle at 95% 95%, rgba(196, 165, 82, 0.4) 0%, transparent 15%);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Enhanced Animations */
+@keyframes shuriken-spin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(0.98); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes wind-flow {
+    0% { transform: rotate(0deg) scale(1); opacity: 0.5; }
+    50% { transform: rotate(-180deg) scale(1.02); opacity: 0.3; }
+    100% { transform: rotate(-360deg) scale(1); opacity: 0.5; }
+}
+
+@keyframes vortex-rotate {
+    0%, 100% { 
+        transform: rotate(0deg) scale(1); 
+        filter: hue-rotate(0deg);
+    }
+    25% { 
+        transform: rotate(5deg) scale(1.02); 
+        filter: hue-rotate(10deg);
+    }
+    50% { 
+        transform: rotate(0deg) scale(0.98); 
+        filter: hue-rotate(0deg);
+    }
+    75% { 
+        transform: rotate(-5deg) scale(1.02); 
+        filter: hue-rotate(-10deg);
+    }
+}
+
+@keyframes dragon-float {
+    0%, 100% { 
+        transform: translateY(0) scale(1); 
+        filter: brightness(1);
+    }
+    33% { 
+        transform: translateY(-5px) scale(1.02); 
+        filter: brightness(1.1);
+    }
+    66% { 
+        transform: translateY(5px) scale(0.98); 
+        filter: brightness(0.9);
+    }
+}
+
+/* High-quality pattern overlays */
+.pattern-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    opacity: 0.1;
+    background-image: 
+        repeating-radial-gradient(
+            circle at 0 0,
+            transparent 0,
+            rgba(0,0,0,0.05) 4px,
+            transparent 8px
+        );
+}
+
+/* Metallic sheen effect */
+.content-card::before {
+    will-change: transform;
+}
+
+.content-card:hover::before {
+    animation-play-state: paused;
+}
+
+/* Fine detail enhancements */
+.content-card {
+    position: relative;
+    background-clip: padding-box;
+}
+
+.content-card.plain-deck::after,
+.content-card.ornate-deck::after,
+.content-card.legendary-deck::after {
+    mix-blend-mode: overlay;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pixel‑Style Card Decks (Balanced ver.)</title>
+  <style>
+    /* ===== 공통 레이아웃 ===== */
+    body{
+      display:flex; justify-content:center; align-items:center;
+      gap:2rem; min-height:100vh; background:#111; font-family:sans-serif;
+    }
+    .card{
+      --w:192px;             /* 카드 넓이 */
+      --h:272px;             /* 카드 높이 */
+      width:var(--w); height:var(--h);
+      position:relative; cursor:pointer; perspective:800px;
+      transform-style:preserve-3d; transition:.4s;
+    }
+    .card:hover{ transform:rotateY(14deg) rotateX(6deg) translateY(-8px); }
+
+    /* ===== 공통 테두리 ===== */
+    .card::before{
+      content:""; position:absolute; inset:0; border-radius:10px;
+      box-shadow:
+              0 3px 0 rgba(0,0,0,.45),
+              0 6px 0 rgba(0,0,0,.35),
+              0 10px 14px rgba(0,0,0,.55);
+      background:
+              conic-gradient(from 135deg at 50% 50%,
+              var(--edgeLight) 0 25%,
+              var(--edgeMid) 25% 50%,
+              var(--edgeDark) 50% 75%,
+              var(--edgeMid) 75% 100%);
+      filter:brightness(1.05);
+      z-index:1;
+    }
+
+    /* ===== 내부 무늬 ===== */
+    .card::after{
+      content:""; position:absolute; inset:6%; border-radius:6px; z-index:2;
+      background:
+              repeating-linear-gradient(45deg,
+              var(--cBright) 0 16px, transparent 16px 32px),
+              repeating-linear-gradient(45deg,
+              var(--cDark)   0 16px, transparent 16px 32px);
+      background-size:32px 32px,32px 32px;
+      background-position:0 0,16px 16px;
+      box-shadow:0 0 0 1px rgba(0,0,0,.7) inset;
+    }
+
+    /* ===== 카드별 색 변수 ===== */
+    /* 1) Legendary */
+    .legendary{
+      --edgeLight:#f0e586; --edgeMid:#d2b75e; --edgeDark:#8a671e;
+      --cBright:#bcbcbc;   /* 은색 계열 평균 */
+      --cDark:#8f0000;     /* 짙은 적색 */
+    }
+    /* 금빛 이동 효과 */
+    .legendary::before{
+      background-size:400% 400%;
+      animation:shimmer 8s linear infinite;
+    }
+    @keyframes shimmer{
+      0%{background-position:0 0;}
+      100%{background-position:200% 200%;}
+    }
+
+    /* 2) Ornate */
+    .ornate{
+      --edgeLight:#dfe3ea; --edgeMid:#9aa1ac; --edgeDark:#555a63;
+      --cBright:#7d88f0;   /* 밝은 남청 */
+      --cDark:#3d4a8c;     /* 깊은 남청 */
+    }
+
+    /* 3) Plain */
+    .plain{
+      --edgeLight:#d9d0c2; --edgeMid:#a79787; --edgeDark:#5d4e3d;
+      --cBright:#9ba0a4;   /* 밝은 회청 */
+      --cDark:#585d60;     /* 짙은 회색 */
+    }
+  </style>
+</head>
+<body>
+<div class="card legendary"></div>
+<div class="card ornate"></div>
+<div class="card plain"></div>
+</body>
+</html>

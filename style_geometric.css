@@ -1,0 +1,167 @@
+/* Advanced Geometric Patterns for Card Backs */
+
+/* Plain Deck - Spiral Shuriken with CSS-Doodle */
+.plain-deck-pattern {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    pointer-events: none;
+}
+
+css-doodle.plain-pattern {
+    --color-border: #a59583;
+    --color-bg: #393c64;
+    --color-accent: #777777;
+}
+
+/* Ornate Deck - Colliding Vortexes */
+.ornate-deck-pattern {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    pointer-events: none;
+}
+
+css-doodle.ornate-pattern {
+    --color-border: #ececee;
+    --color-bg: #0c2382;
+    --color-accent: #717a8c;
+}
+
+/* Legendary Deck - Dragon Geometric */
+.legendary-deck-pattern {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    pointer-events: none;
+}
+
+css-doodle.legendary-pattern {
+    --color-border: #c4a552;
+    --color-bg: #c7c7c7;
+    --color-dragon: #ab0101;
+}
+
+/* SVG-based patterns for better geometric precision */
+.svg-pattern-plain {
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cg id='shuriken'%3E%3Cpath d='M100,100 L100,50 Q95,60 85,65 L100,100 L150,100 Q140,95 135,85 L100,100 L100,150 Q105,140 115,135 L100,100 L50,100 Q60,105 65,115 Z' fill='%23a59583' opacity='0.4'/%3E%3C/g%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='30' fill='none' stroke='%23a59583' stroke-width='2' opacity='0.6'/%3E%3Cuse href='%23shuriken' transform='rotate(0 100 100)'/%3E%3Cuse href='%23shuriken' transform='rotate(45 100 100)'/%3E%3Cuse href='%23shuriken' transform='rotate(90 100 100)'/%3E%3Cuse href='%23shuriken' transform='rotate(135 100 100)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.svg-pattern-ornate {
+    background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='vortex1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ececee;stop-opacity:0.8'/%3E%3Cstop offset='50%25' style='stop-color:%23717a8c;stop-opacity:0.4'/%3E%3Cstop offset='100%25' style='stop-color:transparent'/%3E%3C/linearGradient%3E%3ClinearGradient id='vortex2' x1='100%25' y1='100%25' x2='0%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%23ececee;stop-opacity:0.8'/%3E%3Cstop offset='50%25' style='stop-color:%23717a8c;stop-opacity:0.4'/%3E%3Cstop offset='100%25' style='stop-color:transparent'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50,50 Q200,100 200,200 T350,350' fill='none' stroke='url(%23vortex1)' stroke-width='20' opacity='0.6'/%3E%3Cpath d='M350,350 Q200,300 200,200 T50,50' fill='none' stroke='url(%23vortex2)' stroke-width='20' opacity='0.6'/%3E%3Ccircle cx='100' cy='100' r='80' fill='none' stroke='%23ececee' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='300' cy='300' r='80' fill='none' stroke='%23ececee' stroke-width='2' opacity='0.3'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.svg-pattern-legendary {
+    background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpath id='dragon-scale' d='M0,0 Q10,5 10,10 Q5,10 0,10 Q-5,10 -10,10 Q-10,5 -10,0 Q-5,0 0,0' fill='%23ab0101' opacity='0.3'/%3E%3C/defs%3E%3Cg transform='translate(80,320)'%3E%3Cpath d='M0,0 Q40,-40 80,-40 Q100,-20 100,0 Q80,20 60,40 Q40,40 20,20 Q0,20 0,0' fill='%23ab0101' opacity='0.4'/%3E%3Cuse href='%23dragon-scale' transform='translate(20,0) scale(1.5)'/%3E%3Cuse href='%23dragon-scale' transform='translate(40,-10) scale(1.3)'/%3E%3Cuse href='%23dragon-scale' transform='translate(60,-20) scale(1.2)'/%3E%3C/g%3E%3Cg transform='translate(320,80) rotate(180 0 0)'%3E%3Cpath d='M0,0 Q40,-40 80,-40 Q100,-20 100,0 Q80,20 60,40 Q40,40 20,20 Q0,20 0,0' fill='%23ab0101' opacity='0.4'/%3E%3Cuse href='%23dragon-scale' transform='translate(20,0) scale(1.5)'/%3E%3Cuse href='%23dragon-scale' transform='translate(40,-10) scale(1.3)'/%3E%3Cuse href='%23dragon-scale' transform='translate(60,-20) scale(1.2)'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Animated spiral using pure CSS */
+@keyframes spiral-rotate {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(0.95); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes vortex-pulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.05) rotate(5deg); }
+    75% { transform: scale(0.95) rotate(-5deg); }
+}
+
+@keyframes dragon-breathe {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.1); }
+}
+
+/* Enhanced patterns with mathematical precision */
+.math-spiral {
+    background: 
+        conic-gradient(
+            from 0deg at 50% 50%,
+            transparent 0deg,
+            #a59583 calc(360deg / 8),
+            transparent calc(360deg / 8 * 2),
+            #777777 calc(360deg / 8 * 3),
+            transparent calc(360deg / 8 * 4),
+            #a59583 calc(360deg / 8 * 5),
+            transparent calc(360deg / 8 * 6),
+            #777777 calc(360deg / 8 * 7),
+            transparent 360deg
+        ),
+        radial-gradient(
+            circle at center,
+            #a59583 0%,
+            #a59583 15%,
+            transparent 16%,
+            transparent 30%,
+            #777777 31%,
+            transparent 32%
+        );
+    background-size: 150px 150px;
+    background-position: center;
+    animation: spiral-rotate 20s linear infinite;
+}
+
+.math-vortex {
+    background:
+        radial-gradient(
+            ellipse 200% 200% at 25% 25%,
+            #ececee 0%,
+            transparent 20%
+        ),
+        radial-gradient(
+            ellipse 200% 200% at 75% 75%,
+            #ececee 0%,
+            transparent 20%
+        ),
+        conic-gradient(
+            from 45deg at 25% 25%,
+            transparent 0deg,
+            #717a8c 45deg,
+            transparent 90deg,
+            transparent 270deg,
+            #717a8c 315deg,
+            transparent 360deg
+        ),
+        conic-gradient(
+            from 225deg at 75% 75%,
+            transparent 0deg,
+            #717a8c 45deg,
+            transparent 90deg,
+            transparent 270deg,
+            #717a8c 315deg,
+            transparent 360deg
+        );
+    animation: vortex-pulse 10s ease-in-out infinite;
+}
+
+.math-dragon {
+    background:
+        /* Dragon curve approximation */
+        linear-gradient(45deg, transparent 40%, #ab0101 40%, #ab0101 42%, transparent 42%),
+        linear-gradient(-45deg, transparent 40%, #ab0101 40%, #ab0101 42%, transparent 42%),
+        linear-gradient(135deg, transparent 40%, #ab0101 40%, #ab0101 42%, transparent 42%),
+        linear-gradient(-135deg, transparent 40%, #ab0101 40%, #ab0101 42%, transparent 42%);
+    background-size: 50px 50px, 50px 50px, 100px 100px, 100px 100px;
+    background-position: 
+        0 0,
+        25px 25px,
+        -25px 75px,
+        75px -25px;
+    animation: dragon-breathe 5s ease-in-out infinite;
+}
