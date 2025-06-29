@@ -27,12 +27,12 @@
     padding: 1rem;
     text-align: left;
     font-weight: bold;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid var(--color-three);
 }
 
 .results-table td {
     padding: 0.8rem 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(243, 156, 18, 0.3);
 }
 
 .results-table tbody tr:hover {
@@ -198,6 +198,15 @@
     border-radius: 5px;
     transition: all 0.3s ease;
     font-weight: 500;
+}
+
+/* Link underlines */
+a {
+    text-decoration-color: var(--color-three);
+}
+
+a:hover {
+    text-decoration-color: var(--color-one);
 }
 
 .results-table a:hover,
@@ -465,75 +474,3 @@
     color: var(--off-white);
 }
 
-/* Enhanced Navigation */
-nav {
-    position: relative;
-    margin: 2rem 0;
-}
-
-.navlist {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.navlist li {
-    position: relative;
-}
-
-.navlist a {
-    display: block;
-    padding: 1rem 2rem;
-    color: var(--off-white);
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.navlist a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(135deg, var(--color-two) 0%, var(--color-one) 100%);
-    transition: width 0.3s ease;
-    z-index: -1;
-}
-
-.navlist a:hover::before,
-.navlist a.active::before {
-    width: 100%;
-}
-
-.navlist a:hover {
-    color: white;
-    transform: translateY(-2px);
-}
-
-.navlist a.active {
-    color: white;
-}
-
-/* Separator between items */
-.navlist li:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 20px;
-    width: 1px;
-    background: rgba(255, 255, 255, 0.2);
-}
