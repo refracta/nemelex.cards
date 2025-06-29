@@ -1,0 +1,217 @@
+/* CNC 1st Anniversary Tournament Details Styles */
+
+/* Language Toggle */
+.lang-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.lang-button {
+    background: var(--color-two);
+    color: var(--background-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.lang-button:hover {
+    background: var(--color-one);
+    transform: translateY(-2px);
+}
+
+/* Message Box */
+.message-box {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--color-three);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.message-box h3 {
+    color: var(--color-two);
+    margin-bottom: 1rem;
+}
+
+.message-box p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.message-box .signature {
+    text-align: right;
+    font-style: italic;
+    color: var(--color-three);
+    margin-top: 2rem;
+}
+
+/* Altar Image */
+.altar-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Content Box */
+.content-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.content-box h3 {
+    color: var(--color-two);
+    margin: 2rem 0 1rem 0;
+}
+
+.content-box ul,
+.content-box ol {
+    margin-left: 2rem;
+    line-height: 1.8;
+}
+
+.content-box li {
+    margin-bottom: 0.5rem;
+}
+
+/* Category Box */
+.category-box {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--color-three);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.category-box .highlight {
+    font-size: 1.2rem;
+    color: var(--color-two);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.requirements,
+.notes,
+.scoring,
+.submission {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.requirements h3,
+.notes h3,
+.scoring h3,
+.submission h3 {
+    color: var(--color-three);
+    margin-bottom: 1rem;
+}
+
+.requirements ul,
+.notes ol,
+.submission ol {
+    margin-left: 1.5rem;
+    line-height: 1.8;
+}
+
+.requirements li,
+.notes li,
+.submission li {
+    margin-bottom: 0.5rem;
+}
+
+.note {
+    font-style: italic;
+    color: var(--color-one);
+    margin-top: 1rem;
+}
+
+/* Submission Example */
+.submission-example {
+    background: #1a1a2e;
+    border: 1px solid var(--color-two);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.submission-example h3 {
+    color: var(--color-two);
+    margin-bottom: 1rem;
+}
+
+.submission-example pre {
+    color: var(--off-white);
+    font-family: monospace;
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+
+/* Code blocks */
+code {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-family: monospace;
+    color: var(--color-one);
+}
+
+/* Result Link */
+.result-link-container {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.result-link-button {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: linear-gradient(135deg, var(--color-two) 0%, var(--color-one) 100%);
+    color: var(--background-color) !important;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.result-link-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .lang-toggle {
+        position: static;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .altar-image {
+        max-width: 100%;
+    }
+    
+    .message-box,
+    .content-box,
+    .category-box {
+        padding: 1rem;
+    }
+    
+    .submission-example pre {
+        font-size: 0.85rem;
+    }
+}
