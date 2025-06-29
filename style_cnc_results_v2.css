@@ -85,10 +85,16 @@
     border: 2px solid var(--color-three);
     cursor: pointer;
     transition: transform 0.2s ease;
+    user-select: none;
 }
 
 .player-avatar:hover {
     transform: scale(1.1);
+}
+
+.player-avatar:active {
+    transform: scale(0.95);
+    opacity: 0.8;
 }
 
 /* Score Highlight */

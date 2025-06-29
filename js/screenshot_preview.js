@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let isOverOverlay = false;
     let hoverTimeout;
+    let longPressTimer;
     
     // Find all screenshot links or images with preview capability
-    const screenshotTriggers = document.querySelectorAll('[data-screenshot], .screenshot-trigger, .player-avatar');
+    const screenshotTriggers = document.querySelectorAll('[data-screenshot], .screenshot-trigger');
     
     screenshotTriggers.forEach(trigger => {
         trigger.addEventListener('mouseenter', function(e) {
@@ -30,6 +31,77 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         trigger.addEventListener('mouseleave', function() {
+            clearTimeout(hoverTimeout);
+            setTimeout(() => {
+                if (!isOverOverlay) {
+                    overlay.style.display = 'none';
+                    overlay.classList.remove('active');
+                }
+            }, 100);
+        });
+    });
+    
+    // Handle player avatars differently - show screenshot on long press
+    const playerAvatars = document.querySelectorAll('.player-avatar');
+    
+    playerAvatars.forEach(avatar => {
+        // Get the corresponding gallery button to find screenshots
+        const row = avatar.closest('tr');
+        const galleryBtn = row.querySelector('.screenshot-gallery-btn');
+        const screenshots = galleryBtn ? JSON.parse(galleryBtn.getAttribute('data-screenshots')) : [];
+        
+        // Mouse/touch long press
+        const startLongPress = (e) => {
+            e.preventDefault();
+            longPressTimer = setTimeout(() => {
+                if (screenshots.length === 1) {
+                    // If only one screenshot, show it directly
+                    previewImage.src = screenshots[0];
+                    overlay.style.display = 'flex';
+                    overlay.classList.add('active');
+                } else if (screenshots.length > 1) {
+                    // If multiple screenshots, show gallery
+                    galleryBtn.click();
+                }
+            }, 500); // 500ms long press
+        };
+        
+        const cancelLongPress = () => {
+            clearTimeout(longPressTimer);
+        };
+        
+        // Mouse events
+        avatar.addEventListener('mousedown', startLongPress);
+        avatar.addEventListener('mouseup', cancelLongPress);
+        avatar.addEventListener('mouseleave', cancelLongPress);
+        
+        // Touch events
+        avatar.addEventListener('touchstart', startLongPress);
+        avatar.addEventListener('touchend', cancelLongPress);
+        avatar.addEventListener('touchcancel', cancelLongPress);
+        
+        // Prevent default context menu
+        avatar.addEventListener('contextmenu', (e) => e.preventDefault());
+        
+        // Show screenshot on hover
+        avatar.addEventListener('mouseenter', function(e) {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = setTimeout(() => {
+                if (screenshots.length === 1) {
+                    // If only one screenshot, show it directly
+                    previewImage.src = screenshots[0];
+                    overlay.style.display = 'flex';
+                    overlay.classList.add('active');
+                } else if (screenshots.length > 1) {
+                    // If multiple screenshots, show the first one
+                    previewImage.src = screenshots[0];
+                    overlay.style.display = 'flex';
+                    overlay.classList.add('active');
+                }
+            }, 300);
+        });
+        
+        avatar.addEventListener('mouseleave', function() {
             clearTimeout(hoverTimeout);
             setTimeout(() => {
                 if (!isOverOverlay) {
@@ -90,6 +162,14 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const player = this.getAttribute('data-player');
             const screenshots = JSON.parse(this.getAttribute('data-screenshots'));
+            
+            // If only one screenshot, show it directly
+            if (screenshots.length === 1) {
+                previewImage.src = screenshots[0];
+                overlay.style.display = 'flex';
+                overlay.classList.add('active');
+                return;
+            }
             
             // Clear previous gallery
             galleryGrid.innerHTML = '';
