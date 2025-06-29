@@ -9,6 +9,12 @@
     display: inline-block;
 }
 
+/* Citation alignment */
+#blurb .cite {
+    text-align: left;
+    margin-bottom: 0;
+}
+
 /* Remove h2 left border for this page */
 h2 {
     border-left: none;
