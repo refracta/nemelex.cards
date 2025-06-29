@@ -1,0 +1,109 @@
+/* CNC 1st Anniversary Tournament Details Styles */
+
+/* Inline Logo */
+.inline-logo {
+    height: 1.2em;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+
+/* Language Toggle */
+.lang-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.lang-button {
+    background: var(--color-two);
+    color: var(--off-white);
+    border: 2px solid var(--color-two);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.lang-button:hover {
+    background: var(--color-one);
+    border-color: var(--color-one);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--color-one);
+}
+
+/* Submission Example */
+.submission-example {
+    margin: 2rem 0;
+}
+
+.submission-example h3 {
+    color: var(--color-two);
+    margin-bottom: 1rem;
+}
+
+.submission-example pre {
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--off-white);
+    font-family: var(--monospace);
+    padding: 2rem;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    border: 2px solid var(--color-two);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.requirements,
+.notes {
+    margin: 1.5rem 0;
+}
+
+.requirements h3,
+.notes h3 {
+    color: var(--color-three);
+    margin-bottom: 1rem;
+}
+
+/* Altar Image */
+.altar-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Content Box */
+.content-box {
+    margin: 2rem 0;
+}
+
+.content-box h3 {
+    color: var(--color-two);
+    margin: 2rem 0 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .lang-toggle {
+        position: static;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .submission-example {
+        padding: 1rem;
+    }
+    
+    .submission-example pre {
+        font-size: 0.85rem;
+    }
+}

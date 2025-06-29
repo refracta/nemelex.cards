@@ -1,0 +1,308 @@
+/* Playing card back patterns inspired by Nemelex decks */
+
+/* 회색 카드 패턴 (Deck.png) */
+.card-pattern-gray {
+    position: relative;
+    background: #0a0a0a;
+    overflow: hidden;
+}
+
+.card-pattern-gray::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        /* 중앙 큰 다이아몬드 */
+        radial-gradient(circle at center, transparent 30%, #666 31%, #666 32%, transparent 33%),
+        conic-gradient(from 45deg at 50% 50%, 
+            transparent 0deg, 
+            #cad700 40deg, 
+            transparent 50deg,
+            transparent 130deg,
+            #cad700 140deg,
+            transparent 150deg,
+            transparent 220deg,
+            #cad700 230deg,
+            transparent 240deg,
+            transparent 310deg,
+            #cad700 320deg,
+            transparent 330deg
+        ),
+        /* 반복 다이아몬드 패턴 */
+        repeating-conic-gradient(from 45deg at 25% 25%, 
+            #666 0deg, transparent 90deg, #666 180deg, transparent 270deg, #666 360deg),
+        repeating-conic-gradient(from 45deg at 75% 75%, 
+            #666 0deg, transparent 90deg, #666 180deg, transparent 270deg, #666 360deg);
+    background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
+    background-position: center, center, 0 0, 50px 50px;
+}
+
+.card-pattern-gray::after {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border: 2px solid #666;
+    background: 
+        repeating-linear-gradient(45deg, 
+            transparent, transparent 20px, 
+            rgba(202, 215, 0, 0.1) 20px, rgba(202, 215, 0, 0.1) 21px),
+        repeating-linear-gradient(-45deg, 
+            transparent, transparent 20px, 
+            rgba(202, 215, 0, 0.1) 20px, rgba(202, 215, 0, 0.1) 21px);
+}
+
+/* 파란색 카드 패턴 (Deck_2.png) */
+.card-pattern-blue {
+    position: relative;
+    background: #001c3d;
+    overflow: hidden;
+}
+
+.card-pattern-blue::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        /* 중앙 별 */
+        radial-gradient(circle at center, 
+            #00ccff 5%, transparent 6%,
+            transparent 25%, #00ccff 26%, #00ccff 27%, transparent 28%,
+            transparent 45%, #4a6fa5 46%, #4a6fa5 47%, transparent 48%),
+        /* 교차 패턴 */
+        repeating-linear-gradient(60deg, 
+            transparent, transparent 40px,
+            #4a6fa5 40px, #4a6fa5 41px,
+            transparent 41px, transparent 80px,
+            #00ccff 80px, #00ccff 81px),
+        repeating-linear-gradient(-60deg, 
+            transparent, transparent 40px,
+            #4a6fa5 40px, #4a6fa5 41px,
+            transparent 41px, transparent 80px,
+            #00ccff 80px, #00ccff 81px);
+}
+
+.card-pattern-blue::after {
+    content: '';
+    position: absolute;
+    inset: 15px;
+    border: 3px solid #4a6fa5;
+    border-radius: 8px;
+    background: repeating-conic-gradient(
+        from 0deg at 50% 50%,
+        transparent 0deg,
+        rgba(0, 204, 255, 0.1) 15deg,
+        transparent 30deg,
+        transparent 60deg,
+        rgba(0, 204, 255, 0.1) 75deg,
+        transparent 90deg
+    );
+}
+
+/* 빨강-노랑 카드 패턴 (Deck_3.png) */
+.card-pattern-red {
+    position: relative;
+    background: #3d0015;
+    overflow: hidden;
+}
+
+.card-pattern-red::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        /* 중앙 폭발 패턴 */
+        radial-gradient(circle at center,
+            #ff9933 10%, transparent 11%,
+            transparent 20%, #ff9933 21%, transparent 22%,
+            transparent 30%, #8b3a3a 31%, transparent 32%),
+        /* 방사형 선 */
+        conic-gradient(from 0deg at 50% 50%,
+            transparent 0deg,
+            #ff9933 5deg,
+            transparent 10deg,
+            transparent 35deg,
+            #ff9933 40deg,
+            transparent 45deg,
+            transparent 80deg,
+            #ff9933 85deg,
+            transparent 90deg,
+            transparent 125deg,
+            #ff9933 130deg,
+            transparent 135deg,
+            transparent 170deg,
+            #ff9933 175deg,
+            transparent 180deg,
+            transparent 215deg,
+            #ff9933 220deg,
+            transparent 225deg,
+            transparent 260deg,
+            #ff9933 265deg,
+            transparent 270deg,
+            transparent 305deg,
+            #ff9933 310deg,
+            transparent 315deg,
+            transparent 350deg,
+            #ff9933 355deg,
+            transparent 360deg),
+        /* 코너 장식 */
+        radial-gradient(circle at 20% 20%, #8b3a3a 10%, transparent 11%),
+        radial-gradient(circle at 80% 20%, #8b3a3a 10%, transparent 11%),
+        radial-gradient(circle at 20% 80%, #8b3a3a 10%, transparent 11%),
+        radial-gradient(circle at 80% 80%, #8b3a3a 10%, transparent 11%);
+    background-size: 300px 300px, 300px 300px, 60px 60px, 60px 60px, 60px 60px, 60px 60px;
+    background-position: center, center, 0 0, 100% 0, 0 100%, 100% 100%;
+}
+
+.card-pattern-red::after {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border: 2px solid #8b3a3a;
+    background: 
+        repeating-linear-gradient(90deg,
+            transparent, transparent 30px,
+            rgba(255, 153, 51, 0.1) 30px, rgba(255, 153, 51, 0.1) 31px),
+        repeating-linear-gradient(0deg,
+            transparent, transparent 30px,
+            rgba(255, 153, 51, 0.1) 30px, rgba(255, 153, 51, 0.1) 31px);
+}
+
+/* 섹션별 적용 */
+#section-0,
+#section-3,
+#section-6,
+#section-9,
+#section-12,
+#section-15,
+#section-18,
+#section-21,
+#section-24,
+#section-27,
+#section-30 {
+    position: relative;
+}
+
+/* 회색 카드 패턴 섹션 */
+#section-0,
+#section-9,
+#section-18,
+#section-27 {
+    background: #0a0a0a !important;
+    border-left: 4px solid #666 !important;
+}
+
+#section-0::before,
+#section-9::before,
+#section-18::before,
+#section-27::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 10% 50%, transparent 80px, #cad700 81px, transparent 82px),
+        radial-gradient(circle at 90% 50%, transparent 80px, #cad700 81px, transparent 82px),
+        repeating-linear-gradient(45deg, 
+            transparent, transparent 40px, 
+            rgba(102, 102, 102, 0.1) 40px, rgba(102, 102, 102, 0.1) 41px),
+        repeating-linear-gradient(-45deg, 
+            transparent, transparent 40px, 
+            rgba(102, 102, 102, 0.1) 40px, rgba(102, 102, 102, 0.1) 41px);
+    opacity: 0.5;
+}
+
+/* 파란색 카드 패턴 섹션 */
+#section-1,
+#section-6,
+#section-11,
+#section-16,
+#section-21,
+#section-26,
+#section-31 {
+    background: #001c3d !important;
+    border-left: 4px solid #4a6fa5 !important;
+}
+
+#section-1::before,
+#section-6::before,
+#section-11::before,
+#section-16::before,
+#section-21::before,
+#section-26::before,
+#section-31::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        repeating-linear-gradient(60deg, 
+            transparent, transparent 50px,
+            rgba(74, 111, 165, 0.2) 50px, rgba(74, 111, 165, 0.2) 51px),
+        repeating-linear-gradient(-60deg, 
+            transparent, transparent 50px,
+            rgba(0, 204, 255, 0.2) 50px, rgba(0, 204, 255, 0.2) 51px);
+}
+
+/* 빨강 카드 패턴 섹션 */
+#section-2,
+#section-7,
+#section-12,
+#section-17,
+#section-22,
+#section-27 {
+    background: #3d0015 !important;
+    border-left: 4px solid #8b3a3a !important;
+}
+
+#section-2::before,
+#section-7::before,
+#section-12::before,
+#section-17::before,
+#section-22::before,
+#section-27::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 50% 50%, transparent 100px, rgba(255, 153, 51, 0.1) 101px, transparent 102px),
+        conic-gradient(from 22.5deg at 50% 50%,
+            transparent 0deg,
+            rgba(255, 153, 51, 0.1) 5deg,
+            transparent 10deg,
+            transparent 35deg,
+            rgba(255, 153, 51, 0.1) 40deg,
+            transparent 45deg);
+}
+
+/* 트럼프 카드 스타일 컨테이너 */
+.trump-card {
+    position: relative;
+    background: #1a1a1a;
+    border: 3px solid #888;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.trump-card::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border: 1px solid #666;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.trump-card.gray-deck {
+    background: #0a0a0a;
+    border-color: #666;
+}
+
+.trump-card.blue-deck {
+    background: #001c3d;
+    border-color: #4a6fa5;
+}
+
+.trump-card.red-deck {
+    background: #3d0015;
+    border-color: #8b3a3a;
+}
