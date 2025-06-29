@@ -9,6 +9,24 @@
     display: inline-block;
 }
 
+/* Remove h2 left border for this page */
+h2 {
+    border-left: none;
+    padding-left: 0;
+}
+
+/* Remove section left border */
+.section {
+    border-left: none !important;
+}
+
+#section-0,
+#section-1,
+#section-2,
+#section-3 {
+    border-left: none !important;
+}
+
 /* Results Table */
 .results-table-wrapper {
     overflow-x: auto;
@@ -225,8 +243,8 @@ a:hover {
 }
 
 .link-card {
-    background: #2c3e50;
-    border: 2px solid var(--color-three);
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--color-two);
     border-radius: 10px;
     padding: 2rem;
     text-align: center;
@@ -234,9 +252,10 @@ a:hover {
 }
 
 .link-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.7);
     border-color: var(--color-one);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transform: translateY(-2px);
 }
 
 .link-icon {
@@ -250,13 +269,25 @@ a:hover {
 }
 
 .link-card p {
-    color: var(--off-white);
     margin-bottom: 1.5rem;
-    line-height: 1.6;
+    color: var(--color-three);
+}
+
+.trump-card h3 {
+    color: var(--color-two);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.trump-card p {
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .link-button-fancy {
-    display: inline-block;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
     padding: 0.8rem 2rem;
     background: linear-gradient(135deg, var(--color-two) 0%, var(--color-one) 100%);
     color: var(--background-color) !important;
