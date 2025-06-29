@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let hoverTimeout;
     let longPressTimer;
     
-    // Find all screenshot links or images with preview capability
+    // Find all screenshot links or players with preview capability
     const screenshotTriggers = document.querySelectorAll('[data-screenshot], .screenshot-trigger');
     
     screenshotTriggers.forEach(trigger => {
