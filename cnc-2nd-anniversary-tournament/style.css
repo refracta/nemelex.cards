@@ -159,22 +159,6 @@ body.lang-en .ko {
     min-height: 430px;
     display: grid;
     place-items: center;
-    isolation: isolate;
-}
-
-.hero-art::after {
-    content: "";
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    z-index: 2;
-    width: min(48%, 250px);
-    height: min(56%, 270px);
-    border-radius: 48%;
-    background: radial-gradient(ellipse at center, rgba(5, 6, 9, 0.58), rgba(5, 6, 9, 0.3) 44%, transparent 72%);
-    filter: blur(10px);
-    pointer-events: none;
-    transform: translate(-50%, -50%);
 }
 
 .hero-render-image {
@@ -196,30 +180,21 @@ body.lang-en .ko {
 }
 
 .anniversary-mark {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    z-index: 3;
+    position: relative;
+    z-index: 2;
     display: block;
-    font-size: 10.4rem;
+    font-size: 9.2rem;
     line-height: 0.9;
     font-weight: 900;
     font-family: var(--font-mono);
-    letter-spacing: 0.02em;
     color: transparent;
-    background: linear-gradient(180deg, #fff7d4, var(--gold) 28%, var(--leaf) 52%, var(--wave) 75%, #d9bdff);
+    background: linear-gradient(180deg, var(--fire), var(--gold) 30%, var(--leaf) 52%, var(--wave) 73%, var(--void));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px rgba(5, 7, 10, 0.86);
-    text-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.32),
-        0 0 18px rgba(202, 215, 0, 0.36),
-        0 0 34px rgba(0, 140, 192, 0.28),
-        0 18px 34px rgba(0, 0, 0, 0.64);
-    opacity: 0.96;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 38px rgba(128, 0, 255, 0.34);
+    opacity: 0.9;
 }
 
 .suit-strip {
