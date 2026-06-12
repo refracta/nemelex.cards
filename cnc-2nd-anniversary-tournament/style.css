@@ -255,6 +255,11 @@ h1 {
     letter-spacing: 0;
 }
 
+body.lang-en h1 {
+    font-size: 3.15rem;
+    white-space: nowrap;
+}
+
 .hero-lede {
     margin-bottom: 2rem;
     color: #d9e0ea;
@@ -385,6 +390,22 @@ h3 {
 .category-card:hover,
 .info-card:hover {
     border-color: currentColor;
+}
+
+.feature-link-card {
+    display: block;
+    cursor: pointer;
+}
+
+.feature-link-card:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+.feature-link-card:hover .card-label,
+.feature-link-card:focus-visible .card-label {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
 }
 
 .feature-card p,
@@ -571,6 +592,10 @@ pre {
         font-size: 2.35rem;
         overflow-wrap: break-word;
     }
+
+    body.lang-en h1 {
+        font-size: 2.35rem;
+    }
 }
 
 @media (max-width: 560px) {
@@ -615,6 +640,10 @@ pre {
         font-size: 1.7rem;
     }
 
+    body.lang-en h1 {
+        font-size: 1.85rem;
+    }
+
     .hero-lede {
         font-size: 1rem;
     }
@@ -628,5 +657,11 @@ pre {
     .info-card,
     .category-card {
         padding: 1.1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    body.lang-en h1 {
+        font-size: 1.48rem;
     }
 }
