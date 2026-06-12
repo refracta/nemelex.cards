@@ -228,7 +228,6 @@ body.lang-en .ko {
 .eyebrow,
 .section-kicker,
 .card-label,
-.status-pill,
 .info-value {
     margin: 0;
     font-family: var(--font-mono);
@@ -408,23 +407,6 @@ h3 {
     justify-content: space-between;
     gap: 0.75rem;
     align-items: center;
-}
-
-.status-pill {
-    flex: 0 0 auto;
-    border: 1px solid currentColor;
-    border-radius: 999px;
-    padding: 0.2rem 0.55rem;
-    font-size: 0.72rem;
-    font-weight: 900;
-}
-
-.status-pill.confirmed {
-    color: var(--wave);
-}
-
-.status-pill.draft {
-    color: var(--gold);
 }
 
 .draft-card {
