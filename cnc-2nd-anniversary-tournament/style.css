@@ -165,13 +165,16 @@ body.lang-en .ko {
     position: absolute;
     z-index: 1;
     width: min(94%, 430px);
-    opacity: 0.92;
+    opacity: 1;
     object-fit: contain;
-    mask-image: radial-gradient(circle at 50% 50%, #000 56%, rgba(0, 0, 0, 0.88) 66%, transparent 78%);
-    -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 56%, rgba(0, 0, 0, 0.88) 66%, transparent 78%);
     filter:
+        brightness(1.06)
+        saturate(1.12)
+        contrast(1.02)
         drop-shadow(0 24px 54px rgba(0, 0, 0, 0.54))
+        drop-shadow(0 0 18px rgba(255, 64, 0, 0.13))
         drop-shadow(0 0 24px rgba(0, 140, 192, 0.16))
+        drop-shadow(0 0 18px rgba(0, 152, 0, 0.12))
         drop-shadow(0 0 18px rgba(128, 0, 255, 0.15));
     transform: translateY(-0.85rem);
 }
