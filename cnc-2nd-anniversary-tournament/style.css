@@ -471,6 +471,17 @@ h3 {
     background: currentColor;
 }
 
+.rule-list a,
+.submission-layout a {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+.submission-notes {
+    margin-top: 1rem;
+}
+
 .submission-layout {
     display: grid;
     grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
