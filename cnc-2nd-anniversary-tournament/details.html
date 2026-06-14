@@ -425,8 +425,8 @@
                                 <span class="en">Will and AC give 2 points per pip; EV gives 3 points per pip. Infinite Will counts as 5 pips</span>
                             </li>
                             <li>
-                                <span class="ko">저항: <code>rF * 3 + rC * 3 + rElec * 5</code>. 취약 표시는 음수, 무한 저항은 해당 저항 최대치의 2배로 계산</span>
-                                <span class="en">Resists: <code>rF * 3 + rC * 3 + rElec * 5</code>. Vulnerabilities count as negative pips; infinite resists count as twice that resist's cap</span>
+                                <span class="ko">저항: <code>rF * 3 + rC * 3 + rElec * 5</code>. 취약 표시는 음수, 무한 저항은 <code>MAX_RESIST * 2</code>로 계산합니다. monster max resist는 rF/rC 2, rElec 1입니다.</span>
+                                <span class="en">Resists: <code>rF * 3 + rC * 3 + rElec * 5</code>. Vulnerabilities count as negative pips; infinite resists use <code>MAX_RESIST * 2</code>. Monster max resist is 2 for rF/rC and 1 for rElec.</span>
                             </li>
                             <li>
                                 <span class="ko">데미지: 최대 피해 데미지를 모두 합산한 뒤 <code>floor(damage / 10)</code></span>
@@ -503,8 +503,8 @@
                             <span class="en"><code>Base total = Speed-adjusted stats + Spells</code><br><code>Total = floor(Base total * Status multiplier)</code></span>
                         </p>
                         <p>
-                            <span class="ko">무한 저항은 rF/rC 6칸, rElec 2칸으로 환산합니다. 판데모니엄 군주가 아닌 몬스터나 탐험 모드 제출은 인정하지 않습니다.</span>
-                            <span class="en">Infinite resists count as 6 pips for rF/rC and 2 pips for rElec. Non-lord or explore-mode captures are not eligible.</span>
+                            <span class="ko">무한 저항은 rF 4칸, rC 4칸, rElec 2칸으로 환산합니다. 판데모니엄 군주가 아닌 몬스터나 탐험 모드 제출은 인정하지 않습니다.</span>
+                            <span class="en">Infinite resists count as 4 pips for rF, 4 pips for rC, and 2 pips for rElec. Non-lord or explore-mode captures are not eligible.</span>
                         </p>
                     </article>
                 </div>
