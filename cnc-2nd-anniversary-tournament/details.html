@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CNC 2nd Anniversary Tournament Details | crawl.nemelex.cards</title>
     <link rel="icon" type="image/png" href="../cnc-1st-anniversary-tournament/favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260614-scoring">
 </head>
 <body class="lang-ko">
     <header class="site-header">
@@ -345,12 +345,126 @@
                     </p>
                     <p>
                         <span class="ko">군켓몬은 opking이 로그라이크 갤러리에 올린 2주년 대회 아이디어 초안에서 시작했습니다. 판데모니엄 군주의 능력치를 보고 점수를 매기자는 제안을 바탕으로, 봇 검증과 랭킹/상세 페이지가 붙은 예능 부문으로 구현했습니다.</span>
-                        <span class="en">Goonkemon began with opking's second-anniversary event proposal on the DCInside Roguelike Gallery. The original idea was to score Pandemonium lords by their monster stats; the tournament version adds bot verification, rankings, and capture detail pages.</span>
+                        <span class="en">Goonkemon began with opking's second-anniversary event proposal on the DCInside Roguelike Gallery. The original idea was to score Pandemonium lords by their monster stats; the tournament version adds bot verification, rankings, and capture detail pages. Goonju (군주) means "lord" in Korean, so the name points directly at Pandemonium lords.</span>
                     </p>
                     <a class="origin-link" href="https://gall.dcinside.com/board/view/?id=rlike&amp;no=514927" target="_blank" rel="noopener">
                         <span class="ko">제안 글 보기</span>
                         <span class="en">View the proposal</span>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-band suit-gold-band" id="goonkemon-scoring" aria-labelledby="goonkemon-scoring-title">
+            <div class="section-shell">
+                <div class="section-heading">
+                    <p class="section-kicker">
+                        <span class="ko">Goonkemon Scoring</span>
+                        <span class="en">Goonkemon Scoring</span>
+                    </p>
+                    <h2 id="goonkemon-scoring-title">
+                        <span class="ko">군켓몬 채점 기준</span>
+                        <span class="en">Goonkemon scoring rules</span>
+                    </h2>
+                </div>
+                <div class="scoring-grid">
+                    <article class="score-rule-card suit-fire">
+                        <span class="card-label">
+                            <span class="ko">Base Stats</span>
+                            <span class="en">Base Stats</span>
+                        </span>
+                        <h3>
+                            <span class="ko">기본 스탯 점수</span>
+                            <span class="en">Base stat points</span>
+                        </h3>
+                        <ul class="rule-list">
+                            <li>
+                                <span class="ko">HP: <code>floor(Max HP / 50) + 1</code></span>
+                                <span class="en">HP: <code>floor(Max HP / 50) + 1</code></span>
+                            </li>
+                            <li>
+                                <span class="ko">Will과 AC는 + 한 칸당 2점, EV는 + 한 칸당 3점. 무한 Will은 5칸으로 계산</span>
+                                <span class="en">Will and AC give 2 points per pip; EV gives 3 points per pip. Infinite Will counts as 5 pips</span>
+                            </li>
+                            <li>
+                                <span class="ko">저항: <code>rF * 3 + rC * 3 + rElec * 5</code>. 취약 표시는 음수, 무한 저항은 해당 저항 최대치의 2배로 계산</span>
+                                <span class="en">Resists: <code>rF * 3 + rC * 3 + rElec * 5</code>. Vulnerabilities count as negative pips; infinite resists count as twice that resist's cap</span>
+                            </li>
+                            <li>
+                                <span class="ko">공격: 공격표의 최대 피해 숫자를 모두 합산한 뒤 <code>floor(total / 10)</code></span>
+                                <span class="en">Attacks: add all max-damage numbers in the attack table, then <code>floor(total / 10)</code></span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="score-rule-card suit-wave">
+                        <span class="card-label">
+                            <span class="ko">Speed and Spells</span>
+                            <span class="en">Speed and Spells</span>
+                        </span>
+                        <h3>
+                            <span class="ko">속도와 주문</span>
+                            <span class="en">Speed and spells</span>
+                        </h3>
+                        <ul class="rule-list">
+                            <li>
+                                <span class="ko">스탯 점수는 <code>floor(Base stats * Speed%)</code>로 속도 보정을 받습니다.</span>
+                                <span class="en">Stat points are speed-adjusted as <code>floor(Base stats * Speed%)</code>.</span>
+                            </li>
+                            <li>
+                                <span class="ko">속도가 표시되지 않으면 100%로 계산합니다.</span>
+                                <span class="en">If speed is not shown, it is treated as 100%.</span>
+                            </li>
+                            <li>
+                                <span class="ko">주문은 각 주문 레벨당 2점이며, 전체 주문 점수를 합산합니다.</span>
+                                <span class="en">Each spell gives 2 points per spell level, summed across the spellset.</span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="score-rule-card suit-leaf">
+                        <span class="card-label">
+                            <span class="ko">Status Multiplier</span>
+                            <span class="en">Status Multiplier</span>
+                        </span>
+                        <h3>
+                            <span class="ko">상태 배율</span>
+                            <span class="en">Status multiplier</span>
+                        </h3>
+                        <ul class="rule-list">
+                            <li>
+                                <span class="ko">버프 상태 하나당 <code>1.5x</code>를 곱합니다.</span>
+                                <span class="en">Each buff status multiplies the score by <code>1.5x</code>.</span>
+                            </li>
+                            <li>
+                                <span class="ko">디버프 상태 하나당 <code>0.9x</code>를 곱합니다.</span>
+                                <span class="en">Each debuff status multiplies the score by <code>0.9x</code>.</span>
+                            </li>
+                            <li>
+                                <span class="ko">아군이면서 소환된 상태면 추가로 <code>1.5x</code>를 곱합니다.</span>
+                                <span class="en">If <code>FRIENDLY</code> and <code>SUMMONED</code> are both present, another <code>1.5x</code> is applied.</span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="score-rule-card suit-void">
+                        <span class="card-label">
+                            <span class="ko">Final Formula</span>
+                            <span class="en">Final Formula</span>
+                        </span>
+                        <h3>
+                            <span class="ko">최종 계산식</span>
+                            <span class="en">Final formula</span>
+                        </h3>
+                        <p class="score-equation-text">
+                            <span class="ko"><code>Base total = Speed-adjusted stats + Spells</code><br><code>Total = floor(Base total * Status multiplier)</code></span>
+                            <span class="en"><code>Base total = Speed-adjusted stats + Spells</code><br><code>Total = floor(Base total * Status multiplier)</code></span>
+                        </p>
+                        <p>
+                            <span class="ko">무한 저항은 rF/rC 6칸, rElec 2칸으로 환산합니다. 판데모니엄 군주가 아닌 몬스터나 탐험 모드 제출은 인정하지 않습니다.</span>
+                            <span class="en">Infinite resists count as 6 pips for rF/rC and 2 pips for rElec. Non-lord or explore-mode captures are not eligible.</span>
+                        </p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -387,7 +501,7 @@
                                 <span class="en">Goonkemon scores appear automatically on the detail and ranking pages; share the detail link on Discord if needed.</span>
                             </li>
                             <li>
-                                <span class="ko">군켓몬 기본 점수는 HP, Will, AC, EV, 저항, 공격, 주문, 속도에서 계산되고, 버프/디버프와 Friendly Summoned 여부가 배율로 적용됩니다.</span>
+                                <span class="ko">군켓몬 기본 점수는 HP, Will, AC, EV, 저항, 공격, 주문, 속도에서 계산되고, 버프/디버프와 아군 소환 여부가 배율로 적용됩니다.</span>
                                 <span class="en">Goonkemon base score comes from HP, Will, AC, EV, resistances, attacks, spells, and speed, then status effects and Friendly Summoned apply multipliers.</span>
                             </li>
                         </ul>
