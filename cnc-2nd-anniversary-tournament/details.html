@@ -394,30 +394,34 @@
                                 <span class="ko">데미지: 최대 피해 데미지를 모두 합산한 뒤 <code>floor(damage / 10)</code></span>
                                 <span class="en">Damage: add all max-damage values, then <code>floor(damage / 10)</code></span>
                             </li>
+                            <li>
+                                <span class="ko">스탯 합계는 속도 보정을 받아 <code>floor(Base stats * Speed%)</code>가 됩니다. 속도가 표시되지 않으면 100%로 계산합니다.</span>
+                                <span class="en">The stat subtotal is speed-adjusted as <code>floor(Base stats * Speed%)</code>. If speed is not shown, it is treated as 100%.</span>
+                            </li>
                         </ul>
                     </article>
 
                     <article class="score-rule-card suit-wave">
                         <span class="card-label">
-                            <span class="ko">Speed and Spells</span>
-                            <span class="en">Speed and Spells</span>
+                            <span class="ko">Spells</span>
+                            <span class="en">Spells</span>
                         </span>
                         <h3>
-                            <span class="ko">속도와 주문</span>
-                            <span class="en">Speed and spells</span>
+                            <span class="ko">주문 점수</span>
+                            <span class="en">Spell points</span>
                         </h3>
                         <ul class="rule-list">
                             <li>
-                                <span class="ko">스탯 점수는 <code>floor(Base stats * Speed%)</code>로 속도 보정을 받습니다.</span>
-                                <span class="en">Stat points are speed-adjusted as <code>floor(Base stats * Speed%)</code>.</span>
-                            </li>
-                            <li>
-                                <span class="ko">속도가 표시되지 않으면 100%로 계산합니다.</span>
-                                <span class="en">If speed is not shown, it is treated as 100%.</span>
-                            </li>
-                            <li>
                                 <span class="ko">주문은 각 주문 레벨당 2점이며, 전체 주문 점수를 합산합니다.</span>
                                 <span class="en">Each spell gives 2 points per spell level, summed across the spellset.</span>
+                            </li>
+                            <li>
+                                <span class="ko">레벨은 플레이어 주문 목록이 아니라 x-v 몬스터 spellset의 <code>level</code> 값을 기준으로 삼고, 없으면 주문 정보 문자열의 괄호 안 숫자를 읽습니다.</span>
+                                <span class="en">The level comes from the x-v monster spellset's <code>level</code> value, not the player's spell list. If missing, the bot reads the number inside parentheses in the spell info string.</span>
+                            </li>
+                            <li>
+                                <span class="ko">예: <code>Fire Storm</code> 레벨 9는 18점, <code>Blinkbolt</code> 레벨 5는 10점입니다.</span>
+                                <span class="en">Example: level 9 <code>Fire Storm</code> is 18 points, and level 5 <code>Blinkbolt</code> is 10 points.</span>
                             </li>
                         </ul>
                     </article>
