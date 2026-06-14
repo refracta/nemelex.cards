@@ -43,25 +43,49 @@
         }
     }
 
+    let explicitLanguage = '';
+
+    function queryLanguage() {
+        try {
+            const params = new URLSearchParams(window.location.search);
+            return normalizeLanguage(params.get('lang'));
+        } catch (e) {
+            return '';
+        }
+    }
+
+    function setQueryLanguage(language) {
+        try {
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', language);
+            window.history.replaceState(null, '', url);
+            explicitLanguage = language;
+        } catch (e) {}
+    }
+
     let initial = browserLanguage();
-    let shouldPersist = false;
     try {
-        const params = new URLSearchParams(window.location.search);
-        const queryLanguage = normalizeLanguage(params.get('lang'));
+        const urlLanguage = queryLanguage();
         const storedLanguage = normalizeLanguage(localStorage.getItem(storageKey));
-        if (queryLanguage) {
-            initial = queryLanguage;
-            shouldPersist = true;
+        if (urlLanguage) {
+            explicitLanguage = urlLanguage;
+            initial = urlLanguage;
         } else if (storedLanguage) {
             initial = storedLanguage;
         }
     } catch (e) {}
 
-    applyLanguage(initial, shouldPersist);
+    applyLanguage(initial, false);
 
     if (button) {
         button.addEventListener('click', function () {
-            applyLanguage(body.classList.contains('lang-en') ? 'ko' : 'en', true);
+            const next = body.classList.contains('lang-en') ? 'ko' : 'en';
+            if (explicitLanguage) {
+                setQueryLanguage(next);
+                applyLanguage(next, false);
+                return;
+            }
+            applyLanguage(next, true);
         });
     }
 })();
