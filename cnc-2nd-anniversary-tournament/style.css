@@ -578,6 +578,41 @@ h3 {
     margin-bottom: 1rem;
 }
 
+.goonkemon-example-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 1rem;
+    align-items: start;
+    margin: 0 0 1.4rem;
+}
+
+.goonkemon-example-panel {
+    min-width: 0;
+    margin: 0;
+    padding: 0.8rem;
+    border: 1px solid var(--line);
+    border-top: 4px solid currentColor;
+    border-radius: var(--radius);
+    background: var(--panel-bg);
+    box-shadow: 0 24px 58px rgba(0, 0, 0, 0.24);
+}
+
+.goonkemon-example-panel img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: calc(var(--radius) - 2px);
+    background: #050608;
+}
+
+.goonkemon-example-panel figcaption {
+    margin-top: 0.75rem;
+    color: #dce4ed;
+    font-size: 0.94rem;
+    line-height: 1.55;
+}
+
 .card-label {
     display: block;
     margin-bottom: 1rem;
@@ -739,13 +774,15 @@ pre {
     .feature-grid,
     .info-grid,
     .category-grid,
-    .scoring-grid {
+    .scoring-grid,
+    .goonkemon-example-grid {
         grid-template-columns: 1fr;
     }
 
     .hero-copy,
     .host-letter,
     .origin-panel,
+    .goonkemon-example-panel,
     .feature-card,
     .info-card,
     .category-card,
@@ -847,6 +884,7 @@ pre {
     }
 
     .host-letter,
+    .goonkemon-example-panel,
     .feature-card,
     .info-card,
     .category-card,
