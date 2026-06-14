@@ -311,6 +311,95 @@ body.lang-en h1 {
     margin-bottom: 1.8rem;
 }
 
+.year-section .section-shell {
+    padding-block: 2.8rem;
+}
+
+.year-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    list-style: none;
+    cursor: pointer;
+}
+
+.year-summary::-webkit-details-marker {
+    display: none;
+}
+
+.year-summary:hover .year-toggle {
+    border-color: var(--void);
+    background: rgba(128, 0, 255, 0.18);
+}
+
+.year-summary:focus-visible {
+    outline: 2px solid var(--void);
+    outline-offset: 6px;
+}
+
+.year-summary-copy {
+    display: block;
+    max-width: 760px;
+    min-width: 0;
+}
+
+.year-title {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--void);
+    font-size: 2.1rem;
+    font-weight: 800;
+    line-height: 1.16;
+    letter-spacing: 0;
+}
+
+.year-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(128, 0, 255, 0.48);
+    border-radius: var(--radius);
+    background: rgba(128, 0, 255, 0.12);
+    color: var(--text);
+    font-weight: 800;
+}
+
+.year-toggle::after {
+    content: "";
+    width: 0.55rem;
+    height: 0.55rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translateY(-0.1rem);
+    transition: transform 180ms ease;
+}
+
+.year-disclosure[open] .year-toggle::after {
+    transform: rotate(225deg) translate(-0.1rem, -0.1rem);
+}
+
+.year-disclosure .when-open,
+.year-disclosure[open] .when-closed {
+    display: none;
+}
+
+.year-disclosure[open] .when-open {
+    display: inline;
+}
+
+.year-feature-grid {
+    margin-top: 1.8rem;
+}
+
+.year-disclosure:not([open]) > .year-feature-grid {
+    display: none;
+}
+
 .score-rule-card code {
     color: #f8f1a0;
     font-family: var(--font-mono);
@@ -672,6 +761,10 @@ pre {
         grid-template-columns: 1fr;
     }
 
+    .year-summary {
+        align-items: flex-start;
+    }
+
     .primary-action,
     .secondary-action {
         width: 100%;
@@ -729,6 +822,10 @@ pre {
         font-size: 1.7rem;
     }
 
+    .year-title {
+        font-size: 1.7rem;
+    }
+
     body.lang-en h1 {
         font-size: 1.85rem;
     }
@@ -739,6 +836,14 @@ pre {
 
     .section-shell {
         padding-block: 3.2rem;
+    }
+
+    .year-section .section-shell {
+        padding-block: 2.2rem;
+    }
+
+    .year-summary {
+        flex-direction: column;
     }
 
     .host-letter,

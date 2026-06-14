@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CNC 2nd Anniversary Tournament Details | crawl.nemelex.cards</title>
     <link rel="icon" type="image/png" href="../cnc-1st-anniversary-tournament/favicon.png">
-    <link rel="stylesheet" href="style.css?v=20260614-scoring">
+    <link rel="stylesheet" href="style.css?v=20260614-year-collapse">
 </head>
 <body class="lang-ko">
     <header class="site-header">
@@ -118,75 +118,89 @@
             </div>
         </section>
 
-        <section class="content-band suit-void-band" id="year" aria-labelledby="year-title">
+        <section class="content-band suit-void-band year-section" id="year" aria-labelledby="year-title">
             <div class="section-shell">
-                <div class="section-heading">
-                    <p class="section-kicker">
-                        <span class="ko">This Year on CNC</span>
-                        <span class="en">This Year on CNC</span>
-                    </p>
-                    <h2 id="year-title">
-                        <span class="ko">올해 서버에 쌓인 것들</span>
-                        <span class="en">What the second year added</span>
-                    </h2>
-                </div>
-                <div class="feature-grid" aria-label="CNC second year feature highlights">
-                    <a class="feature-card feature-link-card suit-void" href="https://archive.nemelex.cards/ttyrec/" target="_blank" rel="noopener">
-                        <span class="card-label">WTRec</span>
-                        <h3>
-                            <span class="ko">그래픽 리플레이</span>
-                            <span class="en">Graphical replays</span>
-                        </h3>
-                        <p>
-                            <span class="ko">서버 측 WTRec 녹화와 리플레이 흐름이 실험적으로 자리 잡았습니다.</span>
-                            <span class="en">Server-side WTRec recording and replay support became a visible experiment.</span>
-                        </p>
-                    </a>
-                    <a class="feature-card feature-link-card suit-wave" href="https://github.com/refracta/dcss-webtiles-extension-module/tree/main/modules/sound-support" target="_blank" rel="noopener">
-                        <span class="card-label">Sound</span>
-                        <h3>
-                            <span class="ko">사운드와 BGM</span>
-                            <span class="en">Sound and BGM</span>
-                        </h3>
-                        <p>
-                            <span class="ko">사운드팩과 브랜치별 BGM 지원을 위해 DWEM SoundSupport가 확장됐습니다.</span>
-                            <span class="en">DWEM SoundSupport expanded for sound packs and branch background music.</span>
-                        </p>
-                    </a>
-                    <a class="feature-card feature-link-card suit-leaf" href="https://refracta.github.io/pocketzot-dwem/" target="_blank" rel="noopener">
-                        <span class="card-label">PocketZot-DWEM</span>
-                        <h3>
-                            <span class="ko">PocketZot-DWEM</span>
-                            <span class="en">PocketZot-DWEM</span>
-                        </h3>
-                        <p>
-                            <span class="ko">모바일 환경에서도 번역과 사운드 모듈을 지원하는 방향으로 개선이 이루어졌습니다.</span>
-                            <span class="en">Mobile play kept moving toward Korean text and sound support through PocketZot-DWEM.</span>
-                        </p>
-                    </a>
-                    <a class="feature-card feature-link-card suit-gold" href="https://gall.dcinside.com/board/view/?id=rlike&no=517133" target="_blank" rel="noopener">
-                        <span class="card-label">Profile</span>
-                        <h3>
-                            <span class="ko">프로필과 배너</span>
-                            <span class="en">Profiles and banners</span>
-                        </h3>
-                        <p>
-                            <span class="ko">기여, 대회 성적, 랭킹을 보여주는 배너 시스템이 서버 안에 들어왔습니다.</span>
-                            <span class="en">A banner system now marks contributions, tournament results, and server records.</span>
-                        </p>
-                    </a>
-                    <a class="feature-card feature-link-card suit-fire" href="https://github.com/refracta/dcss-webtiles-extension-module/tree/main/modules/translation-module" target="_blank" rel="noopener">
-                        <span class="card-label">TranslationModule</span>
-                        <h3>
-                            <span class="ko">확장과 번역</span>
-                            <span class="en">Modules and translation</span>
-                        </h3>
-                        <p>
-                            <span class="ko">DWEM 모듈, 한글 처리, 번역 관련 개선이 꾸준히 서버 경험을 다듬고 있습니다.</span>
-                            <span class="en">DWEM modules, Korean handling, and translation work continue to refine the experience.</span>
-                        </p>
-                    </a>
-                </div>
+                <details class="year-disclosure">
+                    <summary class="year-summary">
+                        <span class="year-summary-copy">
+                            <span class="section-kicker">
+                                <span class="ko">This Year on CNC</span>
+                                <span class="en">This Year on CNC</span>
+                            </span>
+                            <span class="year-title" id="year-title" role="heading" aria-level="2">
+                                <span class="ko">올해 서버에 쌓인 것들</span>
+                                <span class="en">What the second year added</span>
+                            </span>
+                        </span>
+                        <span class="year-toggle" aria-hidden="true">
+                            <span class="when-closed">
+                                <span class="ko">펼치기</span>
+                                <span class="en">Show</span>
+                            </span>
+                            <span class="when-open">
+                                <span class="ko">접기</span>
+                                <span class="en">Hide</span>
+                            </span>
+                        </span>
+                    </summary>
+                    <div class="feature-grid year-feature-grid" aria-label="CNC second year feature highlights">
+                        <a class="feature-card feature-link-card suit-void" href="https://archive.nemelex.cards/ttyrec/" target="_blank" rel="noopener">
+                            <span class="card-label">WTRec</span>
+                            <h3>
+                                <span class="ko">그래픽 리플레이</span>
+                                <span class="en">Graphical replays</span>
+                            </h3>
+                            <p>
+                                <span class="ko">서버 측 WTRec 녹화와 리플레이 흐름이 실험적으로 자리 잡았습니다.</span>
+                                <span class="en">Server-side WTRec recording and replay support became a visible experiment.</span>
+                            </p>
+                        </a>
+                        <a class="feature-card feature-link-card suit-wave" href="https://github.com/refracta/dcss-webtiles-extension-module/tree/main/modules/sound-support" target="_blank" rel="noopener">
+                            <span class="card-label">Sound</span>
+                            <h3>
+                                <span class="ko">사운드와 BGM</span>
+                                <span class="en">Sound and BGM</span>
+                            </h3>
+                            <p>
+                                <span class="ko">사운드팩과 브랜치별 BGM 지원을 위해 DWEM SoundSupport가 확장됐습니다.</span>
+                                <span class="en">DWEM SoundSupport expanded for sound packs and branch background music.</span>
+                            </p>
+                        </a>
+                        <a class="feature-card feature-link-card suit-leaf" href="https://refracta.github.io/pocketzot-dwem/" target="_blank" rel="noopener">
+                            <span class="card-label">PocketZot-DWEM</span>
+                            <h3>
+                                <span class="ko">PocketZot-DWEM</span>
+                                <span class="en">PocketZot-DWEM</span>
+                            </h3>
+                            <p>
+                                <span class="ko">모바일 환경에서도 번역과 사운드 모듈을 지원하는 방향으로 개선이 이루어졌습니다.</span>
+                                <span class="en">Mobile play kept moving toward Korean text and sound support through PocketZot-DWEM.</span>
+                            </p>
+                        </a>
+                        <a class="feature-card feature-link-card suit-gold" href="https://gall.dcinside.com/board/view/?id=rlike&no=517133" target="_blank" rel="noopener">
+                            <span class="card-label">Profile</span>
+                            <h3>
+                                <span class="ko">프로필과 배너</span>
+                                <span class="en">Profiles and banners</span>
+                            </h3>
+                            <p>
+                                <span class="ko">기여, 대회 성적, 랭킹을 보여주는 배너 시스템이 서버 안에 들어왔습니다.</span>
+                                <span class="en">A banner system now marks contributions, tournament results, and server records.</span>
+                            </p>
+                        </a>
+                        <a class="feature-card feature-link-card suit-fire" href="https://github.com/refracta/dcss-webtiles-extension-module/tree/main/modules/translation-module" target="_blank" rel="noopener">
+                            <span class="card-label">TranslationModule</span>
+                            <h3>
+                                <span class="ko">확장과 번역</span>
+                                <span class="en">Modules and translation</span>
+                            </h3>
+                            <p>
+                                <span class="ko">DWEM 모듈, 한글 처리, 번역 관련 개선이 꾸준히 서버 경험을 다듬고 있습니다.</span>
+                                <span class="en">DWEM modules, Korean handling, and translation work continue to refine the experience.</span>
+                            </p>
+                        </a>
+                    </div>
+                </details>
             </div>
         </section>
 
