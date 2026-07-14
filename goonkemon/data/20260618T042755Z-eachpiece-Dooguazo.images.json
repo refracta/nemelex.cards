@@ -1,0 +1,23 @@
+{
+  "id": "20260618T042755Z-eachpiece-Dooguazo",
+  "capturedAt": "2026-06-18T04:27:55.895Z",
+  "sourceJson": "20260618T042755Z-eachpiece-Dooguazo.json",
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "4bf5c676c17534e010b2ff7211d62b55cfaf76a8",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-541-g249ab93952",
+    "gameStarted": null
+  },
+  "images": {
+    "icons": {
+      "mime": "image/png",
+      "byteLength": 24938,
+      "url": "../assets/images/d85b9f43fbfb5a14f0462e889ab3b073c6e3113288c87cda2ea80d1f7f383827.png"
+    },
+    "player": {
+      "mime": "image/png",
+      "byteLength": 1268740,
+      "url": "../assets/images/687f84326324defd5b0c53ca1811517f528b19fbeccbd5d6de37c99e2c8a1a13.png"
+    }
+  }
+}

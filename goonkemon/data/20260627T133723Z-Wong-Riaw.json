@@ -1,0 +1,720 @@
+{
+  "id": "20260627T133723Z-Wong-Riaw",
+  "capturedAt": "2026-06-27T13:37:23.596Z",
+  "username": "Wong",
+  "analysis": {
+    "title": "Riaw.",
+    "stats": {
+      "hp": {
+        "raw": "206",
+        "value": 206
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ev": {
+        "raw": "+",
+        "pips": 1
+      },
+      "resists": {
+        "rF": {
+          "raw": "++.",
+          "value": 2,
+          "max": 2
+        },
+        "rC": {
+          "raw": "∞",
+          "value": 4,
+          "max": 2
+        },
+        "rElec": {
+          "raw": ".",
+          "value": 0,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Trunk: distorting touch",
+            "damageText": "28 + 26 (distort)",
+            "damageParts": [
+              28,
+              26
+            ],
+            "damageTotal": 54,
+            "afterHit": ""
+          }
+        ]
+      },
+      "speed": {
+        "percent": 130
+      }
+    },
+    "spells": [
+      {
+        "title": "Corrosive Bolt",
+        "level": 6,
+        "effect": "(3d33)",
+        "range": "(5)",
+        "schools": "Conjuration/Alchemy"
+      },
+      {
+        "title": "Summon Demon",
+        "level": 5,
+        "effect": "",
+        "range": "",
+        "schools": "Summoning"
+      },
+      {
+        "title": "Blink",
+        "level": 2,
+        "effect": "",
+        "range": "",
+        "schools": "Translocation"
+      },
+      {
+        "title": "Paralyse",
+        "level": 4,
+        "effect": "(1%)",
+        "range": "(7)",
+        "schools": "Hexes"
+      },
+      {
+        "title": "Abjuration",
+        "level": 3,
+        "effect": "",
+        "range": "(7)",
+        "schools": "Summoning"
+      }
+    ],
+    "statuses": {
+      "rawIcons": [],
+      "rawFlag": [
+        1074266112,
+        -2147483648
+      ],
+      "buffs": [],
+      "debuffs": [],
+      "special": [],
+      "attitude": [],
+      "unknown": [],
+      "indicators": []
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Riaw.",
+    "body": "One of the many lords of Pandemonium, Riaw has a mantis magenta body with sharp, metallic wings and a thick, horned head. Its body is covered in fungus.\n\n<lightgrey>Max HP: 206     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++++     </lightgrey><lightgrey>  EV: +         </lightgrey>                \n<lightgrey>    rF: ++.     </lightgrey><lightgrey>   rC: ∞        </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><darkgrey>rElec: .        </darkgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 130% (normally travels faster than you)\n\nYou have about 88% to hit with your foreclaws and 87% to hit with your off-hand claw and bite.\nIt has about 75% to hit you.\n\nAttack                   Max Damage         \nTrunk: distorting touch  28 + 26 (distort)  \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+    "quote": "",
+    "status": "",
+    "spellset": [
+      {
+        "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+        "spells": [
+          {
+            "title": "Corrosive Bolt",
+            "colour": 7,
+            "tile": 9324,
+            "letter": "a",
+            "effect": "<yellow>(3d33)</yellow>",
+            "range_string": "(<lightred>5</lightred>)",
+            "schools": "Conjuration/Alchemy",
+            "level": 6
+          },
+          {
+            "title": "Summon Demon",
+            "colour": 7,
+            "tile": 9282,
+            "letter": "b",
+            "effect": "<lightgrey></lightgrey>",
+            "schools": "Summoning",
+            "level": 5
+          },
+          {
+            "title": "Blink",
+            "colour": 7,
+            "tile": 9296,
+            "letter": "c",
+            "effect": "<lightgrey></lightgrey>",
+            "schools": "Translocation",
+            "level": 2
+          },
+          {
+            "title": "Paralyse",
+            "colour": 7,
+            "tile": 9328,
+            "letter": "d",
+            "effect": "(1%)",
+            "range_string": "(<lightred>7</lightred>)",
+            "schools": "Hexes",
+            "level": 4
+          },
+          {
+            "title": "Abjuration",
+            "colour": 7,
+            "tile": 9277,
+            "letter": "e",
+            "effect": "<lightgrey></lightgrey>",
+            "range_string": "(<lightred>7</lightred>)",
+            "schools": "Summoning",
+            "level": 3
+          }
+        ]
+      }
+    ],
+    "fg_idx": 7779,
+    "flag": [
+      1074266112,
+      -2147483648
+    ],
+    "icons": [],
+    "doll": [],
+    "mcache": [
+      [
+        6120,
+        0,
+        0
+      ],
+      [
+        5479,
+        0,
+        0
+      ],
+      [
+        5744,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 630
+  },
+  "messageTypes": {
+    "game_client": 2,
+    "update_spectators": 2,
+    "watching_started": 2,
+    "version": 2,
+    "options": 4,
+    "layout": 2,
+    "text_cursor": 2,
+    "ui_state": 2,
+    "cursor": 9,
+    "player": 8,
+    "map": 23,
+    "ui-stack": 2,
+    "input_mode": 18,
+    "ui-pop": 1,
+    "msgs": 11,
+    "close_all_menus": 1,
+    "ui_cutoff": 1,
+    "delay": 12,
+    "lobby_clear": 1,
+    "lobby_entry": 28,
+    "lobby_complete": 1,
+    "html": 3,
+    "set_game_links": 1,
+    "flash": 1
+  },
+  "recentMessages": [
+    {
+      "turn": 46523,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel"
+    },
+    {
+      "turn": 46523,
+      "channel": 2,
+      "text": "Here: Riaw, armed with a distorting touch (lightly wounded)"
+    },
+    {
+      "turn": 46523,
+      "channel": 24,
+      "text": "The floor."
+    },
+    {
+      "turn": 46523,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel, g - get item"
+    },
+    {
+      "turn": 46523,
+      "channel": 2,
+      "text": "Here: a zykzyl"
+    },
+    {
+      "turn": 46523,
+      "channel": 21,
+      "text": "Item here: a staff of cold."
+    },
+    {
+      "turn": 46523,
+      "channel": 24,
+      "text": "The floor."
+    },
+    {
+      "turn": 46523,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel, g - get item"
+    },
+    {
+      "turn": 46523,
+      "channel": 21,
+      "text": "Item here: a phantom mirror."
+    },
+    {
+      "turn": 46523,
+      "channel": 24,
+      "text": "A stone staircase leading down."
+    },
+    {
+      "turn": 46523,
+      "channel": 24,
+      "text": "Unknown command."
+    },
+    {
+      "turn": 46523,
+      "channel": 2,
+      "text": "Casting: Manifold Assault (mildly dangerous; 1% risk of failure)"
+    },
+    {
+      "turn": 46523,
+      "channel": 2,
+      "text": "Confirm with . or Enter, or press ? or * to list all spells."
+    },
+    {
+      "turn": 46523,
+      "channel": 0,
+      "text": "Space momentarily warps into an impossible shape!"
+    },
+    {
+      "turn": 46523,
+      "channel": 0,
+      "text": "You maul the fire crab!!!!"
+    },
+    {
+      "turn": 46523,
+      "channel": 17,
+      "text": "You kill the fire crab!"
+    },
+    {
+      "turn": 46523,
+      "channel": 3,
+      "text": "The Council accepts your kill."
+    },
+    {
+      "turn": 46523,
+      "channel": 0,
+      "text": "The fire crab's shape twists and changes as it dies."
+    },
+    {
+      "turn": 46523,
+      "channel": 0,
+      "text": "You maul Riaw!!! You maul the kobold fleshcrafter!!!"
+    },
+    {
+      "turn": 46523,
+      "channel": 17,
+      "text": "You kill the kobold fleshcrafter!"
+    },
+    {
+      "turn": 46523,
+      "channel": 3,
+      "text": "The Council accepts your kill."
+    },
+    {
+      "turn": 46523,
+      "channel": 0,
+      "text": "You maul the shock serpent!!!!"
+    },
+    {
+      "turn": 46523,
+      "channel": 17,
+      "text": "You kill the shock serpent!"
+    },
+    {
+      "turn": 46523,
+      "channel": 3,
+      "text": "The Council accepts your kill."
+    },
+    {
+      "turn": 46523,
+      "channel": 0,
+      "text": "The air sparks with electricity, shocking you."
+    },
+    {
+      "turn": 46523,
+      "channel": 0,
+      "text": "You resist."
+    },
+    {
+      "turn": 46523,
+      "channel": 13,
+      "text": "Riaw gestures."
+    },
+    {
+      "turn": 46524,
+      "channel": 0,
+      "text": "The neqoxec is attracted toward you."
+    },
+    {
+      "turn": 46524,
+      "channel": 2,
+      "text": "Casting: Manifold Assault (mildly dangerous; 1% risk of failure)"
+    },
+    {
+      "turn": 46524,
+      "channel": 2,
+      "text": "Confirm with . or Enter, or press ? or * to list all spells."
+    },
+    {
+      "turn": 46524,
+      "channel": 0,
+      "text": "Space momentarily warps into an impossible shape!"
+    },
+    {
+      "turn": 46524,
+      "channel": 0,
+      "text": "You claw the neqoxec! You hit Riaw. You claw Eridghug! You claw the zykzyl!"
+    },
+    {
+      "turn": 46525,
+      "channel": 2,
+      "text": "Casting: Manifold Assault (mildly dangerous; 1% risk of failure)"
+    },
+    {
+      "turn": 46525,
+      "channel": 2,
+      "text": "Confirm with . or Enter, or press ? or * to list all spells."
+    },
+    {
+      "turn": 46525,
+      "channel": 0,
+      "text": "Space momentarily warps into an impossible shape!"
+    },
+    {
+      "turn": 46525,
+      "channel": 0,
+      "text": "You claw the kobold fleshcrafter! You maul the zykzyl!!!"
+    },
+    {
+      "turn": 46525,
+      "channel": 0,
+      "text": "You claw the apocalypse crab!"
+    },
+    {
+      "turn": 46525,
+      "channel": 0,
+      "text": "The chonchon headbutts you but does no damage."
+    },
+    {
+      "turn": 46525,
+      "channel": 0,
+      "text": "The chonchon misses you."
+    }
+  ],
+  "playerState": {
+    "name": "CNCPublicChat",
+    "title": "the Ruffian",
+    "species": "Troll",
+    "xl": 1,
+    "turn": 46526,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "de54235a3e0b114e973168e8247777125b5e68e4",
+    "versionText": "Dungeon Crawl Stone Soup 0.31.0-32-g396128a36d",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "title": "Riaw.",
+          "body": "One of the many lords of Pandemonium, Riaw has a mantis magenta body with sharp, metallic wings and a thick, horned head. Its body is covered in fungus.\n\n<lightgrey>Max HP: 206     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++++     </lightgrey><lightgrey>  EV: +         </lightgrey>                \n<lightgrey>    rF: ++.     </lightgrey><lightgrey>   rC: ∞        </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><darkgrey>rElec: .        </darkgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 130% (normally travels faster than you)\n\nYou have about 88% to hit with your foreclaws and 87% to hit with your off-hand claw and bite.\nIt has about 75% to hit you.\n\nAttack                   Max Damage         \nTrunk: distorting touch  28 + 26 (distort)  \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+          "quote": "",
+          "status": "",
+          "spellset": [
+            {
+              "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+              "spells": [
+                {
+                  "title": "Corrosive Bolt",
+                  "colour": 7,
+                  "tile": 9324,
+                  "letter": "a",
+                  "effect": "<yellow>(3d33)</yellow>",
+                  "range_string": "(<lightred>5</lightred>)",
+                  "schools": "Conjuration/Alchemy",
+                  "level": 6
+                },
+                {
+                  "title": "Summon Demon",
+                  "colour": 7,
+                  "tile": 9282,
+                  "letter": "b",
+                  "effect": "<lightgrey></lightgrey>",
+                  "schools": "Summoning",
+                  "level": 5
+                },
+                {
+                  "title": "Blink",
+                  "colour": 7,
+                  "tile": 9296,
+                  "letter": "c",
+                  "effect": "<lightgrey></lightgrey>",
+                  "schools": "Translocation",
+                  "level": 2
+                },
+                {
+                  "title": "Paralyse",
+                  "colour": 7,
+                  "tile": 9328,
+                  "letter": "d",
+                  "effect": "(1%)",
+                  "range_string": "(<lightred>7</lightred>)",
+                  "schools": "Hexes",
+                  "level": 4
+                },
+                {
+                  "title": "Abjuration",
+                  "colour": 7,
+                  "tile": 9277,
+                  "letter": "e",
+                  "effect": "<lightgrey></lightgrey>",
+                  "range_string": "(<lightred>7</lightred>)",
+                  "schools": "Summoning",
+                  "level": 3
+                }
+              ]
+            }
+          ],
+          "fg_idx": 7779,
+          "flag": [
+            1074266112,
+            -2147483648
+          ],
+          "icons": [],
+          "doll": [],
+          "mcache": [
+            [
+              6120,
+              0,
+              0
+            ],
+            [
+              5479,
+              0,
+              0
+            ],
+            [
+              5744,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 630
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5479": {
+          "sx": 492,
+          "sy": 854,
+          "ex": 514,
+          "ey": 886,
+          "ox": 10,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "5744": {
+          "sx": 314,
+          "sy": 1078,
+          "ex": 346,
+          "ey": 1110,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "6120": {
+          "sx": 702,
+          "sy": 1398,
+          "ex": 729,
+          "ey": 1430,
+          "ox": 4,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        }
+      },
+      "gui": {},
+      "icons": {
+        "8462": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "8476": {
+          "sx": 429,
+          "sy": 0,
+          "ex": 461,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "8477": {
+          "sx": 461,
+          "sy": 0,
+          "ex": 493,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "8478": {
+          "sx": 493,
+          "sy": 0,
+          "ex": 525,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "8479": {
+          "sx": 525,
+          "sy": 0,
+          "ex": 557,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "8483": {
+          "sx": 566,
+          "sy": 0,
+          "ex": 572,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "8484": {
+          "sx": 566,
+          "sy": 8,
+          "ex": 574,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "8485": {
+          "sx": 566,
+          "sy": 17,
+          "ex": 576,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "8496": {
+          "sx": 607,
+          "sy": 18,
+          "ex": 611,
+          "ey": 30,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "8498": {
+          "sx": 618,
+          "sy": 12,
+          "ex": 631,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "8531": {
+          "sx": 766,
+          "sy": 16,
+          "ex": 779,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "8535": {
+          "sx": 790,
+          "sy": 0,
+          "ex": 806,
+          "ey": 9,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 8462,
+      "TRAP_WEB": 8476,
+      "SOMETHING_UNDER": 8535,
+      "FRIENDLY": 8477,
+      "GOOD_NEUTRAL": 8478,
+      "NEUTRAL": 8479,
+      "PARALYSED": 8531,
+      "STAB_BRAND": 8498,
+      "FLEEING": 8496,
+      "POISON": 8483,
+      "MORE_POISON": 8484,
+      "MAX_POISON": 8485
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "gui",
+      "icons"
+    ]
+  }
+}

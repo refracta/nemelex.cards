@@ -1,0 +1,765 @@
+{
+  "id": "20260627T145501Z-Wong-Aptuad",
+  "capturedAt": "2026-06-27T14:55:01.919Z",
+  "username": "Wong",
+  "analysis": {
+    "title": "Aptuad.",
+    "stats": {
+      "hp": {
+        "raw": "224",
+        "value": 224
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "++++ +++",
+        "pips": 7
+      },
+      "ev": {
+        "raw": "+",
+        "pips": 1
+      },
+      "resists": {
+        "rF": {
+          "raw": "∞",
+          "value": 4,
+          "max": 2
+        },
+        "rC": {
+          "raw": "...",
+          "value": 0,
+          "max": 2
+        },
+        "rElec": {
+          "raw": "+",
+          "value": 1,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Peck",
+            "damageText": "75 (base 50)",
+            "damageParts": [
+              75,
+              50
+            ],
+            "damageTotal": 125,
+            "afterHit": "Cause weakness"
+          }
+        ]
+      },
+      "speed": {
+        "percent": 100
+      }
+    },
+    "spells": [
+      {
+        "title": "Metal Splinters",
+        "level": 5,
+        "effect": "(3d31)",
+        "range": "(4)",
+        "schools": "Conjuration"
+      },
+      {
+        "title": "Summon Greater Demon",
+        "level": 7,
+        "effect": "",
+        "range": "",
+        "schools": "Summoning"
+      },
+      {
+        "title": "Haste",
+        "level": 6,
+        "effect": "",
+        "range": "",
+        "schools": "Hexes"
+      },
+      {
+        "title": "Petrify",
+        "level": 4,
+        "effect": "",
+        "range": "(6)",
+        "schools": "Alchemy/Earth"
+      },
+      {
+        "title": "Abjuration",
+        "level": 3,
+        "effect": "",
+        "range": "(7)",
+        "schools": "Summoning"
+      }
+    ],
+    "statuses": {
+      "rawIcons": [
+        10471,
+        10483,
+        10484,
+        10495,
+        10519,
+        10559
+      ],
+      "rawFlag": 1074331648,
+      "buffs": [
+        {
+          "id": 10483,
+          "name": "HASTED",
+          "label": "hasted",
+          "category": "buff",
+          "source": "icon"
+        },
+        {
+          "id": 10484,
+          "name": "MIGHT",
+          "label": "might",
+          "category": "buff",
+          "source": "icon"
+        },
+        {
+          "id": 10519,
+          "name": "BRILLIANCE",
+          "label": "brilliance",
+          "category": "buff",
+          "source": "icon"
+        },
+        {
+          "id": 10559,
+          "name": "STRONG_WILLED",
+          "label": "strong willed",
+          "category": "buff",
+          "source": "icon"
+        }
+      ],
+      "debuffs": [
+        {
+          "id": 10495,
+          "name": "DRAIN",
+          "label": "drain",
+          "category": "debuff",
+          "source": "icon"
+        }
+      ],
+      "special": [
+        {
+          "id": 10471,
+          "name": "SUMMONED",
+          "label": "summoned",
+          "category": "special",
+          "source": "icon"
+        }
+      ],
+      "attitude": [
+        {
+          "id": null,
+          "name": "FRIENDLY",
+          "label": "friendly",
+          "category": "attitude",
+          "source": "flag"
+        }
+      ],
+      "unknown": [],
+      "indicators": [
+        {
+          "id": 10471,
+          "name": "SUMMONED",
+          "label": "summoned",
+          "category": "special",
+          "source": "icon"
+        },
+        {
+          "id": 10483,
+          "name": "HASTED",
+          "label": "hasted",
+          "category": "buff",
+          "source": "icon"
+        },
+        {
+          "id": 10484,
+          "name": "MIGHT",
+          "label": "might",
+          "category": "buff",
+          "source": "icon"
+        },
+        {
+          "id": 10495,
+          "name": "DRAIN",
+          "label": "drain",
+          "category": "debuff",
+          "source": "icon"
+        },
+        {
+          "id": 10519,
+          "name": "BRILLIANCE",
+          "label": "brilliance",
+          "category": "buff",
+          "source": "icon"
+        },
+        {
+          "id": 10559,
+          "name": "STRONG_WILLED",
+          "label": "strong willed",
+          "category": "buff",
+          "source": "icon"
+        },
+        {
+          "id": null,
+          "name": "FRIENDLY",
+          "label": "friendly",
+          "category": "attitude",
+          "source": "flag"
+        }
+      ]
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Aptuad.",
+    "body": "One of the many lords of Pandemonium, Aptuad has an emaciated blue body with fluttering wings and a vicious glare.\n\n<lightgrey>Max HP: 224     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++++ +++ </lightgrey><lightgrey>  EV: +         </lightgrey>                \n<lightgrey>    rF: ∞       </lightgrey><darkgrey>   rC: ...      </darkgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: High    </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\n\n\nYou have about 92% to hit with your paws and 90% to hit with your off-hand punch.\nIt has about 12% to hit you.\n\nAttack  Max Damage    After Damaging Hits\nPeck    75 (base 50)  Cause weakness     \n\nIt is immune to torment; and resistant to miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.\n\nIt is currently targeting the sin beast.\n\nThis monster has been temporarily summoned to this location. If angered it will immediately vanish, yielding no experience or items; it is incapable of using stairs.",
+    "quote": "",
+    "status": "<white>Fast:<lightgrey>\n   This creature moves and acts 50% faster.\n\n<white>Strong:<lightgrey>\n   This creature's melee attacks deal 50% more damage.\n\n<white>Spells empowered:<lightgrey>\n   This creature's spells are strengthened and it will cast them more\n   frequently.\n\n<white>Slightly transparent:<lightgrey>\n   This creature is normally invisible, but your magical sight allows you to see\n   it nonetheless. This has no effect on you, though any allies you have may not\n   be able to see it as you can.\n\n<white>Strong-willed:<lightgrey>\n   This creature's willpower is increased by 2 pips.\n\n<white>Lightly drained:<lightgrey>\n   This creature has been lightly drained, somewhat lowering the accuracy of\n   their melee attacks, the power of their spells and special attack properties,\n   and making them slightly more vulnerable to many status effects.\n\n",
+    "spellset": [
+      {
+        "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+        "spells": [
+          {
+            "title": "Metal Splinters",
+            "colour": 7,
+            "tile": 9408,
+            "letter": "a",
+            "effect": "<cyan>(3d31)</cyan>",
+            "range_string": "(<lightred>4</lightred>)",
+            "schools": "Conjuration",
+            "level": 5
+          },
+          {
+            "title": "Summon Greater Demon",
+            "colour": 7,
+            "tile": 9285,
+            "letter": "b",
+            "effect": "<lightgrey></lightgrey>",
+            "schools": "Summoning",
+            "level": 7
+          },
+          {
+            "title": "Haste",
+            "colour": 7,
+            "tile": 9199,
+            "letter": "c",
+            "effect": "<darkgrey></darkgrey>",
+            "schools": "Hexes",
+            "level": 6
+          },
+          {
+            "title": "Petrify",
+            "colour": 7,
+            "tile": 9184,
+            "letter": "d",
+            "effect": "",
+            "range_string": "(<lightred>6</lightred>)",
+            "schools": "Alchemy/Earth",
+            "level": 4
+          },
+          {
+            "title": "Abjuration",
+            "colour": 7,
+            "tile": 9277,
+            "letter": "e",
+            "effect": "<lightgrey></lightgrey>",
+            "range_string": "(<lightred>7</lightred>)",
+            "schools": "Summoning",
+            "level": 3
+          }
+        ]
+      }
+    ],
+    "fg_idx": 7777,
+    "flag": 1074331648,
+    "icons": [
+      10471,
+      10483,
+      10484,
+      10495,
+      10519,
+      10559
+    ],
+    "doll": [],
+    "mcache": [
+      [
+        6082,
+        0,
+        0
+      ],
+      [
+        5448,
+        0,
+        0
+      ],
+      [
+        5688,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 556
+  },
+  "messageTypes": {
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 3,
+    "player": 1,
+    "map": 2,
+    "ui-stack": 1,
+    "input_mode": 2,
+    "ui-pop": 1,
+    "close_all_menus": 2,
+    "msgs": 1
+  },
+  "recentMessages": [
+    {
+      "turn": 1,
+      "channel": 26,
+      "text": "Infinite lua loop detected, aborting."
+    }
+  ],
+  "playerState": {
+    "name": "Wong",
+    "title": "the Sabretooth",
+    "species": "Felid",
+    "xl": 27,
+    "turn": 66017,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "71d040ed177460bfb8e42b97d257d095a3d9dfd5",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-584-g7029c44831",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "title": "Aptuad.",
+          "body": "One of the many lords of Pandemonium, Aptuad has an emaciated blue body with fluttering wings and a vicious glare.\n\n<lightgrey>Max HP: 224     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++++ +++ </lightgrey><lightgrey>  EV: +         </lightgrey>                \n<lightgrey>    rF: ∞       </lightgrey><darkgrey>   rC: ...      </darkgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: High    </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\n\n\nYou have about 92% to hit with your paws and 90% to hit with your off-hand punch.\nIt has about 12% to hit you.\n\nAttack  Max Damage    After Damaging Hits\nPeck    75 (base 50)  Cause weakness     \n\nIt is immune to torment; and resistant to miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.\n\nIt is currently targeting the sin beast.\n\nThis monster has been temporarily summoned to this location. If angered it will immediately vanish, yielding no experience or items; it is incapable of using stairs.",
+          "quote": "",
+          "status": "<white>Fast:<lightgrey>\n   This creature moves and acts 50% faster.\n\n<white>Strong:<lightgrey>\n   This creature's melee attacks deal 50% more damage.\n\n<white>Spells empowered:<lightgrey>\n   This creature's spells are strengthened and it will cast them more\n   frequently.\n\n<white>Slightly transparent:<lightgrey>\n   This creature is normally invisible, but your magical sight allows you to see\n   it nonetheless. This has no effect on you, though any allies you have may not\n   be able to see it as you can.\n\n<white>Strong-willed:<lightgrey>\n   This creature's willpower is increased by 2 pips.\n\n<white>Lightly drained:<lightgrey>\n   This creature has been lightly drained, somewhat lowering the accuracy of\n   their melee attacks, the power of their spells and special attack properties,\n   and making them slightly more vulnerable to many status effects.\n\n",
+          "spellset": [
+            {
+              "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+              "spells": [
+                {
+                  "title": "Metal Splinters",
+                  "colour": 7,
+                  "tile": 9408,
+                  "letter": "a",
+                  "effect": "<cyan>(3d31)</cyan>",
+                  "range_string": "(<lightred>4</lightred>)",
+                  "schools": "Conjuration",
+                  "level": 5
+                },
+                {
+                  "title": "Summon Greater Demon",
+                  "colour": 7,
+                  "tile": 9285,
+                  "letter": "b",
+                  "effect": "<lightgrey></lightgrey>",
+                  "schools": "Summoning",
+                  "level": 7
+                },
+                {
+                  "title": "Haste",
+                  "colour": 7,
+                  "tile": 9199,
+                  "letter": "c",
+                  "effect": "<darkgrey></darkgrey>",
+                  "schools": "Hexes",
+                  "level": 6
+                },
+                {
+                  "title": "Petrify",
+                  "colour": 7,
+                  "tile": 9184,
+                  "letter": "d",
+                  "effect": "",
+                  "range_string": "(<lightred>6</lightred>)",
+                  "schools": "Alchemy/Earth",
+                  "level": 4
+                },
+                {
+                  "title": "Abjuration",
+                  "colour": 7,
+                  "tile": 9277,
+                  "letter": "e",
+                  "effect": "<lightgrey></lightgrey>",
+                  "range_string": "(<lightred>7</lightred>)",
+                  "schools": "Summoning",
+                  "level": 3
+                }
+              ]
+            }
+          ],
+          "fg_idx": 7777,
+          "flag": 1074331648,
+          "icons": [
+            10471,
+            10483,
+            10484,
+            10495,
+            10519,
+            10559
+          ],
+          "doll": [],
+          "mcache": [
+            [
+              6082,
+              0,
+              0
+            ],
+            [
+              5448,
+              0,
+              0
+            ],
+            [
+              5688,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 556
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5448": {
+          "sx": 812,
+          "sy": 96,
+          "ex": 843,
+          "ey": 134,
+          "ox": 1,
+          "oy": 9,
+          "w": 32,
+          "h": 48
+        },
+        "5688": {
+          "sx": 749,
+          "sy": 385,
+          "ex": 759,
+          "ey": 400,
+          "ox": 6,
+          "oy": 0,
+          "w": 32,
+          "h": 48
+        },
+        "6082": {
+          "sx": 663,
+          "sy": 544,
+          "ex": 695,
+          "ey": 565,
+          "ox": 0,
+          "oy": 3,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {
+        "9184": {
+          "sx": 956,
+          "sy": 0,
+          "ex": 984,
+          "ey": 28,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9199": {
+          "sx": 368,
+          "sy": 32,
+          "ex": 396,
+          "ey": 60,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9277": {
+          "sx": 532,
+          "sy": 96,
+          "ex": 560,
+          "ey": 124,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9285": {
+          "sx": 760,
+          "sy": 96,
+          "ex": 788,
+          "ey": 124,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9408": {
+          "sx": 168,
+          "sy": 224,
+          "ex": 199,
+          "ey": 255,
+          "ox": 1,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        }
+      },
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10471": {
+          "sx": 574,
+          "sy": 13,
+          "ex": 580,
+          "ey": 19,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10483": {
+          "sx": 617,
+          "sy": 11,
+          "ex": 624,
+          "ey": 22,
+          "ox": 25,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10484": {
+          "sx": 624,
+          "sy": 0,
+          "ex": 631,
+          "ey": 11,
+          "ox": 25,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10495": {
+          "sx": 664,
+          "sy": 0,
+          "ex": 671,
+          "ey": 11,
+          "ox": 25,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10519": {
+          "sx": 771,
+          "sy": 11,
+          "ex": 782,
+          "ey": 22,
+          "ox": 21,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10559": {
+          "sx": 46,
+          "sy": 32,
+          "ex": 54,
+          "ey": 41,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {
+      "10483": 6,
+      "10484": 6,
+      "10495": 6,
+      "10519": 10,
+      "10559": 7
+    },
+    "images": [
+      "player",
+      "gui",
+      "icons"
+    ]
+  }
+}

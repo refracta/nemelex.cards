@@ -1,0 +1,28 @@
+{
+  "id": "20260628T123055Z-bizarrehands-Kawin",
+  "capturedAt": "2026-06-28T12:30:55.704Z",
+  "sourceJson": "20260628T123055Z-bizarrehands-Kawin.json",
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "71d040ed177460bfb8e42b97d257d095a3d9dfd5",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-584-g7029c44831",
+    "gameStarted": null
+  },
+  "images": {
+    "gui": {
+      "mime": "image/png",
+      "byteLength": 417628,
+      "url": "../assets/images/59162af786151aa5fcfce15a8b443b93297f17074cb4957539bfdcdad93cd291.png"
+    },
+    "icons": {
+      "mime": "image/png",
+      "byteLength": 24938,
+      "url": "../assets/images/d85b9f43fbfb5a14f0462e889ab3b073c6e3113288c87cda2ea80d1f7f383827.png"
+    },
+    "player": {
+      "mime": "image/png",
+      "byteLength": 1268740,
+      "url": "../assets/images/687f84326324defd5b0c53ca1811517f528b19fbeccbd5d6de37c99e2c8a1a13.png"
+    }
+  }
+}

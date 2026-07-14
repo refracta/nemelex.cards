@@ -1,0 +1,466 @@
+{
+  "id": "20260627T004356Z-eachpiece-Cineom",
+  "capturedAt": "2026-06-27T00:43:56.738Z",
+  "username": "eachpiece",
+  "analysis": {
+    "title": "Cineom.",
+    "stats": {
+      "hp": {
+        "raw": "189",
+        "value": 189
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ev": {
+        "raw": "++",
+        "pips": 2
+      },
+      "resists": {
+        "rF": {
+          "raw": "+..",
+          "value": 1,
+          "max": 2
+        },
+        "rC": {
+          "raw": "++.",
+          "value": 2,
+          "max": 2
+        },
+        "rElec": {
+          "raw": "+",
+          "value": 1,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Sting",
+            "damageText": "42",
+            "damageParts": [
+              42
+            ],
+            "damageTotal": 42,
+            "afterHit": ""
+          }
+        ]
+      },
+      "speed": {
+        "percent": 100
+      }
+    },
+    "spells": [
+      {
+        "title": "Corrosive Bolt",
+        "level": 6,
+        "effect": "(3d32)",
+        "range": "(5)",
+        "schools": "Conjuration/Alchemy"
+      }
+    ],
+    "statuses": {
+      "rawIcons": [],
+      "rawFlag": [
+        524288,
+        -2147483648
+      ],
+      "buffs": [],
+      "debuffs": [],
+      "special": [],
+      "attitude": [],
+      "unknown": [],
+      "indicators": []
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Cineom.",
+    "body": "One of the many lords of Pandemonium, Cineom has a vast, spindly light magenta body with great, sinister wings and huge, compound eyes. It smells of rotting flesh.\n\n<lightgrey>Max HP: 189     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++++     </lightgrey><lightgrey>  EV: ++        </lightgrey>                \n<lightgrey>    rF: +..     </lightgrey><lightgrey>   rC: ++.      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\n\n\nYou have about 83% to hit with the +9 great mace \"Plog\".\nIt has about 45% to hit you.\n\nAttack  Max Damage  \nSting   42          \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+    "quote": "",
+    "status": "",
+    "spellset": [
+      {
+        "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+        "spells": [
+          {
+            "title": "Corrosive Bolt",
+            "colour": 7,
+            "tile": 9324,
+            "letter": "a",
+            "effect": "<yellow>(3d32)</yellow>",
+            "range_string": "(<lightred>5</lightred>)",
+            "schools": "Conjuration/Alchemy",
+            "level": 6
+          }
+        ]
+      }
+    ],
+    "fg_idx": 7773,
+    "flag": [
+      524288,
+      -2147483648
+    ],
+    "icons": [],
+    "doll": [],
+    "mcache": [
+      [
+        6222,
+        0,
+        0
+      ],
+      [
+        5580,
+        0,
+        0
+      ],
+      [
+        5988,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 212
+  },
+  "messageTypes": {
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 4,
+    "player": 1,
+    "map": 5,
+    "ui-stack": 1,
+    "input_mode": 8,
+    "ui-pop": 1,
+    "msgs": 3,
+    "close_all_menus": 1,
+    "ui_cutoff": 1,
+    "menu": 1
+  },
+  "recentMessages": [
+    {
+      "turn": 76993,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel"
+    },
+    {
+      "turn": 76993,
+      "channel": 2,
+      "text": "Here: Cineom"
+    },
+    {
+      "turn": 76993,
+      "channel": 24,
+      "text": "The floor."
+    },
+    {
+      "turn": 76993,
+      "channel": 24,
+      "text": "Unknown command."
+    },
+    {
+      "turn": 76993,
+      "channel": 2,
+      "text": "Casting: Manifold Assault (mildly dangerous; 5% risk of failure)"
+    },
+    {
+      "turn": 76993,
+      "channel": 2,
+      "text": "Confirm with . or Enter, or press ? or * to list all spells."
+    }
+  ],
+  "playerState": {
+    "name": "eachpiece",
+    "title": "the Conqueror",
+    "species": "Formicid",
+    "xl": 27,
+    "turn": 76993,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "c48e7e0b01a90ca067a4b41f700a3453811dcd7f",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-578-g6b10917da2",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "title": "Cineom.",
+          "body": "One of the many lords of Pandemonium, Cineom has a vast, spindly light magenta body with great, sinister wings and huge, compound eyes. It smells of rotting flesh.\n\n<lightgrey>Max HP: 189     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++++     </lightgrey><lightgrey>  EV: ++        </lightgrey>                \n<lightgrey>    rF: +..     </lightgrey><lightgrey>   rC: ++.      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\n\n\nYou have about 83% to hit with the +9 great mace \"Plog\".\nIt has about 45% to hit you.\n\nAttack  Max Damage  \nSting   42          \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+          "quote": "",
+          "status": "",
+          "spellset": [
+            {
+              "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+              "spells": [
+                {
+                  "title": "Corrosive Bolt",
+                  "colour": 7,
+                  "tile": 9324,
+                  "letter": "a",
+                  "effect": "<yellow>(3d32)</yellow>",
+                  "range_string": "(<lightred>5</lightred>)",
+                  "schools": "Conjuration/Alchemy",
+                  "level": 6
+                }
+              ]
+            }
+          ],
+          "fg_idx": 7773,
+          "flag": [
+            524288,
+            -2147483648
+          ],
+          "icons": [],
+          "doll": [],
+          "mcache": [
+            [
+              6222,
+              0,
+              0
+            ],
+            [
+              5580,
+              0,
+              0
+            ],
+            [
+              5988,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 212
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5580": {
+          "sx": 938,
+          "sy": 280,
+          "ex": 970,
+          "ey": 320,
+          "ox": 0,
+          "oy": 8,
+          "w": 32,
+          "h": 48
+        },
+        "5988": {
+          "sx": 146,
+          "sy": 505,
+          "ex": 162,
+          "ey": 516,
+          "ox": 3,
+          "oy": 2,
+          "w": 32,
+          "h": 48
+        },
+        "6222": {
+          "sx": 574,
+          "sy": 662,
+          "ex": 605,
+          "ey": 675,
+          "ox": 1,
+          "oy": 6,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {
+        "9324": {
+          "sx": 845,
+          "sy": 128,
+          "ex": 873,
+          "ey": 156,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        }
+      },
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "gui",
+      "icons"
+    ]
+  }
+}

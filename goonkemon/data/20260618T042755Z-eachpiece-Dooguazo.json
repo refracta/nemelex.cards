@@ -1,0 +1,441 @@
+{
+  "id": "20260618T042755Z-eachpiece-Dooguazo",
+  "capturedAt": "2026-06-18T04:27:55.895Z",
+  "username": "eachpiece",
+  "analysis": {
+    "title": "Dooguazo.",
+    "stats": {
+      "hp": {
+        "raw": "348",
+        "value": 348
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "++++ ++",
+        "pips": 6
+      },
+      "ev": {
+        "raw": "+++",
+        "pips": 3
+      },
+      "resists": {
+        "rF": {
+          "raw": "++.",
+          "value": 2,
+          "max": 2
+        },
+        "rC": {
+          "raw": "...",
+          "value": 0,
+          "max": 2
+        },
+        "rElec": {
+          "raw": ".",
+          "value": 0,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Hit",
+            "damageText": "65",
+            "damageParts": [
+              65
+            ],
+            "damageTotal": 65,
+            "afterHit": "Ensnare with webbing"
+          }
+        ]
+      },
+      "speed": {
+        "percent": 150
+      }
+    },
+    "spells": [],
+    "statuses": {
+      "rawIcons": [],
+      "rawFlag": [
+        524288,
+        -2147483648
+      ],
+      "buffs": [],
+      "debuffs": [],
+      "special": [],
+      "attitude": [],
+      "unknown": [],
+      "indicators": []
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Dooguazo.",
+    "body": "One of the many lords of Pandemonium, Dooguazo has a spiked white body with sparrow-like wings and a thick, horned head. It smells of rotting flesh. The air around it ripples with heat.\n\n<lightgrey>Max HP: 348     </lightgrey><lightgrey> Will: ++++ +   </lightgrey><lightgrey>   AC: ++++ ++  </lightgrey><lightgrey>  EV: +++       </lightgrey>                \n<lightgrey>    rF: ++.     </lightgrey><darkgrey>   rC: ...      </darkgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><darkgrey>rElec: .        </darkgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 150% (normally travels faster than you)\n\nYou have about 81% to hit with your +7 vampiric lajatang and 79% to hit with your bite, pseudopods, slice, and slice.\nIt has about 37% to hit you.\n\nAttack  Max Damage  After Damaging Hits \nHit     65          Ensnare with webbing\n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.",
+    "quote": "",
+    "status": "",
+    "spellset": [],
+    "fg_idx": 7773,
+    "flag": [
+      524288,
+      -2147483648
+    ],
+    "icons": [],
+    "doll": [],
+    "mcache": [
+      [
+        6238,
+        0,
+        0
+      ],
+      [
+        5612,
+        0,
+        0
+      ],
+      [
+        6034,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 117
+  },
+  "messageTypes": {
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 3,
+    "player": 1,
+    "map": 1,
+    "ui-stack": 1,
+    "input_mode": 1,
+    "chat": 1
+  },
+  "recentMessages": [],
+  "playerState": {
+    "name": "eachpiece",
+    "title": "the Conqueror",
+    "species": "Formicid",
+    "xl": 27,
+    "turn": 66863,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "4bf5c676c17534e010b2ff7211d62b55cfaf76a8",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-541-g249ab93952",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "msg": "menu",
+          "ui-centred": false,
+          "tag": "pickup",
+          "flags": 262738,
+          "last_hovered": 1,
+          "title": {
+            "text": "<white>What do you want to examine?"
+          },
+          "more": "<lightgrey>[<white>Up<lightgrey>|<white>Down<lightgrey>] select  [<white>PgDn<lightgrey>|<white>><lightgrey>] page down  [<white>PgUp<lightgrey>|<white><<<lightgrey>] page up  [<white>Esc<lightgrey>] exit<lightgrey>        <lightgrey>[<white>XXX<lightgrey>]<lightgrey>",
+          "alt_more": "",
+          "total_items": 4,
+          "chunk_start": 0,
+          "items": [
+            {
+              "text": "Monsters",
+              "colour": 1,
+              "level": 1
+            },
+            {
+              "text": " a - (<white>&</white>) Dooguazo (pandemonium lord)",
+              "q": 1,
+              "hotkeys": [
+                97
+              ],
+              "level": 2,
+              "tiles": [
+                {
+                  "t": 3057,
+                  "tex": 2
+                },
+                {
+                  "t": 3483,
+                  "tex": 2
+                },
+                {
+                  "t": 5358,
+                  "tex": 3
+                }
+              ]
+            },
+            {
+              "text": "Features",
+              "colour": 1,
+              "level": 1
+            },
+            {
+              "text": " b - (<lightcyan>^</lightcyan>) a net trap",
+              "q": 3934,
+              "hotkeys": [
+                98
+              ],
+              "level": 2,
+              "tiles": [
+                {
+                  "t": 3057,
+                  "tex": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Dooguazo.",
+          "body": "One of the many lords of Pandemonium, Dooguazo has a spiked white body with sparrow-like wings and a thick, horned head. It smells of rotting flesh. The air around it ripples with heat.\n\n<lightgrey>Max HP: 348     </lightgrey><lightgrey> Will: ++++ +   </lightgrey><lightgrey>   AC: ++++ ++  </lightgrey><lightgrey>  EV: +++       </lightgrey>                \n<lightgrey>    rF: ++.     </lightgrey><darkgrey>   rC: ...      </darkgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><darkgrey>rElec: .        </darkgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 150% (normally travels faster than you)\n\nYou have about 81% to hit with your +7 vampiric lajatang and 79% to hit with your bite, pseudopods, slice, and slice.\nIt has about 37% to hit you.\n\nAttack  Max Damage  After Damaging Hits \nHit     65          Ensnare with webbing\n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.",
+          "quote": "",
+          "status": "",
+          "spellset": [],
+          "fg_idx": 7773,
+          "flag": [
+            524288,
+            -2147483648
+          ],
+          "icons": [],
+          "doll": [],
+          "mcache": [
+            [
+              6238,
+              0,
+              0
+            ],
+            [
+              5612,
+              0,
+              0
+            ],
+            [
+              6034,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 117
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5612": {
+          "sx": 936,
+          "sy": 326,
+          "ex": 967,
+          "ey": 366,
+          "ox": 1,
+          "oy": 7,
+          "w": 32,
+          "h": 48
+        },
+        "6034": {
+          "sx": 699,
+          "sy": 517,
+          "ex": 723,
+          "ey": 528,
+          "ox": 1,
+          "oy": 2,
+          "w": 32,
+          "h": 48
+        },
+        "6238": {
+          "sx": 30,
+          "sy": 694,
+          "ex": 62,
+          "ey": 715,
+          "ox": 0,
+          "oy": 3,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {},
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "icons"
+    ]
+  }
+}

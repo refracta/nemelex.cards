@@ -1,0 +1,473 @@
+{
+  "id": "20260619T014959Z-vayu-Yxexats",
+  "capturedAt": "2026-06-19T01:49:59.688Z",
+  "username": "vayu",
+  "analysis": {
+    "title": "Yxexats.",
+    "stats": {
+      "hp": {
+        "raw": "193",
+        "value": 193
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "+++",
+        "pips": 3
+      },
+      "ev": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "resists": {
+        "rF": {
+          "raw": "...",
+          "value": 0,
+          "max": 2
+        },
+        "rC": {
+          "raw": "+..",
+          "value": 1,
+          "max": 2
+        },
+        "rElec": {
+          "raw": ".",
+          "value": 0,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Hit",
+            "damageText": "23",
+            "damageParts": [
+              23
+            ],
+            "damageTotal": 23,
+            "afterHit": ""
+          }
+        ]
+      },
+      "speed": {
+        "percent": 100
+      }
+    },
+    "spells": [],
+    "statuses": {
+      "rawIcons": [],
+      "rawFlag": [
+        -1073217536,
+        1610612736
+      ],
+      "buffs": [],
+      "debuffs": [],
+      "special": [],
+      "attitude": [],
+      "unknown": [],
+      "indicators": []
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Yxexats.",
+    "body": "One of the many lords of Pandemonium, Yxexats has a skeletal magenta body with dragonfly wings and a gigantic mouth.\n\n<lightgrey>Max HP: 193     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: +++      </lightgrey><lightgrey>  EV: ++++      </lightgrey>                \n<darkgrey>    rF: ...     </darkgrey><lightgrey>   rC: +..      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><darkgrey>rElec: .        </darkgrey>\n<lightgrey>Threat: High    </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\n\n\nYou have about 62% to hit with your +9 heavy broad axe and 40% to hit with your headbutt.\nIt has about 40% to hit you.\n\nAttack  Max Damage  \nHit     23          \n\nIt is immune to torment; and resistant to miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.",
+    "quote": "",
+    "status": "",
+    "spellset": [],
+    "fg_idx": 7774,
+    "flag": [
+      -1073217536,
+      1610612736
+    ],
+    "icons": [],
+    "doll": [],
+    "mcache": [
+      [
+        6115,
+        0,
+        0
+      ],
+      [
+        5478,
+        0,
+        0
+      ],
+      [
+        5753,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 364
+  },
+  "messageTypes": {
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 4,
+    "player": 1,
+    "map": 3,
+    "ui-stack": 1,
+    "input_mode": 1,
+    "ui-pop": 1,
+    "close_menu": 1,
+    "msgs": 1
+  },
+  "recentMessages": [
+    {
+      "turn": 66467,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel, g - get item"
+    },
+    {
+      "turn": 66467,
+      "channel": 2,
+      "text": "Here: Yxexats (heavily wounded)"
+    },
+    {
+      "turn": 66467,
+      "channel": 21,
+      "text": "Item here: 43 gold pieces."
+    },
+    {
+      "turn": 66467,
+      "channel": 24,
+      "text": "The floor."
+    }
+  ],
+  "playerState": {
+    "name": "vayu",
+    "title": "the Conqueror",
+    "species": "Minotaur",
+    "xl": 27,
+    "turn": 66467,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "35bf4a0ce99125f041e0d58ed11cd923881bde30",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-542-gedf2d32dfa",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "msg": "menu",
+          "ui-centred": false,
+          "tag": "pickup",
+          "flags": 262738,
+          "last_hovered": 1,
+          "title": {
+            "text": "<white>What do you want to examine?"
+          },
+          "more": "<lightgrey>[<white>Up<lightgrey>|<white>Down<lightgrey>] select  [<white>PgDn<lightgrey>|<white>><lightgrey>] page down  [<white>PgUp<lightgrey>|<white><<<lightgrey>] page up  [<white>Esc<lightgrey>] exit<lightgrey>        <lightgrey>[<white>XXX<lightgrey>]<lightgrey>",
+          "alt_more": "",
+          "total_items": 4,
+          "chunk_start": 0,
+          "items": [
+            {
+              "text": "Monsters",
+              "colour": 1,
+              "level": 1
+            },
+            {
+              "text": " a - (<magenta>&</magenta>) Yxexats (pandemonium lord), heavily wounded",
+              "q": 1,
+              "hotkeys": [
+                97
+              ],
+              "level": 2,
+              "tiles": [
+                {
+                  "t": 275,
+                  "tex": 0
+                },
+                {
+                  "t": 3482,
+                  "tex": 2
+                },
+                {
+                  "t": 5358,
+                  "tex": 3
+                },
+                {
+                  "t": 10609,
+                  "tex": 6
+                }
+              ]
+            },
+            {
+              "text": "Items",
+              "colour": 1,
+              "level": 1
+            },
+            {
+              "text": " b - (<yellow>$</yellow>) 43 gold pieces",
+              "q": 2,
+              "hotkeys": [
+                98,
+                36
+              ],
+              "level": 2,
+              "tiles": [
+                {
+                  "t": 275,
+                  "tex": 0
+                },
+                {
+                  "t": 4727,
+                  "tex": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Yxexats.",
+          "body": "One of the many lords of Pandemonium, Yxexats has a skeletal magenta body with dragonfly wings and a gigantic mouth.\n\n<lightgrey>Max HP: 193     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: +++      </lightgrey><lightgrey>  EV: ++++      </lightgrey>                \n<darkgrey>    rF: ...     </darkgrey><lightgrey>   rC: +..      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><darkgrey>rElec: .        </darkgrey>\n<lightgrey>Threat: High    </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\n\n\nYou have about 62% to hit with your +9 heavy broad axe and 40% to hit with your headbutt.\nIt has about 40% to hit you.\n\nAttack  Max Damage  \nHit     23          \n\nIt is immune to torment; and resistant to miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.",
+          "quote": "",
+          "status": "",
+          "spellset": [],
+          "fg_idx": 7774,
+          "flag": [
+            -1073217536,
+            1610612736
+          ],
+          "icons": [],
+          "doll": [],
+          "mcache": [
+            [
+              6115,
+              0,
+              0
+            ],
+            [
+              5478,
+              0,
+              0
+            ],
+            [
+              5753,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 364
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5478": {
+          "sx": 747,
+          "sy": 142,
+          "ex": 778,
+          "ey": 181,
+          "ox": 1,
+          "oy": 9,
+          "w": 32,
+          "h": 48
+        },
+        "5753": {
+          "sx": 354,
+          "sy": 418,
+          "ex": 368,
+          "ey": 431,
+          "ox": 3,
+          "oy": 2,
+          "w": 32,
+          "h": 48
+        },
+        "6115": {
+          "sx": 630,
+          "sy": 566,
+          "ex": 660,
+          "ey": 585,
+          "ox": 2,
+          "oy": 0,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {},
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "icons"
+    ]
+  }
+}

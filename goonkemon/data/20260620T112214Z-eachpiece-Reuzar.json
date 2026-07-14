@@ -1,0 +1,531 @@
+{
+  "id": "20260620T112214Z-eachpiece-Reuzar",
+  "capturedAt": "2026-06-20T11:22:14.084Z",
+  "username": "eachpiece",
+  "analysis": {
+    "title": "Reuzar.",
+    "stats": {
+      "hp": {
+        "raw": "192",
+        "value": 192
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "+",
+        "pips": 1
+      },
+      "ev": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "resists": {
+        "rF": {
+          "raw": "+..",
+          "value": 1,
+          "max": 2
+        },
+        "rC": {
+          "raw": "...",
+          "value": 0,
+          "max": 2
+        },
+        "rElec": {
+          "raw": "+",
+          "value": 1,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Hit",
+            "damageText": "45",
+            "damageParts": [
+              45
+            ],
+            "damageTotal": 45,
+            "afterHit": ""
+          }
+        ]
+      },
+      "speed": {
+        "percent": 120
+      }
+    },
+    "spells": [
+      {
+        "title": "Plasma Beam",
+        "level": 6,
+        "effect": "(2x3d24)",
+        "range": "(6)",
+        "schools": "Fire/Air"
+      },
+      {
+        "title": "March of Sorrows",
+        "level": 7,
+        "effect": "",
+        "range": "(6)",
+        "schools": "Conjuration/Necromancy/Air"
+      }
+    ],
+    "statuses": {
+      "rawIcons": [],
+      "rawFlag": [
+        524288,
+        -2147483648
+      ],
+      "buffs": [],
+      "debuffs": [],
+      "special": [],
+      "attitude": [],
+      "unknown": [],
+      "indicators": []
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Reuzar.",
+    "body": "One of the many lords of Pandemonium, Reuzar has an armoured body with small, bat-like wings and a cubic structure in place of a head. It smells delicious! It changes colour whenever you look at it.\n\n<lightgrey>Max HP: 192     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: +        </lightgrey><lightgrey>  EV: ++++ +    </lightgrey>                \n<lightgrey>    rF: +..     </lightgrey><darkgrey>   rC: ...      </darkgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 120% (normally travels faster than you)\n\nYou have about 62% to hit with your +9 executioner's axe of flaming and 53% to hit with your slice and slice.\nIt has about 34% to hit you.\n\nAttack  Max Damage  \nHit     45          \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+    "quote": "",
+    "status": "<white>Surrounded by freezing clouds:<lightgrey>\n   This creature trails a ring of freezing clouds around itself.\n\n",
+    "spellset": [
+      {
+        "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+        "spells": [
+          {
+            "title": "Plasma Beam",
+            "colour": 7,
+            "tile": 9219,
+            "letter": "a",
+            "effect": "<red>(2x3d24)</red>",
+            "range_string": "(<lightred>6</lightred>)",
+            "schools": "Fire/Air",
+            "level": 6
+          },
+          {
+            "title": "March of Sorrows",
+            "colour": 7,
+            "tile": 9406,
+            "letter": "b",
+            "effect": "<lightgrey></lightgrey>",
+            "range_string": "(<lightred>6</lightred>)",
+            "schools": "Conjuration/Necromancy/Air",
+            "level": 7
+          }
+        ]
+      }
+    ],
+    "fg_idx": 7774,
+    "flag": [
+      524288,
+      -2147483648
+    ],
+    "icons": [],
+    "doll": [],
+    "mcache": [
+      [
+        6084,
+        0,
+        0
+      ],
+      [
+        5439,
+        0,
+        0
+      ],
+      [
+        5679,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 1174
+  },
+  "messageTypes": {
+    "game_client": 1,
+    "update_spectators": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 6,
+    "player": 2,
+    "map": 10,
+    "ui-stack": 1,
+    "input_mode": 11,
+    "ui-pop": 1,
+    "msgs": 6,
+    "close_all_menus": 5,
+    "ui_cutoff": 2,
+    "menu_scroll": 4,
+    "menu": 2,
+    "update_menu_items": 2,
+    "close_menu": 2
+  },
+  "recentMessages": [
+    {
+      "turn": 77026,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel"
+    },
+    {
+      "turn": 77026,
+      "channel": 2,
+      "text": "Here: Reuzar (surrounded by freezing clouds)"
+    },
+    {
+      "turn": 77026,
+      "channel": 24,
+      "text": "The floor."
+    },
+    {
+      "turn": 77026,
+      "channel": 24,
+      "text": "Unknown command."
+    },
+    {
+      "turn": 77026,
+      "channel": 24,
+      "text": "Unknown command."
+    },
+    {
+      "turn": 77026,
+      "channel": 4,
+      "text": "You gain the combat prowess of a mighty hero."
+    },
+    {
+      "turn": 77027,
+      "channel": 2,
+      "text": "Aiming: Duel (5% risk of failure)"
+    },
+    {
+      "turn": 77027,
+      "channel": 2,
+      "text": "Press: ? - help, Dir - move target"
+    },
+    {
+      "turn": 77027,
+      "channel": 2,
+      "text": "Aim: a smoke demon"
+    },
+    {
+      "turn": 77027,
+      "channel": 2,
+      "text": "Aiming: Duel (5% risk of failure)"
+    },
+    {
+      "turn": 77027,
+      "channel": 2,
+      "text": "Press: ? - help, Dir - move target"
+    }
+  ],
+  "playerState": {
+    "name": "eachpiece",
+    "title": "the Executioner",
+    "species": "Formicid",
+    "xl": 27,
+    "turn": 77027,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "a1f140d2cecfc653605542069364f7f6569720f9",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-546-gb2ce4df294",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "title": "Reuzar.",
+          "body": "One of the many lords of Pandemonium, Reuzar has an armoured body with small, bat-like wings and a cubic structure in place of a head. It smells delicious! It changes colour whenever you look at it.\n\n<lightgrey>Max HP: 192     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: +        </lightgrey><lightgrey>  EV: ++++ +    </lightgrey>                \n<lightgrey>    rF: +..     </lightgrey><darkgrey>   rC: ...      </darkgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 120% (normally travels faster than you)\n\nYou have about 62% to hit with your +9 executioner's axe of flaming and 53% to hit with your slice and slice.\nIt has about 34% to hit you.\n\nAttack  Max Damage  \nHit     45          \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+          "quote": "",
+          "status": "<white>Surrounded by freezing clouds:<lightgrey>\n   This creature trails a ring of freezing clouds around itself.\n\n",
+          "spellset": [
+            {
+              "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+              "spells": [
+                {
+                  "title": "Plasma Beam",
+                  "colour": 7,
+                  "tile": 9219,
+                  "letter": "a",
+                  "effect": "<red>(2x3d24)</red>",
+                  "range_string": "(<lightred>6</lightred>)",
+                  "schools": "Fire/Air",
+                  "level": 6
+                },
+                {
+                  "title": "March of Sorrows",
+                  "colour": 7,
+                  "tile": 9406,
+                  "letter": "b",
+                  "effect": "<lightgrey></lightgrey>",
+                  "range_string": "(<lightred>6</lightred>)",
+                  "schools": "Conjuration/Necromancy/Air",
+                  "level": 7
+                }
+              ]
+            }
+          ],
+          "fg_idx": 7774,
+          "flag": [
+            524288,
+            -2147483648
+          ],
+          "icons": [],
+          "doll": [],
+          "mcache": [
+            [
+              6084,
+              0,
+              0
+            ],
+            [
+              5439,
+              0,
+              0
+            ],
+            [
+              5679,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 1174
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5439": {
+          "sx": 532,
+          "sy": 96,
+          "ex": 564,
+          "ey": 135,
+          "ox": 0,
+          "oy": 9,
+          "w": 32,
+          "h": 48
+        },
+        "5679": {
+          "sx": 665,
+          "sy": 372,
+          "ex": 685,
+          "ey": 384,
+          "ox": 4,
+          "oy": 0,
+          "w": 32,
+          "h": 48
+        },
+        "6084": {
+          "sx": 724,
+          "sy": 534,
+          "ex": 754,
+          "ey": 565,
+          "ox": 2,
+          "oy": 0,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {
+        "9219": {
+          "sx": 932,
+          "sy": 32,
+          "ex": 960,
+          "ey": 60,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9406": {
+          "sx": 112,
+          "sy": 224,
+          "ex": 140,
+          "ey": 252,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        }
+      },
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "gui",
+      "icons"
+    ]
+  }
+}

@@ -1,0 +1,517 @@
+{
+  "id": "20260627T095723Z-fbynet-Bebos",
+  "capturedAt": "2026-06-27T09:57:23.888Z",
+  "username": "fbynet",
+  "analysis": {
+    "title": "Bebos.",
+    "stats": {
+      "hp": {
+        "raw": "187",
+        "value": 187
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "++++ ++",
+        "pips": 6
+      },
+      "ev": {
+        "raw": "+++",
+        "pips": 3
+      },
+      "resists": {
+        "rF": {
+          "raw": "+..",
+          "value": 1,
+          "max": 2
+        },
+        "rC": {
+          "raw": "++.",
+          "value": 2,
+          "max": 2
+        },
+        "rElec": {
+          "raw": "+",
+          "value": 1,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Hit: distorting touch",
+            "damageText": "41 + 26 (distort)",
+            "damageParts": [
+              41,
+              26
+            ],
+            "damageTotal": 67,
+            "afterHit": ""
+          }
+        ]
+      },
+      "speed": {
+        "percent": 150
+      }
+    },
+    "spells": [
+      {
+        "title": "Bolt of Devastation",
+        "level": 5,
+        "effect": "(3d24)",
+        "range": "(7)",
+        "schools": "Conjuration"
+      },
+      {
+        "title": "Fire Storm",
+        "level": 9,
+        "effect": "(8d15)",
+        "range": "(5)",
+        "schools": "Conjuration/Fire"
+      },
+      {
+        "title": "Haste",
+        "level": 6,
+        "effect": "",
+        "range": "",
+        "schools": "Hexes"
+      }
+    ],
+    "statuses": {
+      "rawIcons": [
+        10471
+      ],
+      "rawFlag": 65536,
+      "buffs": [],
+      "debuffs": [],
+      "special": [
+        {
+          "id": 10471,
+          "name": "SUMMONED",
+          "label": "summoned",
+          "category": "special",
+          "source": "icon"
+        }
+      ],
+      "attitude": [
+        {
+          "id": null,
+          "name": "FRIENDLY",
+          "label": "friendly",
+          "category": "attitude",
+          "source": "flag"
+        }
+      ],
+      "unknown": [],
+      "indicators": [
+        {
+          "id": 10471,
+          "name": "SUMMONED",
+          "label": "summoned",
+          "category": "special",
+          "source": "icon"
+        },
+        {
+          "id": null,
+          "name": "FRIENDLY",
+          "label": "friendly",
+          "category": "attitude",
+          "source": "flag"
+        }
+      ]
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Bebos.",
+    "body": "One of the many lords of Pandemonium, Bebos has a skeletal light blue body and a great mass of hair.\n\n<lightgrey>Max HP: 187     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++++ ++  </lightgrey><lightgrey>  EV: +++       </lightgrey>                \n<lightgrey>    rF: +..     </lightgrey><lightgrey>   rC: ++.      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 150% (normally travels faster than you)\n\nYou have about 74% to hit with your +6 spectral demon blade.\nIt has about 30% to hit you.\n\nAttack                 Max Damage         \nHit: distorting touch  41 + 26 (distort)  \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.\n\nIt is currently targeting the soul eater.\n\nThis monster has been temporarily summoned to this location. If angered it will immediately vanish, yielding no experience or items; it is incapable of using stairs.",
+    "quote": "",
+    "status": "",
+    "spellset": [
+      {
+        "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+        "spells": [
+          {
+            "title": "Bolt of Devastation",
+            "colour": 7,
+            "tile": 9326,
+            "letter": "a",
+            "effect": "<magenta>(3d24)</magenta>",
+            "range_string": "(<lightred>7</lightred>)",
+            "schools": "Conjuration",
+            "level": 5
+          },
+          {
+            "title": "Fire Storm",
+            "colour": 7,
+            "tile": 9211,
+            "letter": "b",
+            "effect": "<red>(8d15)</red>",
+            "range_string": "(<lightred>5</lightred>)",
+            "schools": "Conjuration/Fire",
+            "level": 9
+          },
+          {
+            "title": "Haste",
+            "colour": 7,
+            "tile": 9199,
+            "letter": "c",
+            "effect": "<darkgrey></darkgrey>",
+            "schools": "Hexes",
+            "level": 6
+          }
+        ]
+      }
+    ],
+    "fg_idx": 7776,
+    "flag": 65536,
+    "icons": [
+      10471
+    ],
+    "doll": [],
+    "mcache": [
+      [
+        5548,
+        0,
+        0
+      ],
+      [
+        5904,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 186
+  },
+  "messageTypes": {
+    "chat": 1,
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 3,
+    "player": 1,
+    "map": 1,
+    "ui-stack": 1,
+    "input_mode": 1
+  },
+  "recentMessages": [],
+  "playerState": {
+    "name": "fbynet",
+    "title": "the Forbidden One",
+    "species": "Mummy",
+    "xl": 25,
+    "turn": 72364,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "391a27fd8536c7f138ea49d8efd56b65fa59bee5",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-579-g303dd0adc2",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "title": "Bebos.",
+          "body": "One of the many lords of Pandemonium, Bebos has a skeletal light blue body and a great mass of hair.\n\n<lightgrey>Max HP: 187     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++++ ++  </lightgrey><lightgrey>  EV: +++       </lightgrey>                \n<lightgrey>    rF: +..     </lightgrey><lightgrey>   rC: ++.      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 150% (normally travels faster than you)\n\nYou have about 74% to hit with your +6 spectral demon blade.\nIt has about 30% to hit you.\n\nAttack                 Max Damage         \nHit: distorting touch  41 + 26 (distort)  \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.\n\nIt is currently targeting the soul eater.\n\nThis monster has been temporarily summoned to this location. If angered it will immediately vanish, yielding no experience or items; it is incapable of using stairs.",
+          "quote": "",
+          "status": "",
+          "spellset": [
+            {
+              "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+              "spells": [
+                {
+                  "title": "Bolt of Devastation",
+                  "colour": 7,
+                  "tile": 9326,
+                  "letter": "a",
+                  "effect": "<magenta>(3d24)</magenta>",
+                  "range_string": "(<lightred>7</lightred>)",
+                  "schools": "Conjuration",
+                  "level": 5
+                },
+                {
+                  "title": "Fire Storm",
+                  "colour": 7,
+                  "tile": 9211,
+                  "letter": "b",
+                  "effect": "<red>(8d15)</red>",
+                  "range_string": "(<lightred>5</lightred>)",
+                  "schools": "Conjuration/Fire",
+                  "level": 9
+                },
+                {
+                  "title": "Haste",
+                  "colour": 7,
+                  "tile": 9199,
+                  "letter": "c",
+                  "effect": "<darkgrey></darkgrey>",
+                  "schools": "Hexes",
+                  "level": 6
+                }
+              ]
+            }
+          ],
+          "fg_idx": 7776,
+          "flag": 65536,
+          "icons": [
+            10471
+          ],
+          "doll": [],
+          "mcache": [
+            [
+              5548,
+              0,
+              0
+            ],
+            [
+              5904,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 186
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5548": {
+          "sx": 936,
+          "sy": 234,
+          "ex": 967,
+          "ey": 273,
+          "ox": 1,
+          "oy": 9,
+          "w": 32,
+          "h": 48
+        },
+        "5904": {
+          "sx": 131,
+          "sy": 476,
+          "ex": 150,
+          "ey": 490,
+          "ox": 2,
+          "oy": 0,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {
+        "9199": {
+          "sx": 368,
+          "sy": 32,
+          "ex": 396,
+          "ey": 60,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9211": {
+          "sx": 704,
+          "sy": 32,
+          "ex": 736,
+          "ey": 62,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "9326": {
+          "sx": 901,
+          "sy": 128,
+          "ex": 929,
+          "ey": 156,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        }
+      },
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10471": {
+          "sx": 574,
+          "sy": 13,
+          "ex": 580,
+          "ey": 19,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "gui",
+      "icons"
+    ]
+  }
+}

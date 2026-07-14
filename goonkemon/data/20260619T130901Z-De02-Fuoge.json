@@ -1,0 +1,851 @@
+{
+  "id": "20260619T130901Z-De02-Fuoge",
+  "capturedAt": "2026-06-19T13:09:01.426Z",
+  "username": "De02",
+  "analysis": {
+    "title": "Fuoge.",
+    "stats": {
+      "hp": {
+        "raw": "167",
+        "value": 167
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "++++ ++",
+        "pips": 6
+      },
+      "ev": {
+        "raw": "++",
+        "pips": 2
+      },
+      "resists": {
+        "rF": {
+          "raw": "+..",
+          "value": 1,
+          "max": 2
+        },
+        "rC": {
+          "raw": "++.",
+          "value": 2,
+          "max": 2
+        },
+        "rElec": {
+          "raw": "+",
+          "value": 1,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Hit",
+            "damageText": "37",
+            "damageParts": [
+              37
+            ],
+            "damageTotal": 37,
+            "afterHit": ""
+          }
+        ]
+      },
+      "speed": {
+        "percent": 100
+      }
+    },
+    "spells": [
+      {
+        "title": "Bolt of Fire",
+        "level": 6,
+        "effect": "(3d44)",
+        "range": "(6)",
+        "schools": "Conjuration/Fire"
+      },
+      {
+        "title": "Summon Demon",
+        "level": 5,
+        "effect": "",
+        "range": "",
+        "schools": "Summoning"
+      },
+      {
+        "title": "Sleep",
+        "level": 5,
+        "effect": "(19%)",
+        "range": "(7)",
+        "schools": "Hexes"
+      },
+      {
+        "title": "Abjuration",
+        "level": 3,
+        "effect": "",
+        "range": "(7)",
+        "schools": "Summoning"
+      }
+    ],
+    "statuses": {
+      "rawIcons": [
+        10519
+      ],
+      "rawFlag": [
+        1074266112,
+        -2147483648
+      ],
+      "buffs": [
+        {
+          "id": 10519,
+          "name": "BRILLIANCE",
+          "label": "brilliance",
+          "category": "buff",
+          "source": "icon"
+        }
+      ],
+      "debuffs": [],
+      "special": [],
+      "attitude": [],
+      "unknown": [],
+      "indicators": [
+        {
+          "id": 10519,
+          "name": "BRILLIANCE",
+          "label": "brilliance",
+          "category": "buff",
+          "source": "icon"
+        }
+      ]
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Fuoge.",
+    "body": "One of the many lords of Pandemonium, Fuoge has a mantis body with great, sinister wings and wears a helmet over its head. It smells of brimstone. It is constantly speaking in tongues. It changes colour whenever you look at it.\n\n<lightgrey>Max HP: 167     </lightgrey><lightgrey> Will: ++++ +   </lightgrey><lightgrey>   AC: ++++ ++  </lightgrey><lightgrey>  EV: ++        </lightgrey>                \n<lightgrey>    rF: +..     </lightgrey><lightgrey>   rC: ++.      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\n\n\nYou have about 71% to hit with the fire staff of Defence by Offence and 71% to hit with your pseudopods.\nIt has about 77% to hit you.\n\nAttack  Max Damage  \nHit     37          \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+    "quote": "",
+    "status": "<white>Spells empowered:<lightgrey>\n   This creature's spells are strengthened and it will cast them more\n   frequently.\n\n",
+    "spellset": [
+      {
+        "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+        "spells": [
+          {
+            "title": "Bolt of Fire",
+            "colour": 7,
+            "tile": 9208,
+            "letter": "a",
+            "effect": "<red>(3d44)</red>",
+            "range_string": "(<lightgray>6</lightgray>)",
+            "schools": "Conjuration/Fire",
+            "level": 6
+          },
+          {
+            "title": "Summon Demon",
+            "colour": 7,
+            "tile": 9282,
+            "letter": "b",
+            "effect": "<lightgrey></lightgrey>",
+            "schools": "Summoning",
+            "level": 5
+          },
+          {
+            "title": "Sleep",
+            "colour": 7,
+            "tile": 9440,
+            "letter": "c",
+            "effect": "(19%)",
+            "range_string": "(<lightred>7</lightred>)",
+            "schools": "Hexes",
+            "level": 5
+          },
+          {
+            "title": "Abjuration",
+            "colour": 7,
+            "tile": 9277,
+            "letter": "d",
+            "effect": "<lightgrey></lightgrey>",
+            "range_string": "(<lightred>7</lightred>)",
+            "schools": "Summoning",
+            "level": 3
+          }
+        ]
+      }
+    ],
+    "fg_idx": 7778,
+    "flag": [
+      1074266112,
+      -2147483648
+    ],
+    "icons": [
+      10519
+    ],
+    "doll": [],
+    "mcache": [
+      [
+        6110,
+        0,
+        0
+      ],
+      [
+        5479,
+        0,
+        0
+      ],
+      [
+        5742,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 571
+  },
+  "messageTypes": {
+    "ui-pop": 3,
+    "close_all_menus": 7,
+    "input_mode": 14,
+    "update_spectators": 2,
+    "game_client": 1,
+    "msgs": 15,
+    "map": 24,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 2,
+    "cursor": 10,
+    "player": 5,
+    "ui-stack": 1,
+    "close_menu": 1,
+    "ui_cutoff": 4,
+    "delay": 12
+  },
+  "recentMessages": [
+    {
+      "turn": 1,
+      "channel": 26,
+      "text": "Infinite lua loop detected, aborting."
+    },
+    {
+      "turn": 14020,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel, g - get item"
+    },
+    {
+      "turn": 14020,
+      "channel": 2,
+      "text": "Here: Fuoge (flame, lightly wounded, spells empowered)"
+    },
+    {
+      "turn": 14020,
+      "channel": 21,
+      "text": "Item here: a shapeshifter corpse."
+    },
+    {
+      "turn": 14020,
+      "channel": 24,
+      "text": "The floor."
+    },
+    {
+      "turn": 14020,
+      "channel": 31,
+      "text": "You encounter an aspiring flesh and a kobold fleshcrafter.\nThe kobold fleshcrafter is wielding a +1 dagger of venom."
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "Flasks of reagents rain from above!"
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "The flickering plasma engulfs the aspiring flesh!!"
+    },
+    {
+      "turn": 14020,
+      "channel": 17,
+      "text": "The aspiring flesh is moderately wounded."
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "The fiery phlogiston engulfs the kobold fleshcrafter!!"
+    },
+    {
+      "turn": 14020,
+      "channel": 17,
+      "text": "You kill the kobold fleshcrafter!"
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "The flickering plasma engulfs the protean progenitor!!!"
+    },
+    {
+      "turn": 14020,
+      "channel": 17,
+      "text": "The protean progenitor is heavily wounded."
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "The noxious sulphur engulfs the protean progenitor!!"
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "The protean progenitor partially resists."
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "The protean progenitor is poisoned."
+    },
+    {
+      "turn": 14020,
+      "channel": 17,
+      "text": "The protean progenitor is moderately wounded."
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "The unstable reaction engulfs Fuoge!!!!"
+    },
+    {
+      "turn": 14020,
+      "channel": 17,
+      "text": "Fuoge is heavily wounded."
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "Fuoge begins to petrify."
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "The fiery phlogiston engulfs the protean progenitor!!!"
+    },
+    {
+      "turn": 14020,
+      "channel": 17,
+      "text": "The protean progenitor is heavily wounded."
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "The noxious sulphur engulfs your fire vortex!"
+    },
+    {
+      "turn": 14020,
+      "channel": 1,
+      "text": "Your fire vortex partially resists."
+    },
+    {
+      "turn": 14020,
+      "channel": 17,
+      "text": "You destroy your fire vortex!"
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "The fiery phlogiston engulfs your fire vortex."
+    },
+    {
+      "turn": 14020,
+      "channel": 1,
+      "text": "Your fire vortex completely resists."
+    },
+    {
+      "turn": 14020,
+      "channel": 4,
+      "text": "Your rain of reagents ends."
+    },
+    {
+      "turn": 14020,
+      "channel": 8,
+      "text": "You hear a shout!"
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "Your fire vortex is engulfed in freezing vapours."
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "The protean progenitor is engulfed in blazing flames. x2"
+    },
+    {
+      "turn": 14020,
+      "channel": 0,
+      "text": "Fuoge is engulfed in blazing flames."
+    },
+    {
+      "turn": 14020,
+      "channel": 31,
+      "text": "You encounter a demonspawn blood saint. It is wielding a +0 quarterstaff."
+    },
+    {
+      "turn": 14021,
+      "channel": 11,
+      "text": "Your Shapeshifting skill increases to level 19!"
+    },
+    {
+      "turn": 14021,
+      "channel": 2,
+      "text": "Casting: Fire Storm (dangerous; 2% risk of failure)"
+    },
+    {
+      "turn": 14021,
+      "channel": 2,
+      "text": "Confirm with . or Enter, or press ? or * to list all spells."
+    },
+    {
+      "turn": 14021,
+      "channel": 2,
+      "text": "Aiming: Fire Storm (dangerous; 2% risk of failure)"
+    },
+    {
+      "turn": 14021,
+      "channel": 2,
+      "text": "Press: ? - help, Dir - move target"
+    },
+    {
+      "turn": 14021,
+      "channel": 2,
+      "text": "Aim: Fuoge (severely wounded, spells empowered, petrifying slowly)"
+    },
+    {
+      "turn": 14021,
+      "channel": 2,
+      "text": "Okay, then."
+    }
+  ],
+  "playerState": {
+    "name": "De02",
+    "title": "the Sorcerer",
+    "species": "Deep Elf",
+    "xl": 24,
+    "turn": 14021,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "7f49413e0831178644cc5eecd2a1f6ae0564a3aa",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-543-ge005243cc8",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "msg": "menu",
+          "ui-centred": false,
+          "tag": "pickup",
+          "flags": 262738,
+          "last_hovered": 1,
+          "title": {
+            "text": "<white>What do you want to examine?"
+          },
+          "more": "<lightgrey>[<white>Up<lightgrey>|<white>Down<lightgrey>] select  [<white>PgDn<lightgrey>|<white>><lightgrey>] page down  [<white>PgUp<lightgrey>|<white><<<lightgrey>] page up  [<white>Esc<lightgrey>] exit<lightgrey>        <lightgrey>[<white>XXX<lightgrey>]<lightgrey>",
+          "alt_more": "",
+          "total_items": 4,
+          "chunk_start": 0,
+          "items": [
+            {
+              "text": "Monsters",
+              "colour": 1,
+              "level": 1
+            },
+            {
+              "text": " a - (<magenta>&</magenta>) Fuoge (spells empowered pandemonium lord), lightly wounded",
+              "q": 1,
+              "hotkeys": [
+                97
+              ],
+              "level": 2,
+              "tiles": [
+                {
+                  "t": 274,
+                  "tex": 0
+                },
+                {
+                  "t": 3483,
+                  "tex": 2
+                },
+                {
+                  "t": 5358,
+                  "tex": 3
+                },
+                {
+                  "t": 10607,
+                  "tex": 6
+                }
+              ]
+            },
+            {
+              "text": "Items",
+              "colour": 1,
+              "level": 1
+            },
+            {
+              "text": " b - (<lightgreen>†</lightgreen>) a shapeshifter corpse",
+              "q": 2,
+              "colour": 8,
+              "hotkeys": [
+                98
+              ],
+              "level": 2,
+              "tiles": [
+                {
+                  "t": 274,
+                  "tex": 0
+                },
+                {
+                  "t": 4859,
+                  "tex": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Fuoge.",
+          "body": "One of the many lords of Pandemonium, Fuoge has a mantis body with great, sinister wings and wears a helmet over its head. It smells of brimstone. It is constantly speaking in tongues. It changes colour whenever you look at it.\n\n<lightgrey>Max HP: 167     </lightgrey><lightgrey> Will: ++++ +   </lightgrey><lightgrey>   AC: ++++ ++  </lightgrey><lightgrey>  EV: ++        </lightgrey>                \n<lightgrey>    rF: +..     </lightgrey><lightgrey>   rC: ++.      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\n\n\nYou have about 71% to hit with the fire staff of Defence by Offence and 71% to hit with your pseudopods.\nIt has about 77% to hit you.\n\nAttack  Max Damage  \nHit     37          \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+          "quote": "",
+          "status": "<white>Spells empowered:<lightgrey>\n   This creature's spells are strengthened and it will cast them more\n   frequently.\n\n",
+          "spellset": [
+            {
+              "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+              "spells": [
+                {
+                  "title": "Bolt of Fire",
+                  "colour": 7,
+                  "tile": 9208,
+                  "letter": "a",
+                  "effect": "<red>(3d44)</red>",
+                  "range_string": "(<lightgray>6</lightgray>)",
+                  "schools": "Conjuration/Fire",
+                  "level": 6
+                },
+                {
+                  "title": "Summon Demon",
+                  "colour": 7,
+                  "tile": 9282,
+                  "letter": "b",
+                  "effect": "<lightgrey></lightgrey>",
+                  "schools": "Summoning",
+                  "level": 5
+                },
+                {
+                  "title": "Sleep",
+                  "colour": 7,
+                  "tile": 9440,
+                  "letter": "c",
+                  "effect": "(19%)",
+                  "range_string": "(<lightred>7</lightred>)",
+                  "schools": "Hexes",
+                  "level": 5
+                },
+                {
+                  "title": "Abjuration",
+                  "colour": 7,
+                  "tile": 9277,
+                  "letter": "d",
+                  "effect": "<lightgrey></lightgrey>",
+                  "range_string": "(<lightred>7</lightred>)",
+                  "schools": "Summoning",
+                  "level": 3
+                }
+              ]
+            }
+          ],
+          "fg_idx": 7778,
+          "flag": [
+            1074266112,
+            -2147483648
+          ],
+          "icons": [
+            10519
+          ],
+          "doll": [],
+          "mcache": [
+            [
+              6110,
+              0,
+              0
+            ],
+            [
+              5479,
+              0,
+              0
+            ],
+            [
+              5742,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 571
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5479": {
+          "sx": 778,
+          "sy": 142,
+          "ex": 810,
+          "ey": 182,
+          "ox": 0,
+          "oy": 8,
+          "w": 32,
+          "h": 48
+        },
+        "5742": {
+          "sx": 251,
+          "sy": 429,
+          "ex": 265,
+          "ey": 442,
+          "ox": 5,
+          "oy": 1,
+          "w": 32,
+          "h": 48
+        },
+        "6110": {
+          "sx": 481,
+          "sy": 566,
+          "ex": 511,
+          "ey": 597,
+          "ox": 2,
+          "oy": 0,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {
+        "9208": {
+          "sx": 620,
+          "sy": 32,
+          "ex": 648,
+          "ey": 60,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9277": {
+          "sx": 532,
+          "sy": 96,
+          "ex": 560,
+          "ey": 124,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9282": {
+          "sx": 672,
+          "sy": 96,
+          "ex": 700,
+          "ey": 124,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9440": {
+          "sx": 56,
+          "sy": 255,
+          "ex": 84,
+          "ey": 283,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        }
+      },
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10519": {
+          "sx": 771,
+          "sy": 11,
+          "ex": 782,
+          "ey": 22,
+          "ox": 21,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {
+      "10519": 10
+    },
+    "images": [
+      "player",
+      "gui",
+      "icons"
+    ]
+  }
+}

@@ -1,0 +1,484 @@
+{
+  "id": "20260627T004052Z-eachpiece-Axuwkacw",
+  "capturedAt": "2026-06-27T00:40:52.603Z",
+  "username": "eachpiece",
+  "analysis": {
+    "title": "Axuwkacw.",
+    "stats": {
+      "hp": {
+        "raw": "203",
+        "value": 203
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "+",
+        "pips": 1
+      },
+      "ev": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "resists": {
+        "rF": {
+          "raw": "...",
+          "value": 0,
+          "max": 2
+        },
+        "rC": {
+          "raw": "+..",
+          "value": 1,
+          "max": 2
+        },
+        "rElec": {
+          "raw": ".",
+          "value": 0,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Headbutt: electric touch",
+            "damageText": "41 + 20 (elec)",
+            "damageParts": [
+              41,
+              20
+            ],
+            "damageTotal": 61,
+            "afterHit": ""
+          }
+        ]
+      },
+      "speed": {
+        "percent": 130
+      }
+    },
+    "spells": [
+      {
+        "title": "Lehudib's Crystal Spear",
+        "level": 8,
+        "effect": "(3d49)",
+        "range": "(3)",
+        "schools": "Conjuration/Earth"
+      },
+      {
+        "title": "Orb of Electricity",
+        "level": 7,
+        "effect": "(3d44)",
+        "range": "(7)",
+        "schools": "Conjuration/Air"
+      }
+    ],
+    "statuses": {
+      "rawIcons": [],
+      "rawFlag": [
+        0,
+        -2147483648
+      ],
+      "buffs": [],
+      "debuffs": [],
+      "special": [],
+      "attitude": [],
+      "unknown": [],
+      "indicators": []
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Axuwkacw.",
+    "body": "One of the many lords of Pandemonium, Axuwkacw has a skeletal body and an ominous eye at the end of a thin stalk. It stinks of death. It changes colour whenever you look at it.\n\n<lightgrey>Max HP: 203     </lightgrey><lightgrey> Will: ++++ +   </lightgrey><lightgrey>   AC: +        </lightgrey><lightgrey>  EV: ++++ ++   </lightgrey>                \n<darkgrey>    rF: ...     </darkgrey><lightgrey>   rC: +..      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><darkgrey>rElec: .        </darkgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 130% (normally travels faster than you)\n\nYou have about 47% to hit with the +9 great mace \"Plog\".\nIt has about 51% to hit you.\n\nAttack                    Max Damage      \nHeadbutt: electric touch  41 + 20 (elec)  \n\nIt is immune to torment; and resistant to miasma.\nIt can see invisible.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+    "quote": "",
+    "status": "",
+    "spellset": [
+      {
+        "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+        "spells": [
+          {
+            "title": "Lehudib's Crystal Spear",
+            "colour": 7,
+            "tile": 9181,
+            "letter": "a",
+            "effect": "<white>(3d49)</white>",
+            "range_string": "(<lightred>3</lightred>)",
+            "schools": "Conjuration/Earth",
+            "level": 8
+          },
+          {
+            "title": "Orb of Electricity",
+            "colour": 7,
+            "tile": 9416,
+            "letter": "b",
+            "effect": "<lightblue>(3d44)</lightblue>",
+            "range_string": "(<lightred>7</lightred>)",
+            "schools": "Conjuration/Air",
+            "level": 7
+          }
+        ]
+      }
+    ],
+    "fg_idx": 7773,
+    "flag": [
+      0,
+      -2147483648
+    ],
+    "icons": [],
+    "doll": [],
+    "mcache": [
+      [
+        5618,
+        0,
+        0
+      ],
+      [
+        6054,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 159
+  },
+  "messageTypes": {
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 4,
+    "player": 1,
+    "map": 5,
+    "ui-stack": 1,
+    "input_mode": 3,
+    "ui-pop": 2,
+    "msgs": 2,
+    "ui-push": 1,
+    "close_all_menus": 1,
+    "ui_cutoff": 1
+  },
+  "recentMessages": [
+    {
+      "turn": 76491,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel"
+    },
+    {
+      "turn": 76491,
+      "channel": 2,
+      "text": "Here: Axuwkacw, armed with an electric touch"
+    },
+    {
+      "turn": 76491,
+      "channel": 24,
+      "text": "The floor."
+    },
+    {
+      "turn": 76491,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel"
+    },
+    {
+      "turn": 76491,
+      "channel": 2,
+      "text": "Here: Axuwkacw, armed with an electric touch"
+    },
+    {
+      "turn": 76491,
+      "channel": 24,
+      "text": "The floor."
+    }
+  ],
+  "playerState": {
+    "name": "eachpiece",
+    "title": "the Conqueror",
+    "species": "Formicid",
+    "xl": 27,
+    "turn": 76491,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "c48e7e0b01a90ca067a4b41f700a3453811dcd7f",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-578-g6b10917da2",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "title": "Axuwkacw.",
+          "body": "One of the many lords of Pandemonium, Axuwkacw has a skeletal body and an ominous eye at the end of a thin stalk. It stinks of death. It changes colour whenever you look at it.\n\n<lightgrey>Max HP: 203     </lightgrey><lightgrey> Will: ++++ +   </lightgrey><lightgrey>   AC: +        </lightgrey><lightgrey>  EV: ++++ ++   </lightgrey>                \n<darkgrey>    rF: ...     </darkgrey><lightgrey>   rC: +..      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><darkgrey>rElec: .        </darkgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 130% (normally travels faster than you)\n\nYou have about 47% to hit with the +9 great mace \"Plog\".\nIt has about 51% to hit you.\n\nAttack                    Max Damage      \nHeadbutt: electric touch  41 + 20 (elec)  \n\nIt is immune to torment; and resistant to miasma.\nIt can see invisible.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+          "quote": "",
+          "status": "",
+          "spellset": [
+            {
+              "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+              "spells": [
+                {
+                  "title": "Lehudib's Crystal Spear",
+                  "colour": 7,
+                  "tile": 9181,
+                  "letter": "a",
+                  "effect": "<white>(3d49)</white>",
+                  "range_string": "(<lightred>3</lightred>)",
+                  "schools": "Conjuration/Earth",
+                  "level": 8
+                },
+                {
+                  "title": "Orb of Electricity",
+                  "colour": 7,
+                  "tile": 9416,
+                  "letter": "b",
+                  "effect": "<lightblue>(3d44)</lightblue>",
+                  "range_string": "(<lightred>7</lightred>)",
+                  "schools": "Conjuration/Air",
+                  "level": 7
+                }
+              ]
+            }
+          ],
+          "fg_idx": 7773,
+          "flag": [
+            0,
+            -2147483648
+          ],
+          "icons": [],
+          "doll": [],
+          "mcache": [
+            [
+              5618,
+              0,
+              0
+            ],
+            [
+              6054,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 159
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5618": {
+          "sx": 124,
+          "sy": 372,
+          "ex": 155,
+          "ey": 411,
+          "ox": 1,
+          "oy": 9,
+          "w": 32,
+          "h": 48
+        },
+        "6054": {
+          "sx": 916,
+          "sy": 517,
+          "ex": 932,
+          "ey": 527,
+          "ox": 0,
+          "oy": 2,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {
+        "9181": {
+          "sx": 872,
+          "sy": 0,
+          "ex": 900,
+          "ey": 28,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9416": {
+          "sx": 398,
+          "sy": 224,
+          "ex": 426,
+          "ey": 252,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        }
+      },
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "gui",
+      "icons"
+    ]
+  }
+}

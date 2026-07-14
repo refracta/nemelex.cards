@@ -1,0 +1,395 @@
+{
+  "id": "20260619T171636Z-malfuriongg-Iguumih",
+  "capturedAt": "2026-06-19T17:16:36.830Z",
+  "username": "malfuriongg",
+  "analysis": {
+    "title": "Iguumih.",
+    "stats": {
+      "hp": {
+        "raw": "213",
+        "value": 213
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "",
+        "pips": 0
+      },
+      "ev": {
+        "raw": "+++",
+        "pips": 3
+      },
+      "resists": {
+        "rF": {
+          "raw": "∞",
+          "value": 4,
+          "max": 2
+        },
+        "rC": {
+          "raw": "+..",
+          "value": 1,
+          "max": 2
+        },
+        "rElec": {
+          "raw": "+",
+          "value": 1,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Hit",
+            "damageText": "55",
+            "damageParts": [
+              55
+            ],
+            "damageTotal": 55,
+            "afterHit": "Cause corrosion"
+          }
+        ]
+      },
+      "speed": {
+        "percent": 140
+      }
+    },
+    "spells": [],
+    "statuses": {
+      "rawIcons": [],
+      "rawFlag": [
+        2621440,
+        -2147483648
+      ],
+      "buffs": [],
+      "debuffs": [
+        {
+          "id": null,
+          "name": "UNAWARE",
+          "label": "unaware",
+          "category": "debuff",
+          "source": "flag"
+        }
+      ],
+      "special": [],
+      "attitude": [],
+      "unknown": [],
+      "indicators": [
+        {
+          "id": null,
+          "name": "UNAWARE",
+          "label": "unaware",
+          "category": "debuff",
+          "source": "flag"
+        }
+      ]
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Iguumih.",
+    "body": "One of the many lords of Pandemonium, Iguumih has a splotchy light grey body with the wings of a moth and the head of a bird.\n\n<lightgrey>Max HP: 213     </lightgrey><lightgrey> Will: ++++ +   </lightgrey><lightgrey>   AC: ~45      </lightgrey><lightgrey>  EV: +++       </lightgrey>                \n<lightgrey>    rF: ∞       </lightgrey><lightgrey>   rC: +..      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 140% (normally travels faster than you)\n\nYou have about 75% to hit with the cursed +9 quick blade \"Enlightened Repose\".\nIt has about 48% to hit you.\n\nAttack  Max Damage  Bonus          \nHit     55          Cause corrosion\n\nIt has a 20% chance to notice you each turn.\nIt is immune to torment; and resistant to miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.",
+    "quote": "",
+    "status": "",
+    "spellset": [],
+    "fg_idx": 7780,
+    "flag": [
+      2621440,
+      -2147483648
+    ],
+    "icons": [],
+    "doll": [],
+    "mcache": [
+      [
+        6146,
+        0,
+        0
+      ],
+      [
+        5501,
+        0,
+        0
+      ],
+      [
+        5820,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 642
+  },
+  "messageTypes": {
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 3,
+    "player": 1,
+    "map": 1,
+    "ui-stack": 1,
+    "input_mode": 2,
+    "ui-push": 1
+  },
+  "recentMessages": [],
+  "playerState": {
+    "name": "malfuriongg",
+    "title": "the Imperceptible",
+    "species": "Poltergeist",
+    "xl": 27,
+    "turn": 56662,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "a1f140d2cecfc653605542069364f7f6569720f9",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-546-gb2ce4df294",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "title": "Iguumih.",
+          "body": "One of the many lords of Pandemonium, Iguumih has a splotchy light grey body with the wings of a moth and the head of a bird.\n\n<lightgrey>Max HP: 213     </lightgrey><lightgrey> Will: ++++ +   </lightgrey><lightgrey>   AC: ~45      </lightgrey><lightgrey>  EV: +++       </lightgrey>                \n<lightgrey>    rF: ∞       </lightgrey><lightgrey>   rC: +..      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 140% (normally travels faster than you)\n\nYou have about 75% to hit with the cursed +9 quick blade \"Enlightened Repose\".\nIt has about 48% to hit you.\n\nAttack  Max Damage  Bonus          \nHit     55          Cause corrosion\n\nIt has a 20% chance to notice you each turn.\nIt is immune to torment; and resistant to miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.",
+          "quote": "",
+          "status": "",
+          "spellset": [],
+          "fg_idx": 7780,
+          "flag": [
+            2621440,
+            -2147483648
+          ],
+          "icons": [],
+          "doll": [],
+          "mcache": [
+            [
+              6146,
+              0,
+              0
+            ],
+            [
+              5501,
+              0,
+              0
+            ],
+            [
+              5820,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 642
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5501": {
+          "sx": 468,
+          "sy": 188,
+          "ex": 499,
+          "ey": 226,
+          "ox": 0,
+          "oy": 9,
+          "w": 32,
+          "h": 48
+        },
+        "5820": {
+          "sx": 144,
+          "sy": 447,
+          "ex": 160,
+          "ey": 457,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 48
+        },
+        "6146": {
+          "sx": 484,
+          "sy": 598,
+          "ex": 514,
+          "ey": 608,
+          "ox": 1,
+          "oy": 5,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {},
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "icons"
+    ]
+  }
+}

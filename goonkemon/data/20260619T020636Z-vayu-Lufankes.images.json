@@ -1,0 +1,28 @@
+{
+  "id": "20260619T020636Z-vayu-Lufankes",
+  "capturedAt": "2026-06-19T02:06:36.076Z",
+  "sourceJson": "20260619T020636Z-vayu-Lufankes.json",
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "35bf4a0ce99125f041e0d58ed11cd923881bde30",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-542-gedf2d32dfa",
+    "gameStarted": null
+  },
+  "images": {
+    "gui": {
+      "mime": "image/png",
+      "byteLength": 417656,
+      "url": "../assets/images/23c2ef2a3a0ecf02a326de2a35c068cb7879d6286cab231b232238fd069edf26.png"
+    },
+    "icons": {
+      "mime": "image/png",
+      "byteLength": 24938,
+      "url": "../assets/images/d85b9f43fbfb5a14f0462e889ab3b073c6e3113288c87cda2ea80d1f7f383827.png"
+    },
+    "player": {
+      "mime": "image/png",
+      "byteLength": 1268740,
+      "url": "../assets/images/687f84326324defd5b0c53ca1811517f528b19fbeccbd5d6de37c99e2c8a1a13.png"
+    }
+  }
+}

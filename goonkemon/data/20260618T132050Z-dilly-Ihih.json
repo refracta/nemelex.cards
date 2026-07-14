@@ -1,0 +1,628 @@
+{
+  "id": "20260618T132050Z-dilly-Ihih",
+  "capturedAt": "2026-06-18T13:20:50.299Z",
+  "username": "dilly",
+  "analysis": {
+    "title": "Ihih.",
+    "stats": {
+      "hp": {
+        "raw": "187",
+        "value": 187
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ev": {
+        "raw": "+++",
+        "pips": 3
+      },
+      "resists": {
+        "rF": {
+          "raw": "∞",
+          "value": 4,
+          "max": 2
+        },
+        "rC": {
+          "raw": "...",
+          "value": 0,
+          "max": 2
+        },
+        "rElec": {
+          "raw": "+",
+          "value": 1,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Hit",
+            "damageText": "30",
+            "damageParts": [
+              30
+            ],
+            "damageTotal": 30,
+            "afterHit": ""
+          }
+        ]
+      },
+      "speed": {
+        "percent": 150
+      }
+    },
+    "spells": [
+      {
+        "title": "Lightning Bolt",
+        "level": 5,
+        "effect": "(3d26)",
+        "range": "(7)",
+        "schools": "Conjuration/Air"
+      },
+      {
+        "title": "Malign Gateway",
+        "level": 7,
+        "effect": "",
+        "range": "",
+        "schools": "Summoning/Translocation"
+      },
+      {
+        "title": "Sentinel's Mark",
+        "level": 5,
+        "effect": "(12%)",
+        "range": "(7)",
+        "schools": "Hexes"
+      }
+    ],
+    "statuses": {
+      "rawIcons": [],
+      "rawFlag": [
+        0,
+        -2147483648
+      ],
+      "buffs": [],
+      "debuffs": [],
+      "special": [],
+      "attitude": [],
+      "unknown": [],
+      "indicators": []
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Ihih.",
+    "body": "One of the many lords of Pandemonium, Ihih has a spiked blue body and a thick, horned head.\n\n<lightgrey>Max HP: 187     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++++     </lightgrey><lightgrey>  EV: +++       </lightgrey>                \n<lightgrey>    rF: ∞       </lightgrey><darkgrey>   rC: ...      </darkgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 150% (normally travels faster than you)\n\nYou have about 83% to hit with your claws and 83% to hit with your bite.\nIt has about 22% to hit you.\n\nAttack  Max Damage  \nHit     30          \n\nIt is immune to torment; and resistant to miasma.\nIt is vulnerable to silver and hated by Zin.\nIt can see invisible.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+    "quote": "",
+    "status": "",
+    "spellset": [
+      {
+        "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+        "spells": [
+          {
+            "title": "Lightning Bolt",
+            "colour": 7,
+            "tile": 9161,
+            "letter": "a",
+            "effect": "<lightcyan>(3d26)</lightcyan>",
+            "range_string": "(<lightred>7</lightred>)",
+            "schools": "Conjuration/Air",
+            "level": 5
+          },
+          {
+            "title": "Malign Gateway",
+            "colour": 7,
+            "tile": 9276,
+            "letter": "b",
+            "effect": "<lightgrey></lightgrey>",
+            "schools": "Summoning/Translocation",
+            "level": 7
+          },
+          {
+            "title": "Sentinel's Mark",
+            "colour": 7,
+            "tile": 9436,
+            "letter": "c",
+            "effect": "(12%)",
+            "range_string": "(<lightred>7</lightred>)",
+            "schools": "Hexes",
+            "level": 5
+          }
+        ]
+      }
+    ],
+    "fg_idx": 7776,
+    "flag": [
+      0,
+      -2147483648
+    ],
+    "icons": [],
+    "doll": [],
+    "mcache": [
+      [
+        5444,
+        0,
+        0
+      ],
+      [
+        5686,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 125
+  },
+  "messageTypes": {
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 4,
+    "player": 9,
+    "map": 20,
+    "ui-stack": 1,
+    "input_mode": 19,
+    "ui-pop": 1,
+    "msgs": 10,
+    "close_all_menus": 1,
+    "ui_cutoff": 1,
+    "delay": 8
+  },
+  "recentMessages": [
+    {
+      "turn": 50877,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel"
+    },
+    {
+      "turn": 50877,
+      "channel": 2,
+      "text": "Here: Ihih"
+    },
+    {
+      "turn": 50877,
+      "channel": 24,
+      "text": "The floor."
+    },
+    {
+      "turn": 50877,
+      "channel": 24,
+      "text": "Unknown command."
+    },
+    {
+      "turn": 50877,
+      "channel": 0,
+      "text": "You eviscerate Ihih!!! You bite Ihih!! Ihih's magic leaks into the air."
+    },
+    {
+      "turn": 50877,
+      "channel": 0,
+      "text": "You drain its magic."
+    },
+    {
+      "turn": 50877,
+      "channel": 17,
+      "text": "Ihih is heavily wounded."
+    },
+    {
+      "turn": 50878,
+      "channel": 0,
+      "text": "You mangle Ihih!! Your bite misses Ihih."
+    },
+    {
+      "turn": 50878,
+      "channel": 17,
+      "text": "Ihih is severely wounded."
+    },
+    {
+      "turn": 50878,
+      "channel": 0,
+      "text": "You block Ihih's attack. You block the orange demon's attack."
+    },
+    {
+      "turn": 50879,
+      "channel": 0,
+      "text": "You barely miss Ihih. You bite Ihih!! Ihih's magic leaks into the air."
+    },
+    {
+      "turn": 50879,
+      "channel": 0,
+      "text": "You drain its magic."
+    },
+    {
+      "turn": 50879,
+      "channel": 17,
+      "text": "Ihih is severely wounded."
+    },
+    {
+      "turn": 50879,
+      "channel": 0,
+      "text": "Ihih falters for a moment."
+    },
+    {
+      "turn": 50880,
+      "channel": 0,
+      "text": "You claw Ihih! Your bite misses Ihih."
+    },
+    {
+      "turn": 50880,
+      "channel": 17,
+      "text": "Ihih is severely wounded."
+    },
+    {
+      "turn": 50880,
+      "channel": 0,
+      "text": "Ihih falters for a moment. You block the orange demon's attack."
+    },
+    {
+      "turn": 50881,
+      "channel": 0,
+      "text": "You scratch Ihih. Your bite misses Ihih."
+    },
+    {
+      "turn": 50881,
+      "channel": 17,
+      "text": "Ihih is almost dead."
+    },
+    {
+      "turn": 50882,
+      "channel": 0,
+      "text": "You mangle Ihih!! Your bite misses Ihih."
+    },
+    {
+      "turn": 50882,
+      "channel": 17,
+      "text": "Ihih is almost dead."
+    },
+    {
+      "turn": 50882,
+      "channel": 0,
+      "text": "You block the orange demon's attack. Ihih falters for a moment."
+    },
+    {
+      "turn": 50883,
+      "channel": 0,
+      "text": "You scratch Ihih but do no damage. You bite Ihih!"
+    },
+    {
+      "turn": 50883,
+      "channel": 17,
+      "text": "You kill Ihih!"
+    },
+    {
+      "turn": 50883,
+      "channel": 3,
+      "text": "Cheibriados thoroughly appreciates the change of pace."
+    },
+    {
+      "turn": 50883,
+      "channel": 0,
+      "text": "You let out a blood-chilling howl!"
+    },
+    {
+      "turn": 50883,
+      "channel": 13,
+      "text": "The Hell Sentinel gestures at you."
+    },
+    {
+      "turn": 50883,
+      "channel": 0,
+      "text": "You block the iron shot. You block the orange demon's attack."
+    }
+  ],
+  "playerState": {
+    "name": "dilly",
+    "title": "the Wrestler",
+    "species": "Vine Stalker",
+    "xl": 27,
+    "turn": 50884,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "35bf4a0ce99125f041e0d58ed11cd923881bde30",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-542-gedf2d32dfa",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "title": "Ihih.",
+          "body": "One of the many lords of Pandemonium, Ihih has a spiked blue body and a thick, horned head.\n\n<lightgrey>Max HP: 187     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++++     </lightgrey><lightgrey>  EV: +++       </lightgrey>                \n<lightgrey>    rF: ∞       </lightgrey><darkgrey>   rC: ...      </darkgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 150% (normally travels faster than you)\n\nYou have about 83% to hit with your claws and 83% to hit with your bite.\nIt has about 22% to hit you.\n\nAttack  Max Damage  \nHit     30          \n\nIt is immune to torment; and resistant to miasma.\nIt is vulnerable to silver and hated by Zin.\nIt can see invisible.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+          "quote": "",
+          "status": "",
+          "spellset": [
+            {
+              "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+              "spells": [
+                {
+                  "title": "Lightning Bolt",
+                  "colour": 7,
+                  "tile": 9161,
+                  "letter": "a",
+                  "effect": "<lightcyan>(3d26)</lightcyan>",
+                  "range_string": "(<lightred>7</lightred>)",
+                  "schools": "Conjuration/Air",
+                  "level": 5
+                },
+                {
+                  "title": "Malign Gateway",
+                  "colour": 7,
+                  "tile": 9276,
+                  "letter": "b",
+                  "effect": "<lightgrey></lightgrey>",
+                  "schools": "Summoning/Translocation",
+                  "level": 7
+                },
+                {
+                  "title": "Sentinel's Mark",
+                  "colour": 7,
+                  "tile": 9436,
+                  "letter": "c",
+                  "effect": "(12%)",
+                  "range_string": "(<lightred>7</lightred>)",
+                  "schools": "Hexes",
+                  "level": 5
+                }
+              ]
+            }
+          ],
+          "fg_idx": 7776,
+          "flag": [
+            0,
+            -2147483648
+          ],
+          "icons": [],
+          "doll": [],
+          "mcache": [
+            [
+              5444,
+              0,
+              0
+            ],
+            [
+              5686,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 125
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5444": {
+          "sx": 688,
+          "sy": 96,
+          "ex": 719,
+          "ey": 136,
+          "ox": 1,
+          "oy": 7,
+          "w": 32,
+          "h": 48
+        },
+        "5686": {
+          "sx": 725,
+          "sy": 397,
+          "ex": 749,
+          "ey": 408,
+          "ox": 1,
+          "oy": 2,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {
+        "9161": {
+          "sx": 312,
+          "sy": 0,
+          "ex": 340,
+          "ey": 28,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9276": {
+          "sx": 504,
+          "sy": 96,
+          "ex": 532,
+          "ey": 128,
+          "ox": 2,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "9436": {
+          "sx": 961,
+          "sy": 224,
+          "ex": 989,
+          "ey": 252,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        }
+      },
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "gui",
+      "icons"
+    ]
+  }
+}

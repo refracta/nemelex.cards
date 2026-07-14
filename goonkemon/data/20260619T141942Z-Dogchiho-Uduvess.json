@@ -1,0 +1,383 @@
+{
+  "id": "20260619T141942Z-Dogchiho-Uduvess",
+  "capturedAt": "2026-06-19T14:19:42.304Z",
+  "username": "Dogchiho",
+  "analysis": {
+    "title": "Uduvess.",
+    "stats": {
+      "hp": {
+        "raw": "232",
+        "value": 232
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "+++",
+        "pips": 3
+      },
+      "ev": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "resists": {
+        "rF": {
+          "raw": "++.",
+          "value": 2,
+          "max": 2
+        },
+        "rC": {
+          "raw": "...",
+          "value": 0,
+          "max": 2
+        },
+        "rElec": {
+          "raw": "+",
+          "value": 1,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Hit",
+            "damageText": "61",
+            "damageParts": [
+              61
+            ],
+            "damageTotal": 61,
+            "afterHit": "Ensnare with webbing"
+          }
+        ]
+      },
+      "speed": {
+        "percent": 180
+      }
+    },
+    "spells": [],
+    "statuses": {
+      "rawIcons": [],
+      "rawFlag": [
+        0,
+        -2147483648
+      ],
+      "buffs": [],
+      "debuffs": [],
+      "special": [],
+      "attitude": [],
+      "unknown": [],
+      "indicators": []
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Uduvess.",
+    "body": "One of the many lords of Pandemonium, Uduvess has a tentacled red body and snakes for hair. It smells of brimstone. Tiny orange flames dance around it.\n\n<lightgrey>Max HP: 232     </lightgrey><lightgrey> Will: ++++ +   </lightgrey><lightgrey>   AC: +++      </lightgrey><lightgrey>  EV: ++++ ++++ </lightgrey>                \n<lightgrey>    rF: ++.     </lightgrey><darkgrey>   rC: ...      </darkgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 180% (normally travels faster than you)\n\nYou have about 27% to hit with the +5 Lochaber axe.\nIt has about 69% to hit you.\n\nAttack  Max Damage  After Damaging Hits \nHit     61          Ensnare with webbing\n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can open doors.\n\nIt is currently targeted by your spectral sixfirhy.",
+    "quote": "",
+    "status": "<white>Surrounded by flames:<lightgrey>\n   This creature trails a ring of flame clouds around itself.\n\n<white>Ally target:<lightgrey>\n   This creature is being targeted by one or more of your allies.\n\n",
+    "spellset": [],
+    "fg_idx": 7774,
+    "flag": [
+      0,
+      -2147483648
+    ],
+    "icons": [],
+    "doll": [],
+    "mcache": [
+      [
+        5433,
+        0,
+        0
+      ],
+      [
+        5660,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 2076
+  },
+  "messageTypes": {
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 10,
+    "player": 1,
+    "map": 5,
+    "ui-stack": 1,
+    "input_mode": 5,
+    "ui-pop": 1,
+    "msgs": 2,
+    "close_all_menus": 1,
+    "ui_cutoff": 1
+  },
+  "recentMessages": [
+    {
+      "turn": 64294,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel"
+    },
+    {
+      "turn": 64294,
+      "channel": 2,
+      "text": "Here: Uduvess (surrounded by flames, ally target, umbra)"
+    },
+    {
+      "turn": 64294,
+      "channel": 24,
+      "text": "The floor."
+    },
+    {
+      "turn": 64294,
+      "channel": 24,
+      "text": "Unknown command."
+    }
+  ],
+  "playerState": {
+    "name": "Dogchiho",
+    "title": "the Phalangite",
+    "species": "Merfolk",
+    "xl": 27,
+    "turn": 64294,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "7f49413e0831178644cc5eecd2a1f6ae0564a3aa",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-543-ge005243cc8",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "title": "Uduvess.",
+          "body": "One of the many lords of Pandemonium, Uduvess has a tentacled red body and snakes for hair. It smells of brimstone. Tiny orange flames dance around it.\n\n<lightgrey>Max HP: 232     </lightgrey><lightgrey> Will: ++++ +   </lightgrey><lightgrey>   AC: +++      </lightgrey><lightgrey>  EV: ++++ ++++ </lightgrey>                \n<lightgrey>    rF: ++.     </lightgrey><darkgrey>   rC: ...      </darkgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 180% (normally travels faster than you)\n\nYou have about 27% to hit with the +5 Lochaber axe.\nIt has about 69% to hit you.\n\nAttack  Max Damage  After Damaging Hits \nHit     61          Ensnare with webbing\n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can open doors.\n\nIt is currently targeted by your spectral sixfirhy.",
+          "quote": "",
+          "status": "<white>Surrounded by flames:<lightgrey>\n   This creature trails a ring of flame clouds around itself.\n\n<white>Ally target:<lightgrey>\n   This creature is being targeted by one or more of your allies.\n\n",
+          "spellset": [],
+          "fg_idx": 7774,
+          "flag": [
+            0,
+            -2147483648
+          ],
+          "icons": [],
+          "doll": [],
+          "mcache": [
+            [
+              5433,
+              0,
+              0
+            ],
+            [
+              5660,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 2076
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5433": {
+          "sx": 343,
+          "sy": 96,
+          "ex": 375,
+          "ey": 135,
+          "ox": 0,
+          "oy": 9,
+          "w": 32,
+          "h": 48
+        },
+        "5660": {
+          "sx": 526,
+          "sy": 400,
+          "ex": 546,
+          "ey": 415,
+          "ox": 2,
+          "oy": 0,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {},
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "icons"
+    ]
+  }
+}

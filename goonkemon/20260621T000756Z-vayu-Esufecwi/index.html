@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Esufecwi. - Goonkemon</title>
+<style>
+:root {
+    color-scheme: dark;
+    --crawl-bg: #050505;
+    --crawl-panel: #0b0b0b;
+    --crawl-panel-2: #151515;
+    --crawl-border: #757575;
+    --crawl-border-dim: #333;
+    --crawl-text: #d6d6d6;
+    --crawl-dim: #9a9a9a;
+    --crawl-yellow: #ffff55;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #111;
+    color: var(--crawl-text);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 14px;
+    line-height: 1.3;
+}
+main {
+    width: min(1080px, calc(100vw - 24px));
+    margin: 12px auto;
+}
+.ui-window {
+    background: var(--crawl-bg);
+    border: 2px solid var(--crawl-border);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55);
+}
+.menu-titlebar {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--crawl-border-dim);
+    background: #101010;
+}
+.monster-tiles {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    line-height: 0;
+}
+.monster-tile {
+    width: 48px;
+    height: auto;
+    image-rendering: pixelated;
+}
+h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+.score-badge {
+    color: var(--crawl-yellow);
+    white-space: nowrap;
+}
+.menu-body {
+    padding: 10px 12px 12px;
+}
+.desc-text {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+.spellset {
+    margin: 8px 0 10px;
+}
+.spell-label {
+    margin: 4px 0;
+    white-space: pre-wrap;
+}
+.spell-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.spell-item {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    align-items: center;
+    gap: 6px;
+    min-height: 34px;
+    padding: 1px 0;
+}
+.spell-item canvas {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+}
+.spell-line {
+    min-width: 0;
+    color: inherit;
+}
+.spell-key {
+    color: #fff;
+}
+.spell-name {
+    color: inherit;
+}
+.spell-meta {
+	    color: var(--crawl-dim);
+	}
+	.score-loading,
+	.score-error {
+	    margin-top: 8px;
+	    color: var(--crawl-dim);
+	}
+	.score-error {
+	    color: #ff5555;
+	}
+	.status-loading,
+	.status-empty {
+	    color: var(--crawl-dim);
+	}
+	.status-groups {
+	    display: grid;
+	    gap: 6px;
+	}
+	.status-group {
+	    display: grid;
+	    grid-template-columns: 86px minmax(0, 1fr);
+	    gap: 8px;
+	    align-items: start;
+	}
+	.status-group-label {
+	    color: var(--crawl-dim);
+	}
+	.status-tags {
+	    display: flex;
+	    flex-wrap: wrap;
+	    gap: 4px;
+	}
+	.status-tag {
+	    border: 1px solid var(--crawl-border-dim);
+	    background: #101010;
+	    padding: 1px 5px;
+	    color: #dcdcdc;
+	}
+	.status-buff {
+	    color: #55ff55;
+	}
+	.status-debuff {
+	    color: #ff5555;
+	}
+	.status-special {
+	    color: #55ffff;
+	}
+	.status-attitude {
+	    color: #d6d6d6;
+	}
+	.status-unknown {
+	    color: #ffff55;
+	}
+	.menu-section {
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid var(--crawl-border-dim);
+}
+.section-title {
+    margin-bottom: 4px;
+    color: #fff;
+}
+	.score-grid {
+	    display: grid;
+	    grid-template-columns: repeat(4, minmax(88px, 1fr));
+	    gap: 1px;
+	    margin: 8px 0 0;
+    background: var(--crawl-border-dim);
+    border: 1px solid var(--crawl-border-dim);
+}
+.score-cell {
+    min-width: 0;
+    padding: 5px 6px;
+    background: var(--crawl-panel-2);
+}
+.score-label {
+    color: var(--crawl-dim);
+}
+	.score-value {
+	    color: #fff;
+	}
+	.score-detail {
+	    display: grid;
+	    gap: 10px;
+	    margin-top: 10px;
+	}
+	.score-equations {
+	    display: grid;
+	    gap: 2px;
+	    color: #dcdcdc;
+	}
+	.score-equation strong,
+	.score-subtitle {
+	    color: #fff;
+	    font-weight: 400;
+	}
+	.score-table {
+	    width: 100%;
+	    border-collapse: collapse;
+	    table-layout: fixed;
+	    background: var(--crawl-bg);
+	}
+	.score-table th,
+	.score-table td {
+	    padding: 4px 6px;
+	    border: 1px solid var(--crawl-border-dim);
+	    text-align: left;
+	    vertical-align: top;
+	}
+	.score-table th {
+	    color: var(--crawl-dim);
+	    background: #101010;
+	    font-weight: 400;
+	}
+	.score-points {
+	    width: 72px;
+	    color: #fff;
+	    text-align: right;
+	    white-space: nowrap;
+	}
+	.score-empty {
+	    color: var(--crawl-dim);
+	}
+	.source {
+	    margin-top: 8px;
+	    color: var(--crawl-dim);
+	    font-size: 12px;
+	}
+	.page-actions {
+	    display: flex;
+	    justify-content: flex-end;
+	    margin-top: 12px;
+	    padding-top: 10px;
+	    border-top: 1px solid var(--crawl-border-dim);
+	}
+	.crawl-button {
+	    display: inline-block;
+	    border: 1px solid var(--crawl-border);
+	    background: #101010;
+	    color: #fff;
+	    padding: 4px 10px;
+	    text-decoration: none;
+	}
+	.crawl-button:hover,
+	.crawl-button:focus {
+	    background: #1c1c1c;
+	    color: var(--crawl-yellow);
+	}
+.lightgrey, .lightgray { color: #b8b8b8; }
+.darkgrey, .darkgray { color: #666; }
+.white, .w { color: #fff; }
+.yellow { color: #ffff55; }
+.red { color: #aa0000; }
+.lightred { color: #ff5555; }
+.green { color: #00aa00; }
+.lightgreen { color: #55ff55; }
+.blue { color: #5555ff; }
+.lightblue { color: #7777ff; }
+.magenta { color: #aa00aa; }
+.lightmagenta { color: #ff55ff; }
+.cyan { color: #00aaaa; }
+.lightcyan { color: #55ffff; }
+.brown { color: #aa5500; }
+.fg0 { color: #050505; }
+.fg1 { color: #5555ff; }
+.fg2 { color: #00aa00; }
+.fg3 { color: #00aaaa; }
+.fg4 { color: #aa0000; }
+.fg5 { color: #aa00aa; }
+.fg6 { color: #aa5500; }
+.fg7 { color: #b8b8b8; }
+.fg8 { color: #666; }
+.fg9 { color: #7777ff; }
+.fg10 { color: #55ff55; }
+.fg11 { color: #55ffff; }
+.fg12 { color: #ff5555; }
+.fg13 { color: #ff55ff; }
+.fg14 { color: #ffff55; }
+.fg15 { color: #fff; }
+@media (max-width: 720px) {
+	    main { width: calc(100vw - 8px); margin: 4px auto; }
+	    .menu-titlebar { grid-template-columns: auto 1fr; }
+	    .score-badge { grid-column: 2; }
+	    .score-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	    .score-table { table-layout: auto; }
+	}
+</style>
+</head>
+<body>
+<main>
+<section class="ui-window" role="document" aria-label="Goonkemon monster capture">
+<div class="menu-titlebar">
+<div class="monster-tiles">
+<canvas class="monster-tile" width="48" height="72" data-tile="6191" data-texture="player" data-label="E" title="Esufecwi." data-parts="[{&quot;texture&quot;:&quot;player&quot;,&quot;tile&quot;:6191,&quot;xofs&quot;:0,&quot;yofs&quot;:0},{&quot;texture&quot;:&quot;player&quot;,&quot;tile&quot;:5556,&quot;xofs&quot;:0,&quot;yofs&quot;:0},{&quot;texture&quot;:&quot;player&quot;,&quot;tile&quot;:5911,&quot;xofs&quot;:0,&quot;yofs&quot;:0}]" data-monster-tile="true" data-icons="[10471]" data-flag="589824"></canvas>
+<canvas class="monster-tile" width="48" height="72" data-tile="6191" data-texture="player" data-label="E" title="Esufecwi. without status overlays" data-parts="[{&quot;texture&quot;:&quot;player&quot;,&quot;tile&quot;:6191,&quot;xofs&quot;:0,&quot;yofs&quot;:0},{&quot;texture&quot;:&quot;player&quot;,&quot;tile&quot;:5556,&quot;xofs&quot;:0,&quot;yofs&quot;:0},{&quot;texture&quot;:&quot;player&quot;,&quot;tile&quot;:5911,&quot;xofs&quot;:0,&quot;yofs&quot;:0}]" data-clean-monster-tile="true"></canvas>
+</div>
+<h1>Esufecwi.</h1>
+<div class="score-badge" data-score-badge>...</div>
+</div>
+<div class="menu-body">
+<div class="desc-text">One of the many lords of Pandemonium, Esufecwi has a spiked light green body with great, sinister wings and a cubic structure in place of a head.
+
+<span class="lightgrey">Max HP: 197     </span><span class="lightgrey"> Will: ++++     </span><span class="lightgrey">   AC: ++++ +++ </span><span class="lightgrey">  EV: +         </span>                
+<span class="darkgrey">    rF: ...     </span><span class="lightgrey">   rC: ∞        </span><span class="lightgrey">rPois: +        </span><span class="lightgrey">rNeg: ∞         </span><span class="lightgrey">rElec: +        </span>
+<span class="lightgrey">Threat: Lethal  </span><span class="lightgrey">Class: Demonic  </span><span class="lightgrey"> Size: Large    </span><span class="lightgrey"> Int: Human     </span>
+Speed: 140% (normally travels faster than you)
+
+You have about 89% to hit with your +2 vampiric war axe and 87% to hit with your headbutt.
+It has about 47% to hit you.
+
+Attack  Max Damage  
+Hit     34          
+
+It is immune to torment; and resistant to miasma.
+It can see invisible.
+It can fly.
+It can open doors.</div><div class="spellset">
+<div class="spell-label">It possesses the following magical abilities, which are affected by antimagic (but not silence):</div>
+<ol class="spell-list"><li class="spell-item fg7">
+<canvas class="" width="48" height="48" data-tile="9179" data-texture="gui" data-label="a" title="Bombard"></canvas>
+<div class="spell-line"><span class="spell-key">a</span> - <span class="spell-name">Bombard</span> <span class="spell-meta"><span class="lightcyan">(3d37)</span> (<span class="lightred">4</span>) Conjuration/Earth L6</span></div>
+</li>
+<li class="spell-item fg7">
+<canvas class="" width="48" height="48" data-tile="9285" data-texture="gui" data-label="b" title="Summon Greater Demon"></canvas>
+<div class="spell-line"><span class="spell-key">b</span> - <span class="spell-name">Summon Greater Demon</span> <span class="spell-meta"><span class="lightgrey"></span> Summoning L7</span></div>
+</li>
+<li class="spell-item fg7">
+<canvas class="" width="48" height="48" data-tile="9277" data-texture="gui" data-label="c" title="Abjuration"></canvas>
+<div class="spell-line"><span class="spell-key">c</span> - <span class="spell-name">Abjuration</span> <span class="spell-meta"><span class="lightgrey"></span> (<span class="lightred">7</span>) Summoning L3</span></div>
+</li></ol>
+</div><div class="desc-text">To read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.
+
+This monster has been temporarily summoned to this location. If angered it will immediately vanish, yielding no experience or items; it is incapable of using stairs.</div>
+
+		<section class="menu-section">
+		<div class="section-title">Tile status</div>
+		<div id="goonkemon-status-indicators">
+		<div class="status-loading">Loading status indicators...</div>
+		</div>
+		</section>
+		<section class="menu-section">
+		<div class="section-title">Goonkemon score</div>
+		<div id="goonkemon-score" data-json="../data/20260621T000756Z-vayu-Esufecwi.json" data-images="../data/20260621T000756Z-vayu-Esufecwi.images.json">
+		<div class="score-loading">Loading score from ../data/20260621T000756Z-vayu-Esufecwi.json...</div>
+		</div>
+		<div class="source">Captured for vayu at <span data-captured-at="2026-06-21T00:07:56.378Z">2026-06-21T00:07:56.378Z</span> (Dungeon Crawl Stone Soup 0.35-a0-546-gb2ce4df294).</div>
+		</section>
+		<nav class="page-actions" aria-label="Page actions">
+			<a class="crawl-button" href="../ranking/">View ranking</a>
+		</nav>
+	</div>
+</section>
+</main>
+<script type="module">
+import {renderScoreHtml, scoreAnalysis} from "../score-rules.js";
+
+const scoreRoot = document.getElementById('goonkemon-score');
+const statusRoot = document.getElementById('goonkemon-status-indicators');
+const badge = document.querySelector('[data-score-badge]');
+const jsonPath = scoreRoot?.dataset.json || '';
+const imagePath = scoreRoot?.dataset.images || jsonPath.replace(/\.json$/i, '.images.json');
+
+async function renderDynamicScore() {
+    try {
+        const capture = await fetchJson(jsonPath);
+        const analysis = capture.analysis || capture.score;
+        if (!analysis) {
+            throw new Error('Capture JSON has no analysis data.');
+        }
+        const score = scoreAnalysis(analysis);
+        scoreRoot.innerHTML = renderScoreHtml(analysis);
+        if (statusRoot) {
+            statusRoot.innerHTML = renderStatusHtml(analysis.statuses);
+        }
+        if (badge) {
+            badge.textContent = score.total + ' pts';
+        }
+    } catch (error) {
+        scoreRoot.innerHTML = '<div class="score-error">' + escapeHtml(String(error.message || error)) + '</div>';
+        if (statusRoot) {
+            statusRoot.innerHTML = '<div class="score-error">' + escapeHtml(String(error.message || error)) + '</div>';
+        }
+        if (badge) {
+            badge.textContent = 'score unavailable';
+        }
+    }
+}
+
+async function fetchJson(path) {
+    const response = await fetch(path, {cache: 'no-store'});
+    if (!response.ok) {
+        throw new Error('Could not load ' + path + ': ' + response.status);
+    }
+    return response.json();
+}
+
+function renderStatusHtml(statuses = {}) {
+    const groups = [
+        ['attitude', 'Attitude', 'status-attitude'],
+        ['buffs', 'Buffs', 'status-buff'],
+        ['debuffs', 'Debuffs', 'status-debuff'],
+        ['special', 'Special', 'status-special'],
+        ['unknown', 'Unknown', 'status-unknown']
+    ];
+    const rows = groups
+        .map(([key, label, className]) => {
+            const items = Array.isArray(statuses[key]) ? statuses[key] : [];
+            if (!items.length) {
+                return '';
+            }
+            const tags = items.map(item => {
+                const title = item.id == null ? item.source : item.source + ' #' + item.id;
+                return '<span class="status-tag ' + className + '" title="' + escapeHtml(title) + '">' +
+                    escapeHtml(item.label || item.name) + '</span>';
+            }).join('');
+            return '<div class="status-group"><div class="status-group-label">' + label + '</div>' +
+                '<div class="status-tags">' + tags + '</div></div>';
+        })
+        .filter(Boolean)
+        .join('');
+    return rows ? '<div class="status-groups">' + rows + '</div>' :
+        '<div class="status-empty">No tile status indicators.</div>';
+}
+
+function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, char => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+    })[char]);
+}
+
+function formatCaptureTimes() {
+    document.querySelectorAll('[data-captured-at]').forEach(element => {
+        const raw = element.dataset.capturedAt || '';
+        const date = new Date(raw);
+        if (Number.isNaN(date.valueOf())) {
+            return;
+        }
+        element.textContent = formatDateTime(date);
+        element.title = raw;
+    });
+}
+
+function formatDateTime(date) {
+    const options = {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        timeZoneName: 'short'
+    };
+    try {
+        return new Intl.DateTimeFormat(undefined, options).format(date);
+    } catch (error) {
+        return date.toLocaleString();
+    }
+}
+
+formatCaptureTimes();
+renderDynamicScore();
+</script>
+<script>
+(() => {
+    const scoreRoot = document.getElementById('goonkemon-score');
+    const jsonPath = scoreRoot?.dataset.json || '';
+    const imagePath = scoreRoot?.dataset.images || jsonPath.replace(/\.json$/i, '.images.json');
+    const canvases = Array.from(document.querySelectorAll('canvas[data-tile]'));
+    const images = {};
+    let tileRendering = {};
+
+    function drawFallback(canvas) {
+        const ctx = canvas.getContext('2d');
+        const tile = Number(canvas.dataset.tile || 0);
+        const label = canvas.dataset.label || '?';
+        const hue = Math.abs((tile * 47) % 360);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#050505';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.strokeStyle = 'hsl(' + hue + ' 80% 62%)';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(1, 1, canvas.width - 2, canvas.height - 2);
+        ctx.fillStyle = 'hsl(' + hue + ' 72% 48% / 0.35)';
+        ctx.fillRect(5, 5, canvas.width - 10, canvas.height - 10);
+        ctx.fillStyle = '#fff';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.font = 'bold ' + Math.max(12, Math.floor(canvas.height * 0.34)) + 'px monospace';
+        ctx.fillText(label.slice(0, 3), canvas.width / 2, canvas.height / 2 - 2);
+        ctx.fillStyle = '#aaa';
+        ctx.font = '8px monospace';
+        ctx.fillText(String(tile || ''), canvas.width / 2, canvas.height - 7);
+    }
+
+    function loadImage(name, imageData) {
+        return new Promise((resolve, reject) => {
+            const manifestUrl = new URL(imagePath, window.location.href);
+            const source = imageData?.url
+                ? new URL(imageData.url, manifestUrl).href
+                : imageData?.dataUrl || (imageData?.data
+                    ? 'data:' + (imageData.mime || 'image/png') + ';base64,' + imageData.data
+                    : '');
+            if (!source) {
+                reject(new Error('Missing image data for ' + name));
+                return;
+            }
+            const image = new Image();
+            image.onload = () => {
+                images[name] = image;
+                resolve(image);
+            };
+            image.onerror = () => reject(new Error('Could not load stored ' + name + ' image'));
+            image.src = source;
+        });
+    }
+
+    function drawSprite(canvas) {
+        const parts = parseTileParts(canvas);
+        if (parts.length) {
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.imageSmoothingEnabled = false;
+            const layout = spriteLayout(canvas, parts);
+            return parts.map(part => drawSpritePart(canvas, part, false, layout)).every(Boolean);
+        }
+
+        return drawSpritePart(canvas, {
+            texture: canvas.dataset.texture || 'main',
+            tile: Number(canvas.dataset.tile || 0),
+            xofs: 0,
+            yofs: 0,
+            clear: true
+        }, true);
+    }
+
+    function parseTileParts(canvas) {
+        if (!canvas.dataset.parts) {
+            return [];
+        }
+        try {
+            const parsed = JSON.parse(canvas.dataset.parts);
+            return Array.isArray(parsed) ? parsed : [];
+        } catch (error) {
+            return [];
+        }
+    }
+
+    function spriteLayout(canvas, parts) {
+        const infos = parts.map(part => {
+            const texture = part.texture || 'main';
+            const tile = Number(part.tile || 0);
+            return tileRendering?.sprites?.[texture]?.[tile];
+        }).filter(Boolean);
+        const frameWidth = Math.max(32, ...infos.map(info => Number(info.w || 0)));
+        const frameHeight = Math.max(32, ...infos.map(info => Number(info.h || 0)));
+        const scale = Math.min(canvas.width / frameWidth, canvas.height / frameHeight);
+
+        return {
+            frameWidth,
+            frameHeight,
+            scale,
+            originX: (canvas.width - frameWidth * scale) / 2,
+            originY: canvas.height - frameHeight * scale
+        };
+    }
+
+    function drawSpritePart(canvas, part, clear, sharedLayout = null) {
+        const texture = part.texture || 'main';
+        const tile = Number(part.tile || 0);
+        const image = images[texture];
+        const info = tileRendering?.sprites?.[texture]?.[tile];
+        if (!image || !info) {
+            return false;
+        }
+
+        const ctx = canvas.getContext('2d');
+        const sw = Math.max(1, info.ex - info.sx);
+        const sh = Math.max(1, info.ey - info.sy);
+        const layout = sharedLayout || spriteLayout(canvas, [part]);
+        const sizeOx = layout.frameWidth / 2 - Number(info.w || 0) / 2;
+        const sizeOy = layout.frameHeight - Number(info.h || 0);
+        const xofs = Number(part.xofs || 0);
+        const yofs = Number(part.yofs || 0);
+        const dx = Math.round(layout.originX + (xofs + Number(info.ox || 0) + sizeOx) * layout.scale);
+        const dy = Math.round(layout.originY + (yofs + Number(info.oy || 0) + sizeOy) * layout.scale);
+        if (clear) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        ctx.imageSmoothingEnabled = false;
+        ctx.drawImage(image, info.sx, info.sy, sw, sh, dx, dy,
+            Math.ceil(sw * layout.scale), Math.ceil(sh * layout.scale));
+        return true;
+    }
+
+    function drawIconPart(canvas, tile, xofs, yofs) {
+        const image = images.icons;
+        const info = tileRendering?.sprites?.icons?.[Number(tile || 0)];
+        if (!image || !info) {
+            return false;
+        }
+
+        const ctx = canvas.getContext('2d');
+        const sw = Math.max(1, info.ex - info.sx);
+        const sh = Math.max(1, info.ey - info.sy);
+        const scale = Math.min(canvas.width, canvas.height) / 32;
+        const sizeOx = 16 - Number(info.w || 0) / 2;
+        const sizeOy = 32 - Number(info.h || 0);
+        const originX = (canvas.width - 32 * scale) / 2;
+        const originY = canvas.height - 32 * scale;
+        const dx = Math.round(originX + ((xofs || 0) + Number(info.ox || 0) + sizeOx) * scale);
+        const dy = Math.round(originY + ((yofs || 0) + Number(info.oy || 0) + sizeOy) * scale);
+        ctx.imageSmoothingEnabled = false;
+        ctx.drawImage(image, info.sx, info.sy, sw, sh, dx, dy,
+            Math.ceil(sw * scale), Math.ceil(sh * scale));
+        return true;
+    }
+
+    function drawStatusOverlays(canvas) {
+        if (canvas.dataset.monsterTile !== 'true' || !images.icons) {
+            return;
+        }
+
+        const iconIds = parseJsonData(canvas.dataset.icons, []);
+        const flag = parseFlagPair(parseJsonData(canvas.dataset.flag, null));
+        const icons = tileRendering.iconTiles || {};
+        let statusShift = 0;
+
+        if ((flag[0] & 0x00800000) === 0x00800000) {
+            drawIconPart(canvas, icons.TRAP_NET, 0, 0);
+        }
+        if ((flag[0] & 0x01000000) === 0x01000000) {
+            drawIconPart(canvas, icons.TRAP_WEB, 0, 0);
+        }
+        if ((flag[0] & 0x00040000) === 0x00040000) {
+            drawIconPart(canvas, icons.SOMETHING_UNDER, 0, 0);
+        }
+
+        const attitude = flag[0] & 0x00030000;
+        if (attitude === 0x00010000) {
+            drawIconPart(canvas, icons.FRIENDLY, 0, 0);
+        } else if (attitude === 0x00020000) {
+            drawIconPart(canvas, icons.GOOD_NEUTRAL, 0, 0);
+        } else if (attitude === 0x00030000) {
+            drawIconPart(canvas, icons.NEUTRAL, 0, 0);
+        }
+
+        const behaviour = flag[0] & 0x00700000;
+        if (behaviour === 0x00400000 && drawIconPart(canvas, icons.PARALYSED, 0, 0)) {
+            statusShift += 12;
+        } else if (behaviour === 0x00100000 && drawIconPart(canvas, icons.STAB_BRAND, 0, 0)) {
+            statusShift += 12;
+        } else if (behaviour === 0x00200000 && drawIconPart(canvas, icons.UNAWARE, 0, 0)) {
+            statusShift += 7;
+        } else if (behaviour === 0x00300000 && drawIconPart(canvas, icons.FLEEING, 0, 0)) {
+            statusShift += 3;
+        }
+
+        const poison = flag[1] & 0x18000000;
+        if (poison === 0x08000000 && drawIconPart(canvas, icons.POISON, -statusShift, 0)) {
+            statusShift += 5;
+        } else if (poison === 0x10000000 && drawIconPart(canvas, icons.MORE_POISON, -statusShift, 0)) {
+            statusShift += 5;
+        } else if (poison === 0x18000000 && drawIconPart(canvas, icons.MAX_POISON, -statusShift, 0)) {
+            statusShift += 5;
+        }
+
+        for (const iconId of iconIds) {
+            if (drawIconPart(canvas, Number(iconId), -statusShift, 0)) {
+                statusShift += statusIconSize(Number(iconId));
+            }
+        }
+    }
+
+    function statusIconSize(iconId) {
+        const size = Number(tileRendering?.statusIconSizes?.[iconId]);
+        return Number.isFinite(size) && size > 0 ? size : 0;
+    }
+
+    function parseJsonData(value, fallback) {
+        try {
+            return JSON.parse(value || '');
+        } catch (error) {
+            return fallback;
+        }
+    }
+
+    function parseFlagPair(value) {
+        if (Array.isArray(value)) {
+            return [Number(value[0] || 0) >>> 0, Number(value[1] || 0) >>> 0];
+        }
+        if (Number.isFinite(Number(value))) {
+            return [Number(value) >>> 0, 0];
+        }
+        return [0, 0];
+    }
+
+    async function renderTiles() {
+        canvases.forEach(drawFallback);
+        if (!jsonPath || !imagePath) {
+            return;
+        }
+        try {
+            const [capture, imageBundle] = await Promise.all([fetchJson(jsonPath), fetchJson(imagePath)]);
+            tileRendering = capture.tileRendering || {};
+            const storedImages = imageBundle.images || {};
+            await Promise.all(Object.entries(storedImages).map(([name, data]) => loadImage(name, data)));
+            canvases.forEach(canvas => {
+                if (!drawSprite(canvas)) {
+                    drawFallback(canvas);
+                }
+                drawStatusOverlays(canvas);
+            });
+        } catch (error) {
+            console.warn('Goonkemon tile sprite fallback:', error.message || error);
+        }
+    }
+
+    async function fetchJson(path) {
+        const response = await fetch(path, {cache: 'no-store'});
+        if (!response.ok) {
+            throw new Error('Could not load ' + path + ': ' + response.status);
+        }
+        return response.json();
+    }
+
+    renderTiles();
+})();
+</script>
+</body>
+</html>

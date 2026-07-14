@@ -1,0 +1,456 @@
+{
+  "id": "20260618T132656Z-sekai-Yddaewk",
+  "capturedAt": "2026-06-18T13:26:56.330Z",
+  "username": "sekai",
+  "analysis": {
+    "title": "Yddaewk.",
+    "stats": {
+      "hp": {
+        "raw": "255",
+        "value": 255
+      },
+      "will": {
+        "raw": "+++",
+        "pips": 3
+      },
+      "ac": {
+        "raw": "++",
+        "pips": 2
+      },
+      "ev": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "resists": {
+        "rF": {
+          "raw": "+..",
+          "value": 1,
+          "max": 2
+        },
+        "rC": {
+          "raw": "x..",
+          "value": -1,
+          "max": 2
+        },
+        "rElec": {
+          "raw": "∞",
+          "value": 2,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Sting: foul flame touch",
+            "damageText": "57 + 42 (foul flame)",
+            "damageParts": [
+              57,
+              42
+            ],
+            "damageTotal": 99,
+            "afterHit": ""
+          }
+        ]
+      },
+      "speed": {
+        "percent": 170
+      }
+    },
+    "spells": [],
+    "statuses": {
+      "rawIcons": [
+        10471,
+        10495
+      ],
+      "rawFlag": 65536,
+      "buffs": [],
+      "debuffs": [
+        {
+          "id": 10495,
+          "name": "DRAIN",
+          "label": "drain",
+          "category": "debuff",
+          "source": "icon"
+        }
+      ],
+      "special": [
+        {
+          "id": 10471,
+          "name": "SUMMONED",
+          "label": "summoned",
+          "category": "special",
+          "source": "icon"
+        }
+      ],
+      "attitude": [
+        {
+          "id": null,
+          "name": "FRIENDLY",
+          "label": "friendly",
+          "category": "attitude",
+          "source": "flag"
+        }
+      ],
+      "unknown": [],
+      "indicators": [
+        {
+          "id": 10471,
+          "name": "SUMMONED",
+          "label": "summoned",
+          "category": "special",
+          "source": "icon"
+        },
+        {
+          "id": 10495,
+          "name": "DRAIN",
+          "label": "drain",
+          "category": "debuff",
+          "source": "icon"
+        },
+        {
+          "id": null,
+          "name": "FRIENDLY",
+          "label": "friendly",
+          "category": "attitude",
+          "source": "flag"
+        }
+      ]
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Yddaewk.",
+    "body": "One of the many lords of Pandemonium, Yddaewk has a mantis body and an ominous eye at the end of a thin stalk. It seems utterly heartbroken. It changes colour whenever you look at it.\n\n<lightgrey>Max HP: 255     </lightgrey><lightgrey> Will: +++      </lightgrey><lightgrey>   AC: ++       </lightgrey><lightgrey>  EV: ++++ +    </lightgrey>                \n<lightgrey>    rF: +..     </lightgrey><lightgrey>   rC: x..      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: ∞        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 170% (normally travels faster than you)\n\nYou have about 63% to hit with your +9 quick blade of protection.\nIt has about 18% to hit you.\n\nAttack                   Max Damage            \nSting: foul flame touch  57 + 42 (foul flame)  \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can open doors.\n\nIt is currently targeting the green death.\n\nThis monster has been temporarily summoned to this location. If angered it will immediately vanish, yielding no experience or items; it is incapable of using stairs.",
+    "quote": "",
+    "status": "<white>Lightly drained:<lightgrey>\n   This creature has been lightly drained, somewhat lowering the accuracy of\n   their melee attacks, the power of their spells and special attack properties,\n   and making them slightly more vulnerable to many status effects.\n\n",
+    "spellset": [],
+    "fg_idx": 7780,
+    "flag": 65536,
+    "icons": [
+      10471,
+      10495
+    ],
+    "doll": [],
+    "mcache": [
+      [
+        5605,
+        0,
+        0
+      ],
+      [
+        6025,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 514
+  },
+  "messageTypes": {
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 3,
+    "player": 1,
+    "map": 3,
+    "ui-stack": 1,
+    "input_mode": 4,
+    "ui-pop": 2,
+    "close_all_menus": 2,
+    "msgs": 2
+  },
+  "recentMessages": [
+    {
+      "turn": 1,
+      "channel": 24,
+      "text": "Unknown command."
+    },
+    {
+      "turn": 1,
+      "channel": 26,
+      "text": "Infinite lua loop detected, aborting."
+    },
+    {
+      "turn": 40489,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel"
+    },
+    {
+      "turn": 40489,
+      "channel": 2,
+      "text": "Here: Yddaewk, armed with a foul flame touch (blue smoke, summoned, lightly drained, friendly, umbra)"
+    },
+    {
+      "turn": 40489,
+      "channel": 24,
+      "text": "The floor."
+    }
+  ],
+  "playerState": {
+    "name": "sekai",
+    "title": "the Ninja",
+    "species": "Poltergeist",
+    "xl": 26,
+    "turn": 40489,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "35bf4a0ce99125f041e0d58ed11cd923881bde30",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-542-gedf2d32dfa",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "title": "Yddaewk.",
+          "body": "One of the many lords of Pandemonium, Yddaewk has a mantis body and an ominous eye at the end of a thin stalk. It seems utterly heartbroken. It changes colour whenever you look at it.\n\n<lightgrey>Max HP: 255     </lightgrey><lightgrey> Will: +++      </lightgrey><lightgrey>   AC: ++       </lightgrey><lightgrey>  EV: ++++ +    </lightgrey>                \n<lightgrey>    rF: +..     </lightgrey><lightgrey>   rC: x..      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: ∞        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 170% (normally travels faster than you)\n\nYou have about 63% to hit with your +9 quick blade of protection.\nIt has about 18% to hit you.\n\nAttack                   Max Damage            \nSting: foul flame touch  57 + 42 (foul flame)  \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can open doors.\n\nIt is currently targeting the green death.\n\nThis monster has been temporarily summoned to this location. If angered it will immediately vanish, yielding no experience or items; it is incapable of using stairs.",
+          "quote": "",
+          "status": "<white>Lightly drained:<lightgrey>\n   This creature has been lightly drained, somewhat lowering the accuracy of\n   their melee attacks, the power of their spells and special attack properties,\n   and making them slightly more vulnerable to many status effects.\n\n",
+          "spellset": [],
+          "fg_idx": 7780,
+          "flag": 65536,
+          "icons": [
+            10471,
+            10495
+          ],
+          "doll": [],
+          "mcache": [
+            [
+              5605,
+              0,
+              0
+            ],
+            [
+              6025,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 514
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5605": {
+          "sx": 716,
+          "sy": 326,
+          "ex": 748,
+          "ey": 366,
+          "ox": 0,
+          "oy": 8,
+          "w": 32,
+          "h": 48
+        },
+        "6025": {
+          "sx": 584,
+          "sy": 517,
+          "ex": 600,
+          "ey": 527,
+          "ox": 0,
+          "oy": 2,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {},
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10471": {
+          "sx": 574,
+          "sy": 13,
+          "ex": 580,
+          "ey": 19,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10495": {
+          "sx": 664,
+          "sy": 0,
+          "ex": 671,
+          "ey": 11,
+          "ox": 25,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {
+      "10495": 6
+    },
+    "images": [
+      "player",
+      "icons"
+    ]
+  }
+}

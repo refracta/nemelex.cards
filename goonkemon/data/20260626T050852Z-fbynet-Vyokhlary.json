@@ -1,0 +1,533 @@
+{
+  "id": "20260626T050852Z-fbynet-Vyokhlary",
+  "capturedAt": "2026-06-26T05:08:52.244Z",
+  "username": "fbynet",
+  "analysis": {
+    "title": "Vyokhlary.",
+    "stats": {
+      "hp": {
+        "raw": "303",
+        "value": 303
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "++++ +++",
+        "pips": 7
+      },
+      "ev": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "resists": {
+        "rF": {
+          "raw": "++.",
+          "value": 2,
+          "max": 2
+        },
+        "rC": {
+          "raw": "++.",
+          "value": 2,
+          "max": 2
+        },
+        "rElec": {
+          "raw": "+",
+          "value": 1,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Hit: antimagic touch",
+            "damageText": "53 + antimagic",
+            "damageParts": [
+              53
+            ],
+            "damageTotal": 53,
+            "afterHit": ""
+          }
+        ]
+      },
+      "speed": {
+        "percent": 160
+      }
+    },
+    "spells": [],
+    "statuses": {
+      "rawIcons": [
+        10471
+      ],
+      "rawFlag": 1074331648,
+      "buffs": [],
+      "debuffs": [],
+      "special": [
+        {
+          "id": 10471,
+          "name": "SUMMONED",
+          "label": "summoned",
+          "category": "special",
+          "source": "icon"
+        }
+      ],
+      "attitude": [
+        {
+          "id": null,
+          "name": "FRIENDLY",
+          "label": "friendly",
+          "category": "attitude",
+          "source": "flag"
+        }
+      ],
+      "unknown": [],
+      "indicators": [
+        {
+          "id": 10471,
+          "name": "SUMMONED",
+          "label": "summoned",
+          "category": "special",
+          "source": "icon"
+        },
+        {
+          "id": null,
+          "name": "FRIENDLY",
+          "label": "friendly",
+          "category": "attitude",
+          "source": "flag"
+        }
+      ]
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Vyokhlary.",
+    "body": "One of the many lords of Pandemonium, Vyokhlary has a tentacled body with small, bat-like wings and an eyeball for a head. Tiny orange flames dance around it. It changes colour whenever you look at it.\n\n<lightgrey>Max HP: 303     </lightgrey><lightgrey> Will: ++++ +   </lightgrey><lightgrey>   AC: ++++ +++ </lightgrey><lightgrey>  EV: ++++      </lightgrey>                \n<lightgrey>    rF: ++.     </lightgrey><lightgrey>   rC: ++.      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 160% (normally travels faster than you)\n\nYou have about 68% to hit with your +7 demon blade of draining.\nIt has about 49% to hit you.\n\nAttack                Max Damage      \nHit: antimagic touch  53 + antimagic  \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\n\nThis monster has been temporarily summoned to this location. If angered it will immediately vanish, yielding no experience or items; it is incapable of using stairs.",
+    "quote": "",
+    "status": "",
+    "spellset": [],
+    "fg_idx": 7773,
+    "flag": 1074331648,
+    "icons": [
+      10471
+    ],
+    "doll": [],
+    "mcache": [
+      [
+        6078,
+        0,
+        0
+      ],
+      [
+        5433,
+        0,
+        0
+      ],
+      [
+        5654,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 3
+  },
+  "messageTypes": {
+    "chat": 1,
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 3,
+    "player": 1,
+    "map": 2,
+    "ui-stack": 1,
+    "input_mode": 2,
+    "ui-pop": 1,
+    "close_all_menus": 2
+  },
+  "recentMessages": [],
+  "playerState": {
+    "name": "fbynet",
+    "title": "the Peltast",
+    "species": "Mummy",
+    "xl": 19,
+    "turn": 38359,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "d006c5b14328e6a1c32988d5723677e88125254a",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-572-g353cd707cd",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "msg": "menu",
+          "ui-centred": false,
+          "tag": "pickup",
+          "flags": 262738,
+          "last_hovered": 1,
+          "title": {
+            "text": "<white>What do you want to examine?"
+          },
+          "more": "<lightgrey>[<white>Up<lightgrey>|<white>Down<lightgrey>] select  [<white>PgDn<lightgrey>|<white>><lightgrey>] page down  [<white>PgUp<lightgrey>|<white><<<lightgrey>] page up  [<white>Esc<lightgrey>] exit<lightgrey>        <lightgrey>[<white>XXX<lightgrey>]<lightgrey>",
+          "alt_more": "",
+          "total_items": 7,
+          "chunk_start": 0,
+          "items": [
+            {
+              "text": "Monsters",
+              "colour": 1,
+              "level": 1
+            },
+            {
+              "text": " a - (<red>&</red>) Vyokhlary (friendly and summoned pandemonium lord), armed with an",
+              "q": 1,
+              "hotkeys": [
+                97
+              ],
+              "level": 2,
+              "tiles": [
+                {
+                  "t": 165,
+                  "tex": 0
+                },
+                {
+                  "t": 3476,
+                  "tex": 2
+                },
+                {
+                  "t": 5358,
+                  "tex": 3
+                },
+                {
+                  "t": 10607,
+                  "tex": 6
+                },
+                {
+                  "t": 10467,
+                  "tex": 6
+                }
+              ]
+            },
+            {
+              "text": "         antimagic touch, lightly wounded",
+              "q": 1,
+              "level": 2
+            },
+            {
+              "text": "Items",
+              "colour": 1,
+              "level": 1
+            },
+            {
+              "text": " b - (<red>[</red>) a +0 robe",
+              "q": 2,
+              "hotkeys": [
+                98,
+                91
+              ],
+              "level": 2,
+              "tiles": [
+                {
+                  "t": 165,
+                  "tex": 0
+                },
+                {
+                  "t": 3971,
+                  "tex": 4
+                }
+              ]
+            },
+            {
+              "text": " c - (<lightcyan>)</lightcyan>) a +3 falchion",
+              "q": 2,
+              "colour": 2,
+              "hotkeys": [
+                99,
+                41
+              ],
+              "level": 2,
+              "tiles": [
+                {
+                  "t": 165,
+                  "tex": 0
+                },
+                {
+                  "t": 3735,
+                  "tex": 4
+                }
+              ]
+            },
+            {
+              "text": " d - (<lightred>†</lightred>) an elf corpse",
+              "q": 2,
+              "colour": 8,
+              "hotkeys": [
+                100
+              ],
+              "level": 2,
+              "tiles": [
+                {
+                  "t": 165,
+                  "tex": 0
+                },
+                {
+                  "t": 4829,
+                  "tex": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Vyokhlary.",
+          "body": "One of the many lords of Pandemonium, Vyokhlary has a tentacled body with small, bat-like wings and an eyeball for a head. Tiny orange flames dance around it. It changes colour whenever you look at it.\n\n<lightgrey>Max HP: 303     </lightgrey><lightgrey> Will: ++++ +   </lightgrey><lightgrey>   AC: ++++ +++ </lightgrey><lightgrey>  EV: ++++      </lightgrey>                \n<lightgrey>    rF: ++.     </lightgrey><lightgrey>   rC: ++.      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 160% (normally travels faster than you)\n\nYou have about 68% to hit with your +7 demon blade of draining.\nIt has about 49% to hit you.\n\nAttack                Max Damage      \nHit: antimagic touch  53 + antimagic  \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\n\nThis monster has been temporarily summoned to this location. If angered it will immediately vanish, yielding no experience or items; it is incapable of using stairs.",
+          "quote": "",
+          "status": "",
+          "spellset": [],
+          "fg_idx": 7773,
+          "flag": 1074331648,
+          "icons": [
+            10471
+          ],
+          "doll": [],
+          "mcache": [
+            [
+              6078,
+              0,
+              0
+            ],
+            [
+              5433,
+              0,
+              0
+            ],
+            [
+              5654,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 3
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5433": {
+          "sx": 343,
+          "sy": 96,
+          "ex": 375,
+          "ey": 135,
+          "ox": 0,
+          "oy": 9,
+          "w": 32,
+          "h": 48
+        },
+        "5654": {
+          "sx": 481,
+          "sy": 401,
+          "ex": 494,
+          "ey": 412,
+          "ox": 4,
+          "oy": 2,
+          "w": 32,
+          "h": 48
+        },
+        "6078": {
+          "sx": 573,
+          "sy": 534,
+          "ex": 604,
+          "ey": 565,
+          "ox": 0,
+          "oy": 1,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {},
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10471": {
+          "sx": 574,
+          "sy": 13,
+          "ex": 580,
+          "ey": 19,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "icons"
+    ]
+  }
+}

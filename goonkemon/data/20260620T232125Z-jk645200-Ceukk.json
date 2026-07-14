@@ -1,0 +1,571 @@
+{
+  "id": "20260620T232125Z-jk645200-Ceukk",
+  "capturedAt": "2026-06-20T23:21:25.021Z",
+  "username": "jk645200",
+  "analysis": {
+    "title": "Ceukk.",
+    "stats": {
+      "hp": {
+        "raw": "179",
+        "value": 179
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "++++ ++",
+        "pips": 6
+      },
+      "ev": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "resists": {
+        "rF": {
+          "raw": "++.",
+          "value": 2,
+          "max": 2
+        },
+        "rC": {
+          "raw": "+..",
+          "value": 1,
+          "max": 2
+        },
+        "rElec": {
+          "raw": "+",
+          "value": 1,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Hit",
+            "damageText": "53",
+            "damageParts": [
+              53
+            ],
+            "damageTotal": 53,
+            "afterHit": "Ensnare with webbing"
+          }
+        ]
+      },
+      "speed": {
+        "percent": 160
+      }
+    },
+    "spells": [
+      {
+        "title": "Quicksilver Bolt",
+        "level": 5,
+        "effect": "(3d27)",
+        "range": "(7)",
+        "schools": "Conjuration"
+      },
+      {
+        "title": "Conjure Ball Lightning",
+        "level": 6,
+        "effect": "(3x3d31)",
+        "range": "",
+        "schools": "Conjuration/Air"
+      },
+      {
+        "title": "Silence",
+        "level": 5,
+        "effect": "",
+        "range": "",
+        "schools": "Hexes/Air"
+      }
+    ],
+    "statuses": {
+      "rawIcons": [],
+      "rawFlag": [
+        524288,
+        -2147483648
+      ],
+      "buffs": [],
+      "debuffs": [],
+      "special": [],
+      "attitude": [],
+      "unknown": [],
+      "indicators": []
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Ceukk.",
+    "body": "One of the many lords of Pandemonium, Ceukk has a mantis cyan body with the wings of a moth and a face from nightmares. It leaves a glistening oily trail.\n\n<lightgrey>Max HP: 179     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++++ ++  </lightgrey><lightgrey>  EV: ++++      </lightgrey>                \n<lightgrey>    rF: ++.     </lightgrey><lightgrey>   rC: +..      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 160% (normally travels faster than you)\n\nYou have about 72% to hit with the +9 trident of Certain Death.\nIt has about 29% to hit you.\n\nAttack  Max Damage  After Damaging Hits \nHit     53          Ensnare with webbing\n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+    "quote": "",
+    "status": "",
+    "spellset": [
+      {
+        "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+        "spells": [
+          {
+            "title": "Quicksilver Bolt",
+            "colour": 7,
+            "tile": 9428,
+            "letter": "a",
+            "effect": "<yellow>(</yellow><yellow>3</yellow><yellow>d</yellow><yellow>2</yellow><yellow>7</yellow><yellow>)</yellow>",
+            "range_string": "(<lightred>7</lightred>)",
+            "schools": "Conjuration",
+            "level": 5
+          },
+          {
+            "title": "Conjure Ball Lightning",
+            "colour": 7,
+            "tile": 9160,
+            "letter": "b",
+            "effect": "<lightgrey>(3x3d31)</lightgrey>",
+            "schools": "Conjuration/Air",
+            "level": 6
+          },
+          {
+            "title": "Silence",
+            "colour": 7,
+            "tile": 9165,
+            "letter": "c",
+            "effect": "<lightgrey></lightgrey>",
+            "schools": "Hexes/Air",
+            "level": 5
+          }
+        ]
+      }
+    ],
+    "fg_idx": 7794,
+    "flag": [
+      524288,
+      -2147483648
+    ],
+    "icons": [],
+    "doll": [],
+    "mcache": [
+      [
+        6057,
+        0,
+        0
+      ],
+      [
+        5423,
+        0,
+        0
+      ],
+      [
+        5649,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 148
+  },
+  "messageTypes": {
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 1,
+    "cursor": 3,
+    "player": 1,
+    "map": 1,
+    "ui-stack": 1,
+    "input_mode": 1
+  },
+  "recentMessages": [],
+  "playerState": {
+    "name": "jk645200",
+    "title": "the Acrobat",
+    "species": "Merfolk",
+    "xl": 27,
+    "turn": 55021,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "a1f140d2cecfc653605542069364f7f6569720f9",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-546-gb2ce4df294",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "msg": "menu",
+          "ui-centred": false,
+          "tag": "pickup",
+          "flags": 262738,
+          "last_hovered": 1,
+          "title": {
+            "text": "<white>What do you want to examine?"
+          },
+          "more": "<lightgrey>[<white>Up<lightgrey>|<white>Down<lightgrey>] select  [<white>PgDn<lightgrey>|<white>><lightgrey>] page down  [<white>PgUp<lightgrey>|<white><<<lightgrey>] page up  [<white>Esc<lightgrey>] exit<lightgrey>        <lightgrey>[<white>XXX<lightgrey>]<lightgrey>",
+          "alt_more": "",
+          "total_items": 4,
+          "chunk_start": 0,
+          "items": [
+            {
+              "text": "Monsters",
+              "colour": 1,
+              "level": 1
+            },
+            {
+              "text": " a - (<cyan>&</cyan>) Ceukk (pandemonium lord)",
+              "q": 1,
+              "hotkeys": [
+                97
+              ],
+              "level": 2,
+              "tiles": [
+                {
+                  "t": 881,
+                  "tex": 0
+                },
+                {
+                  "t": 3483,
+                  "tex": 2
+                },
+                {
+                  "t": 5358,
+                  "tex": 3
+                }
+              ]
+            },
+            {
+              "text": "Items",
+              "colour": 1,
+              "level": 1
+            },
+            {
+              "text": " b - (<lightgrey>!</lightgrey>) a potion of curing",
+              "q": 2,
+              "hotkeys": [
+                98,
+                33
+              ],
+              "level": 2,
+              "tiles": [
+                {
+                  "t": 881,
+                  "tex": 0
+                },
+                {
+                  "t": 4373,
+                  "tex": 4
+                },
+                {
+                  "t": 4385,
+                  "tex": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ceukk.",
+          "body": "One of the many lords of Pandemonium, Ceukk has a mantis cyan body with the wings of a moth and a face from nightmares. It leaves a glistening oily trail.\n\n<lightgrey>Max HP: 179     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++++ ++  </lightgrey><lightgrey>  EV: ++++      </lightgrey>                \n<lightgrey>    rF: ++.     </lightgrey><lightgrey>   rC: +..      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\nSpeed: 160% (normally travels faster than you)\n\nYou have about 72% to hit with the +9 trident of Certain Death.\nIt has about 29% to hit you.\n\nAttack  Max Damage  After Damaging Hits \nHit     53          Ensnare with webbing\n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+          "quote": "",
+          "status": "",
+          "spellset": [
+            {
+              "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+              "spells": [
+                {
+                  "title": "Quicksilver Bolt",
+                  "colour": 7,
+                  "tile": 9428,
+                  "letter": "a",
+                  "effect": "<yellow>(</yellow><yellow>3</yellow><yellow>d</yellow><yellow>2</yellow><yellow>7</yellow><yellow>)</yellow>",
+                  "range_string": "(<lightred>7</lightred>)",
+                  "schools": "Conjuration",
+                  "level": 5
+                },
+                {
+                  "title": "Conjure Ball Lightning",
+                  "colour": 7,
+                  "tile": 9160,
+                  "letter": "b",
+                  "effect": "<lightgrey>(3x3d31)</lightgrey>",
+                  "schools": "Conjuration/Air",
+                  "level": 6
+                },
+                {
+                  "title": "Silence",
+                  "colour": 7,
+                  "tile": 9165,
+                  "letter": "c",
+                  "effect": "<lightgrey></lightgrey>",
+                  "schools": "Hexes/Air",
+                  "level": 5
+                }
+              ]
+            }
+          ],
+          "fg_idx": 7794,
+          "flag": [
+            524288,
+            -2147483648
+          ],
+          "icons": [],
+          "doll": [],
+          "mcache": [
+            [
+              6057,
+              0,
+              0
+            ],
+            [
+              5423,
+              0,
+              0
+            ],
+            [
+              5649,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 148
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5423": {
+          "sx": 31,
+          "sy": 96,
+          "ex": 63,
+          "ey": 136,
+          "ox": 0,
+          "oy": 8,
+          "w": 32,
+          "h": 48
+        },
+        "5649": {
+          "sx": 419,
+          "sy": 394,
+          "ex": 439,
+          "ey": 406,
+          "ox": 2,
+          "oy": 0,
+          "w": 32,
+          "h": 48
+        },
+        "6057": {
+          "sx": 991,
+          "sy": 505,
+          "ex": 1020,
+          "ey": 525,
+          "ox": 3,
+          "oy": 0,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {
+        "9160": {
+          "sx": 284,
+          "sy": 0,
+          "ex": 312,
+          "ey": 28,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9165": {
+          "sx": 424,
+          "sy": 0,
+          "ex": 452,
+          "ey": 28,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9428": {
+          "sx": 735,
+          "sy": 224,
+          "ex": 765,
+          "ey": 253,
+          "ox": 1,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        }
+      },
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "gui",
+      "icons"
+    ]
+  }
+}

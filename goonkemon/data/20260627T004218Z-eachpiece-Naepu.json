@@ -1,0 +1,555 @@
+{
+  "id": "20260627T004218Z-eachpiece-Naepu",
+  "capturedAt": "2026-06-27T00:42:18.388Z",
+  "username": "eachpiece",
+  "analysis": {
+    "title": "Naepu.",
+    "stats": {
+      "hp": {
+        "raw": "192",
+        "value": 192
+      },
+      "will": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "ac": {
+        "raw": "++",
+        "pips": 2
+      },
+      "ev": {
+        "raw": "++++",
+        "pips": 4
+      },
+      "resists": {
+        "rF": {
+          "raw": "++.",
+          "value": 2,
+          "max": 2
+        },
+        "rC": {
+          "raw": "+..",
+          "value": 1,
+          "max": 2
+        },
+        "rElec": {
+          "raw": "+",
+          "value": 1,
+          "max": 1
+        }
+      },
+      "attacks": {
+        "items": [
+          {
+            "name": "Hit",
+            "damageText": "38",
+            "damageParts": [
+              38
+            ],
+            "damageTotal": 38,
+            "afterHit": ""
+          }
+        ]
+      },
+      "speed": {
+        "percent": 100
+      }
+    },
+    "spells": [
+      {
+        "title": "Metal Splinters",
+        "level": 5,
+        "effect": "(3d33)",
+        "range": "(4)",
+        "schools": "Conjuration"
+      },
+      {
+        "title": "Symbol of Torment",
+        "level": 6,
+        "effect": "",
+        "range": "",
+        "schools": "Necromancy"
+      },
+      {
+        "title": "Haste",
+        "level": 6,
+        "effect": "",
+        "range": "",
+        "schools": "Hexes"
+      }
+    ],
+    "statuses": {
+      "rawIcons": [],
+      "rawFlag": [
+        524288,
+        -2147483648
+      ],
+      "buffs": [],
+      "debuffs": [],
+      "special": [],
+      "attitude": [],
+      "unknown": [],
+      "indicators": []
+    },
+    "eligible": true
+  },
+  "monster": {
+    "title": "Naepu.",
+    "body": "One of the many lords of Pandemonium, Naepu has a bug-like body which hovers in mid-air and huge, compound eyes. It stinks of death. It changes colour whenever you look at it.\n\n<lightgrey>Max HP: 192     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++       </lightgrey><lightgrey>  EV: ++++ +    </lightgrey>                \n<lightgrey>    rF: ++.     </lightgrey><lightgrey>   rC: +..      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\n\n\nYou have about 56% to hit with the +9 great mace \"Plog\".\nIt has about 46% to hit you.\n\nAttack  Max Damage  \nHit     38          \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+    "quote": "",
+    "status": "",
+    "spellset": [
+      {
+        "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+        "spells": [
+          {
+            "title": "Metal Splinters",
+            "colour": 7,
+            "tile": 9408,
+            "letter": "a",
+            "effect": "<cyan>(3d33)</cyan>",
+            "range_string": "(<lightred>4</lightred>)",
+            "schools": "Conjuration",
+            "level": 5
+          },
+          {
+            "title": "Symbol of Torment",
+            "colour": 7,
+            "tile": 9262,
+            "letter": "b",
+            "effect": "<lightgrey></lightgrey>",
+            "schools": "Necromancy",
+            "level": 6
+          },
+          {
+            "title": "Haste",
+            "colour": 7,
+            "tile": 9199,
+            "letter": "c",
+            "effect": "<darkgrey></darkgrey>",
+            "schools": "Hexes",
+            "level": 6
+          }
+        ]
+      }
+    ],
+    "fg_idx": 7773,
+    "flag": [
+      524288,
+      -2147483648
+    ],
+    "icons": [],
+    "doll": [],
+    "mcache": [
+      [
+        6146,
+        0,
+        0
+      ],
+      [
+        5505,
+        0,
+        0
+      ],
+      [
+        5814,
+        0,
+        0
+      ]
+    ],
+    "msg": "ui-push",
+    "type": "describe-monster",
+    "ui-centred": false,
+    "generation_id": 178
+  },
+  "messageTypes": {
+    "update_spectators": 2,
+    "game_client": 1,
+    "watching_started": 1,
+    "version": 1,
+    "options": 2,
+    "layout": 1,
+    "text_cursor": 1,
+    "ui_state": 2,
+    "cursor": 7,
+    "player": 2,
+    "map": 8,
+    "ui-stack": 1,
+    "input_mode": 10,
+    "ui-pop": 1,
+    "msgs": 4,
+    "close_all_menus": 1,
+    "ui_cutoff": 2
+  },
+  "recentMessages": [
+    {
+      "turn": 76604,
+      "channel": 2,
+      "text": "Press: ? - help, v - describe, . - travel"
+    },
+    {
+      "turn": 76604,
+      "channel": 2,
+      "text": "Here: Naepu"
+    },
+    {
+      "turn": 76604,
+      "channel": 24,
+      "text": "The floor."
+    },
+    {
+      "turn": 76604,
+      "channel": 24,
+      "text": "Unknown command."
+    },
+    {
+      "turn": 76604,
+      "channel": 24,
+      "text": "Unknown command."
+    },
+    {
+      "turn": 76604,
+      "channel": 13,
+      "text": "Naepu calls on the powers of darkness!"
+    },
+    {
+      "turn": 76604,
+      "channel": 0,
+      "text": "Your body is wracked with pain!"
+    },
+    {
+      "turn": 76605,
+      "channel": 0,
+      "text": "You fly upwards."
+    },
+    {
+      "turn": 76605,
+      "channel": 0,
+      "text": "Level annotation: 36 runed translucent doors"
+    },
+    {
+      "turn": 76606,
+      "channel": 23,
+      "text": "There is a stone staircase leading down here."
+    }
+  ],
+  "playerState": {
+    "name": "eachpiece",
+    "title": "the Conqueror",
+    "species": "Formicid",
+    "xl": 27,
+    "turn": 76606,
+    "wizard": 0,
+    "explore": 0
+  },
+  "webtiles": {
+    "entrypoint": "https://crawl.nemelex.cards",
+    "gameClientVersion": "c48e7e0b01a90ca067a4b41f700a3453811dcd7f",
+    "versionText": "Dungeon Crawl Stone Soup 0.35-a0-578-g6b10917da2",
+    "gameStarted": null
+  },
+  "exploreModeEvidence": [],
+  "uiMessages": [
+    {
+      "msg": "ui-stack",
+      "items": [
+        {
+          "title": "Naepu.",
+          "body": "One of the many lords of Pandemonium, Naepu has a bug-like body which hovers in mid-air and huge, compound eyes. It stinks of death. It changes colour whenever you look at it.\n\n<lightgrey>Max HP: 192     </lightgrey><lightgrey> Will: ++++     </lightgrey><lightgrey>   AC: ++       </lightgrey><lightgrey>  EV: ++++ +    </lightgrey>                \n<lightgrey>    rF: ++.     </lightgrey><lightgrey>   rC: +..      </lightgrey><lightgrey>rPois: +        </lightgrey><lightgrey>rNeg: ∞         </lightgrey><lightgrey>rElec: +        </lightgrey>\n<lightgrey>Threat: Lethal  </lightgrey><lightgrey>Class: Demonic  </lightgrey><lightgrey> Size: Large    </lightgrey><lightgrey> Int: Human     </lightgrey>\n\n\nYou have about 56% to hit with the +9 great mace \"Plog\".\nIt has about 46% to hit you.\n\nAttack  Max Damage  \nHit     38          \n\nIt is immune to torment; and resistant to steam and miasma.\nIt can see invisible.\nIt can fly.\nIt can open doors.\nSPELLSET_PLACEHOLDERTo read a description, press the key listed above. (AdB) indicates damage (the sum of A B-sided dice), (x%) indicates the chance to defeat your Will, and (y) indicates the spell range; shown in red if you are in range.",
+          "quote": "",
+          "status": "",
+          "spellset": [
+            {
+              "label": "\nIt possesses the following magical abilities, which are affected by antimagic (but not silence):",
+              "spells": [
+                {
+                  "title": "Metal Splinters",
+                  "colour": 7,
+                  "tile": 9408,
+                  "letter": "a",
+                  "effect": "<cyan>(3d33)</cyan>",
+                  "range_string": "(<lightred>4</lightred>)",
+                  "schools": "Conjuration",
+                  "level": 5
+                },
+                {
+                  "title": "Symbol of Torment",
+                  "colour": 7,
+                  "tile": 9262,
+                  "letter": "b",
+                  "effect": "<lightgrey></lightgrey>",
+                  "schools": "Necromancy",
+                  "level": 6
+                },
+                {
+                  "title": "Haste",
+                  "colour": 7,
+                  "tile": 9199,
+                  "letter": "c",
+                  "effect": "<darkgrey></darkgrey>",
+                  "schools": "Hexes",
+                  "level": 6
+                }
+              ]
+            }
+          ],
+          "fg_idx": 7773,
+          "flag": [
+            524288,
+            -2147483648
+          ],
+          "icons": [],
+          "doll": [],
+          "mcache": [
+            [
+              6146,
+              0,
+              0
+            ],
+            [
+              5505,
+              0,
+              0
+            ],
+            [
+              5814,
+              0,
+              0
+            ]
+          ],
+          "msg": "ui-push",
+          "type": "describe-monster",
+          "ui-centred": false,
+          "generation_id": 178
+        },
+        {
+          "pane": 0,
+          "msg": "ui-state",
+          "type": "describe-monster"
+        }
+      ]
+    }
+  ],
+  "tileRendering": {
+    "sprites": {
+      "main": {},
+      "player": {
+        "5505": {
+          "sx": 592,
+          "sy": 188,
+          "ex": 623,
+          "ey": 228,
+          "ox": 1,
+          "oy": 8,
+          "w": 32,
+          "h": 48
+        },
+        "5814": {
+          "sx": 58,
+          "sy": 447,
+          "ex": 74,
+          "ey": 458,
+          "ox": 3,
+          "oy": 2,
+          "w": 32,
+          "h": 48
+        },
+        "6146": {
+          "sx": 484,
+          "sy": 598,
+          "ex": 514,
+          "ey": 608,
+          "ox": 1,
+          "oy": 5,
+          "w": 32,
+          "h": 48
+        }
+      },
+      "gui": {
+        "9199": {
+          "sx": 368,
+          "sy": 32,
+          "ex": 396,
+          "ey": 60,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9262": {
+          "sx": 112,
+          "sy": 96,
+          "ex": 140,
+          "ey": 124,
+          "ox": 2,
+          "oy": 2,
+          "w": 32,
+          "h": 32
+        },
+        "9408": {
+          "sx": 168,
+          "sy": 224,
+          "ex": 199,
+          "ey": 255,
+          "ox": 1,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        }
+      },
+      "icons": {
+        "10451": {
+          "sx": 0,
+          "sy": 0,
+          "ex": 30,
+          "ey": 30,
+          "ox": 1,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10466": {
+          "sx": 446,
+          "sy": 0,
+          "ex": 478,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10467": {
+          "sx": 478,
+          "sy": 0,
+          "ex": 510,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10468": {
+          "sx": 510,
+          "sy": 0,
+          "ex": 542,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10469": {
+          "sx": 542,
+          "sy": 0,
+          "ex": 574,
+          "ey": 32,
+          "ox": 0,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10474": {
+          "sx": 583,
+          "sy": 0,
+          "ex": 589,
+          "ey": 8,
+          "ox": 25,
+          "oy": 1,
+          "w": 32,
+          "h": 32
+        },
+        "10475": {
+          "sx": 583,
+          "sy": 8,
+          "ex": 591,
+          "ey": 17,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10476": {
+          "sx": 583,
+          "sy": 17,
+          "ex": 593,
+          "ey": 27,
+          "ox": 22,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10488": {
+          "sx": 631,
+          "sy": 7,
+          "ex": 635,
+          "ey": 19,
+          "ox": 28,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10489": {
+          "sx": 631,
+          "sy": 19,
+          "ex": 639,
+          "ey": 31,
+          "ox": 24,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10491": {
+          "sx": 642,
+          "sy": 12,
+          "ex": 655,
+          "ey": 23,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10525": {
+          "sx": 791,
+          "sy": 16,
+          "ex": 804,
+          "ey": 27,
+          "ox": 19,
+          "oy": 0,
+          "w": 32,
+          "h": 32
+        },
+        "10565": {
+          "sx": 111,
+          "sy": 32,
+          "ex": 127,
+          "ey": 41,
+          "ox": 0,
+          "oy": 23,
+          "w": 32,
+          "h": 32
+        }
+      }
+    },
+    "iconTiles": {
+      "TRAP_NET": 10451,
+      "TRAP_WEB": 10466,
+      "SOMETHING_UNDER": 10565,
+      "FRIENDLY": 10467,
+      "GOOD_NEUTRAL": 10468,
+      "NEUTRAL": 10469,
+      "PARALYSED": 10525,
+      "STAB_BRAND": 10491,
+      "UNAWARE": 10489,
+      "FLEEING": 10488,
+      "POISON": 10474,
+      "MORE_POISON": 10475,
+      "MAX_POISON": 10476
+    },
+    "statusIconSizes": {},
+    "images": [
+      "player",
+      "gui",
+      "icons"
+    ]
+  }
+}
