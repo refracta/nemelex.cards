@@ -9,7 +9,9 @@ const speedrunRecords = [
         turns: 21601,
         runes: 15,
         gems: {ko: '7', en: '7'},
-        morgue: 'https://archive.nemelex.cards/morgue/Sapher/morgue-Sapher-20260626-184638.txt'
+        morgue: 'https://archive.nemelex.cards/morgue/Sapher/morgue-Sapher-20260626-184638.txt',
+        playerTile: 'images/results/speedrun/sapher-tile.png',
+        playerTileTurn: 21600
     },
     {
         player: 'Wong',
@@ -19,7 +21,9 @@ const speedrunRecords = [
         turns: 29005,
         runes: 15,
         gems: {ko: '11 (all intact)', en: '11 (all intact)'},
-        morgue: 'https://archive.nemelex.cards/morgue/Wong/morgue-Wong-20260624-133254.txt'
+        morgue: 'https://archive.nemelex.cards/morgue/Wong/morgue-Wong-20260624-133254.txt',
+        playerTile: 'images/results/speedrun/wong-tile.png',
+        playerTileTurn: 26607
     },
     {
         player: 'Tanach',
@@ -28,7 +32,7 @@ const speedrunRecords = [
         score: 41660204,
         turns: 36011,
         runes: 15,
-        gems: {ko: '11 (온전 10)', en: '11 (10 intact)'},
+        gems: {ko: '11 (10 intact)', en: '11 (10 intact)'},
         morgue: 'https://archive.nemelex.cards/morgue/Tanach/morgue-Tanach-20260619-234000.txt',
         screenshot: 'images/results/speedrun/tanach.png'
     },
@@ -50,7 +54,7 @@ const speedrunRecords = [
         score: 17969370,
         turns: 86235,
         runes: 15,
-        gems: {ko: '1 (온전 0)', en: '1 (0 intact)'},
+        gems: {ko: '1 (0 intact)', en: '1 (0 intact)'},
         morgue: 'https://archive.nemelex.cards/morgue/vayu/morgue-vayu-20260622-103321.txt',
         screenshot: 'images/results/speedrun/vayu.png'
     },
@@ -62,17 +66,22 @@ const speedrunRecords = [
         turns: 76307,
         runes: 11,
         gems: {ko: '5', en: '5'},
-        morgue: 'https://archive.nemelex.cards/morgue/Huckle/morgue-Huckle-20260624-004113.txt'
+        morgue: 'https://archive.nemelex.cards/morgue/Huckle/morgue-Huckle-20260624-004113.txt',
+        playerTile: 'images/results/speedrun/huckle-tile.png',
+        playerTileTurn: 76306
     },
     {
         player: 'fbynet',
         title: 'Forbidden One',
+        titleUrl: 'https://yugioh.fandom.com/wiki/Forbidden_One',
         combo: 'MuMo',
         score: 1600788,
         turns: 78733,
         runes: 3,
         gems: {ko: '0', en: '0'},
-        morgue: 'https://archive.nemelex.cards/morgue/fbynet/morgue-fbynet-20260627-103021.txt'
+        morgue: 'https://archive.nemelex.cards/morgue/fbynet/morgue-fbynet-20260627-103021.txt',
+        playerTile: 'images/results/speedrun/fbynet-tile.png',
+        playerTileTurn: 78732
     }
 ];
 
@@ -159,6 +168,27 @@ const supplementalStatuses = {
     }
 };
 
+const lordLoreKorean = {
+    '20260630T174537Z-Rutnb-Luedatz': '판데모니엄의 수많은 군주 중 하나인 Luedatz는 참새 같은 날개와 거대한 겹눈이 달린 가느다란 녹색 몸을 지녔습니다.',
+    '20260622T153834Z-sekai-Diosoekej': '판데모니엄의 수많은 군주 중 하나인 Diosoekej는 근육질의 갈색 몸과 섬뜩할 만큼 인간적인 이목구비를 지녔습니다. 병들어 보입니다.',
+    '20260627T145501Z-Wong-Aptuad': '판데모니엄의 수많은 군주 중 하나인 Aptuad는 퍼덕이는 날개가 달린 야윈 푸른 몸과 사나운 눈빛을 지녔습니다.',
+    '20260628T021220Z-sasameki-Vejouc': '판데모니엄의 수많은 군주 중 하나인 Vejouc는 꿈틀거리며 기어 다니는 흰 몸과 숫양의 머리를 지녔습니다. 맛있는 냄새가 납니다!',
+    '20260627T095723Z-fbynet-Bebos': '판데모니엄의 수많은 군주 중 하나인 Bebos는 뼈만 남은 연푸른 몸과 거대한 머리털 더미를 지녔습니다.',
+    '20260620T113133Z-Tanach-Hud_Mal': '판데모니엄의 수많은 군주 중 하나인 Hud Mal은 뼈로 된 날개와 해골 머리가 달린 근육질의 연녹색 몸을 지녔습니다.',
+    '20260621T044638Z-eachpiece-Iquerahe': '판데모니엄의 수많은 군주 중 하나인 Iquerahe는 참새 같은 날개가 달린 갑각의 몸과 목에서 자라난 커다란 균류를 지녔습니다. 바라볼 때마다 몸의 색이 바뀝니다.',
+    '20260621T212849Z-vayu-Joace': '판데모니엄의 수많은 군주 중 하나인 Joace는 기묘한 혹이 붙은 녹색 갑각의 몸과 소의 해골 머리를 지녔습니다.',
+    '20260620T060625Z-malfuriongg-Acax': '판데모니엄의 수많은 군주 중 하나인 Acax는 거대하고 불길한 날개가 달린 푸른 사마귀 같은 몸과 사나운 눈빛을 지녔습니다.',
+    '20260620T124649Z-zonber-Qarcho': '판데모니엄의 수많은 군주 중 하나인 Qarcho는 기묘한 혹이 붙은 뚱뚱한 청록색 몸과 뇌로 된 머리를 지녔습니다.',
+    '20260620T144139Z-bizarrehands-Lablunt': '판데모니엄의 수많은 군주 중 하나인 Lablunt는 작고 박쥐 같은 날개가 달린 거대하고 가느다란 연청록색 몸과 머리 대신 솟은 뿔을 지녔습니다. 작은 주황색 불꽃이 주변에서 춤춥니다.',
+    '20260620T232125Z-jk645200-Ceukk': '판데모니엄의 수많은 군주 중 하나인 Ceukk는 나방의 날개가 달린 청록색 사마귀 같은 몸과 악몽에서 튀어나온 듯한 얼굴을 지녔습니다. 번들거리는 기름 자국을 남깁니다.',
+    '20260620T073116Z-dilly-Faneots': '판데모니엄의 수많은 군주 중 하나인 Faneots는 참새 같은 날개가 달린 갈색 갑각의 몸과 악몽에서 튀어나온 듯한 얼굴을 지녔습니다.',
+    '20260625T165518Z-Asidra-Josche_Jyif': '판데모니엄의 수많은 군주 중 하나인 Josche Jyif는 거대하고 불길한 날개가 달린 촉수투성이의 붉은 몸과 사나운 눈빛을 지녔습니다.',
+    '20260619T042055Z-opking-Qieg': '판데모니엄의 수많은 군주 중 하나인 Qieg는 나방의 날개와 해골 머리가 달린 근육질의 몸을 지녔습니다. 바라볼 때마다 몸의 색이 바뀝니다.',
+    '20260619T142159Z-Dogchiho-Zixa': '판데모니엄의 수많은 군주 중 하나인 Zixa는 뼈로 된 날개와 생쥐 머리가 달린 연청록색 갑각의 몸을 지녔습니다.',
+    '20260619T130809Z-De02-Utzead': '판데모니엄의 수많은 군주 중 하나인 Utzead는 나방의 날개가 달린 얼룩덜룩한 연자홍색 몸과 사나운 눈빛을 지녔습니다. 시선을 떼기가 어렵습니다.',
+    '20260619T014959Z-vayu-Yxexats': '판데모니엄의 수많은 군주 중 하나인 Yxexats는 잠자리 날개가 달린 뼈만 남은 자홍색 몸과 거대한 입을 지녔습니다.'
+};
+
 const speedrunRoot = document.getElementById('speedrun-results');
 const goonkemonRoot = document.getElementById('goonkemon-results');
 const weakestRoot = document.getElementById('weakest-goonkemon');
@@ -173,41 +203,48 @@ function renderSpeedrun() {
 }
 
 function renderSpeedrunRow(record, rank) {
-    const screenshot = record.screenshot
+    const playerImage = record.screenshot
         ? `<span class="player-crop" title="${escapeAttribute(record.player)} player tile">
                 <img src="${escapeAttribute(record.screenshot)}" alt="" aria-hidden="true">
            </span>`
+        : record.playerTile
+            ? `<span class="player-crop player-tile" title="${escapeAttribute(record.player)} player tile recovered from WTREC at turn ${formatNumber(record.playerTileTurn)}">
+                    <img src="${escapeAttribute(record.playerTile)}" alt="${escapeAttribute(record.player)} player tile">
+               </span>`
         : `<span class="player-crop-empty" title="No submitted screenshot" aria-hidden="true">-</span>`;
     const screenshotAction = record.screenshot
         ? `<button class="result-link" type="button" data-screenshot="${escapeAttribute(record.screenshot)}" data-player="${escapeAttribute(record.player)}">
                 <span class="ko">제출 이미지</span><span class="en">Screenshot</span>
            </button>`
         : '';
+    const title = record.titleUrl
+        ? `<a class="result-title-link" href="${escapeAttribute(record.titleUrl)}" target="_blank" rel="noopener">${escapeHtml(record.title)}</a>`
+        : escapeHtml(record.title);
 
     return `<article class="standing-row speedrun-row rank-${rank}" aria-label="Rank ${rank}: ${escapeAttribute(record.player)}">
         <div class="rank-number">${rank}</div>
-        ${screenshot}
+        ${playerImage}
         <div class="result-identity">
-            <strong>${escapeHtml(record.player)} the ${escapeHtml(record.title)}</strong>
+            <strong>${escapeHtml(record.player)} the ${title}</strong>
             <span>${escapeHtml(record.combo)}</span>
         </div>
         <dl class="run-metrics">
             <div>
-                <dt><span class="ko">턴</span><span class="en">Turns</span></dt>
+                <dt>TURNS</dt>
                 <dd>${formatNumber(record.turns)}</dd>
             </div>
             <div>
-                <dt><span class="ko">룬</span><span class="en">Runes</span></dt>
+                <dt>RUNES</dt>
                 <dd>${record.runes}</dd>
             </div>
             <div>
-                <dt><span class="ko">젬</span><span class="en">Gems</span></dt>
+                <dt>GEMS</dt>
                 <dd><span class="ko">${escapeHtml(record.gems.ko)}</span><span class="en">${escapeHtml(record.gems.en)}</span></dd>
             </div>
         </dl>
         <div class="result-score">
             ${formatNumber(record.score)}
-            <small><span class="ko">최종 점수</span><span class="en">final score</span></small>
+            <small>SCORE</small>
         </div>
         <div class="result-actions">
             <a class="result-link" href="${escapeAttribute(record.morgue)}" target="_blank" rel="noopener">Morgue</a>
@@ -313,8 +350,9 @@ async function loadCaptureDetails(items) {
 function renderGoonkemonDetails(capture, detail) {
     const analysis = capture.analysis || {};
     const lore = extractLore(detail?.monster?.body);
+    const koreanLore = lordLoreKorean[capture.id] || lore;
     return `<div class="goonkemon-details">
-        ${lore ? `<p class="lord-description">${escapeHtml(lore)}</p>` : ''}
+        ${lore ? `<p class="lord-description"><span class="ko">${escapeHtml(koreanLore)}</span><span class="en">${escapeHtml(lore)}</span></p>` : ''}
         ${renderLordStats(analysis.stats || {})}
         ${renderSpellset(capture.id, analysis.spells || [])}
         ${renderMonsterStatuses(analysis.statuses || {}, detail?.monster?.status)}
@@ -339,7 +377,7 @@ function renderLordStats(stats) {
 
     return `<dl class="lord-stats">
         ${values.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}
-        ${attacks ? `<div class="lord-stat-wide"><dt><span class="ko">공격</span><span class="en">Attack</span></dt><dd>${escapeHtml(attacks)}</dd></div>` : ''}
+        ${attacks ? `<div class="lord-stat-wide"><dt>Attack</dt><dd>${escapeHtml(attacks)}</dd></div>` : ''}
     </dl>`;
 }
 
@@ -388,16 +426,16 @@ function renderMonsterStatuses(statuses, rawStatus) {
     });
 
     const count = entries.length;
-    const content = count
-        ? `<ul>${entries.map(renderMonsterStatusItem).join('')}</ul>`
-        : `<p class="lord-status-empty"><span class="ko">활성 상태 없음</span><span class="en">No active status effects</span></p>`;
+    if (!count) {
+        return '';
+    }
 
     return `<section class="lord-statuses" aria-label="Monster status effects">
         <div class="lord-status-heading">
             <span class="status-section-label">Status</span>
             <small><span class="ko">${count}개 활성 효과</span><span class="en">${count} active effect${count === 1 ? '' : 's'}</span></small>
         </div>
-        ${content}
+        <ul>${entries.map(renderMonsterStatusItem).join('')}</ul>
     </section>`;
 }
 
