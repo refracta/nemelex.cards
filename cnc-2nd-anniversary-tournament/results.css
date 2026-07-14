@@ -48,13 +48,34 @@
     font-size: 1.1rem;
 }
 
-.results-hero-art {
+.results-hero-art-wrap {
+    position: relative;
     align-self: center;
     justify-self: end;
     width: 290px;
+}
+
+.results-hero-art {
+    display: block;
+    width: 100%;
     max-height: 280px;
     object-fit: contain;
     filter: saturate(1.08) drop-shadow(0 20px 34px rgba(0, 0, 0, 0.55));
+}
+
+.results-hero-anniversary {
+    position: absolute;
+    top: 49.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--gold);
+    font-family: var(--font-mono);
+    font-size: 2.1rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0;
+    -webkit-text-stroke: 1px rgba(29, 18, 42, 0.9);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .result-summary {
@@ -165,8 +186,12 @@
 .recap-copy h3 {
     margin: 8px 0 12px;
     color: var(--ink);
-    font-size: clamp(1.45rem, 2.6vw, 2.1rem);
+    font-size: 1.55rem;
     letter-spacing: 0;
+}
+
+.recap-copy h3 .ko {
+    white-space: nowrap;
 }
 
 .recap-copy > p:last-of-type {
@@ -240,7 +265,7 @@
 }
 
 .speedrun-row {
-    grid-template-columns: 42px 58px minmax(180px, 1fr) 276px 136px 172px;
+    grid-template-columns: 42px 58px minmax(180px, 1fr) 276px 136px 226px;
 }
 
 .goonkemon-row {
@@ -621,6 +646,7 @@
 
 .result-actions {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     gap: 0.4rem;
     min-width: 0;
@@ -639,6 +665,7 @@
     font: inherit;
     font-size: 0.82rem;
     font-weight: 700;
+    white-space: nowrap;
     cursor: pointer;
 }
 
@@ -755,7 +782,7 @@
     text-align: center;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1040px) {
     .speedrun-row {
         grid-template-columns: 38px 58px minmax(150px, 1fr) 276px 136px;
     }
@@ -798,8 +825,13 @@
         font-size: 3rem;
     }
 
-    .results-hero-art {
+    .results-hero-art-wrap {
         width: 150px;
+    }
+
+    .results-hero-anniversary {
+        font-size: 1.15rem;
+        -webkit-text-stroke-width: 0.5px;
     }
 
     .result-summary {
@@ -852,6 +884,10 @@
 }
 
 @media (max-width: 520px) {
+    body.lang-ko .recap-copy h3 {
+        font-size: 0.9rem;
+    }
+
     .results-hero {
         grid-template-columns: minmax(0, 1fr) 92px;
         width: min(100% - 1.5rem, var(--max-width));
@@ -862,8 +898,13 @@
         font-size: 2.35rem;
     }
 
-    .results-hero-art {
+    .results-hero-art-wrap {
         width: 92px;
+    }
+
+    .results-hero-anniversary {
+        font-size: 0.75rem;
+        -webkit-text-stroke-width: 0.4px;
     }
 
     .results-lede {
@@ -934,6 +975,10 @@
 }
 
 @media (max-width: 360px) {
+    body.lang-ko .recap-copy h3 {
+        font-size: 0.78rem;
+    }
+
     .run-metrics {
         grid-column: 1 / -1;
     }

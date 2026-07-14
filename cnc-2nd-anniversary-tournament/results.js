@@ -22,6 +22,7 @@ const speedrunRecords = [
         runes: 15,
         gems: {ko: '11 (all intact)', en: '11 (all intact)'},
         morgue: 'https://archive.nemelex.cards/morgue/Wong/morgue-Wong-20260624-133254.txt',
+        post: 'https://gall.dcinside.com/board/view/?id=rlike&no=520069',
         playerTile: 'images/results/speedrun/wong-tile.png',
         playerTileTurn: 26607
     },
@@ -45,6 +46,9 @@ const speedrunRecords = [
         runes: 15,
         gems: {ko: '11 (all intact)', en: '11 (all intact)'},
         morgue: 'https://archive.nemelex.cards/morgue/opking/morgue-opking-20260619-054433.txt',
+        post: 'https://gall.dcinside.com/board/view/?id=rlike&no=519771',
+        playerTile: 'images/results/speedrun/opking-tile.png',
+        playerTileTurn: 12129,
         screenshot: 'images/results/speedrun/opking.png'
     },
     {
@@ -203,19 +207,22 @@ function renderSpeedrun() {
 }
 
 function renderSpeedrunRow(record, rank) {
-    const playerImage = record.screenshot
-        ? `<span class="player-crop" title="${escapeAttribute(record.player)} player tile">
-                <img src="${escapeAttribute(record.screenshot)}" alt="" aria-hidden="true">
+    const playerImage = record.playerTile
+        ? `<span class="player-crop player-tile" title="${escapeAttribute(record.player)} player tile recovered from WTREC at turn ${formatNumber(record.playerTileTurn)}">
+                <img src="${escapeAttribute(record.playerTile)}" alt="${escapeAttribute(record.player)} player tile">
            </span>`
-        : record.playerTile
-            ? `<span class="player-crop player-tile" title="${escapeAttribute(record.player)} player tile recovered from WTREC at turn ${formatNumber(record.playerTileTurn)}">
-                    <img src="${escapeAttribute(record.playerTile)}" alt="${escapeAttribute(record.player)} player tile">
+        : record.screenshot
+            ? `<span class="player-crop" title="${escapeAttribute(record.player)} player tile">
+                    <img src="${escapeAttribute(record.screenshot)}" alt="" aria-hidden="true">
                </span>`
         : `<span class="player-crop-empty" title="No submitted screenshot" aria-hidden="true">-</span>`;
     const screenshotAction = record.screenshot
         ? `<button class="result-link" type="button" data-screenshot="${escapeAttribute(record.screenshot)}" data-player="${escapeAttribute(record.player)}">
                 <span class="ko">제출 이미지</span><span class="en">Screenshot</span>
            </button>`
+        : '';
+    const postAction = record.post
+        ? `<a class="result-link" href="${escapeAttribute(record.post)}" target="_blank" rel="noopener">Post</a>`
         : '';
     const title = record.titleUrl
         ? `<a class="result-title-link" href="${escapeAttribute(record.titleUrl)}" target="_blank" rel="noopener">${escapeHtml(record.title)}</a>`
@@ -248,6 +255,7 @@ function renderSpeedrunRow(record, rank) {
         </div>
         <div class="result-actions">
             <a class="result-link" href="${escapeAttribute(record.morgue)}" target="_blank" rel="noopener">Morgue</a>
+            ${postAction}
             ${screenshotAction}
         </div>
     </article>`;
