@@ -178,7 +178,7 @@
 }
 
 .speedrun-row {
-    grid-template-columns: 42px 58px minmax(180px, 1fr) minmax(230px, auto) minmax(126px, auto) auto;
+    grid-template-columns: 42px 58px minmax(180px, 1fr) 240px 136px 176px;
 }
 
 .goonkemon-row {
@@ -431,7 +431,7 @@
 
 @media (max-width: 980px) {
     .speedrun-row {
-        grid-template-columns: 38px 58px minmax(150px, 1fr) minmax(215px, auto) minmax(120px, auto);
+        grid-template-columns: 38px 58px minmax(150px, 1fr) 230px 136px;
     }
 
     .goonkemon-row {
