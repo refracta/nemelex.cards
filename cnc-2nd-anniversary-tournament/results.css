@@ -227,7 +227,8 @@
 }
 
 .lord-stats dt,
-.spellset-label {
+.spellset-label,
+.status-section-label {
     color: var(--muted);
     font-size: 0.7rem;
     font-weight: 700;
@@ -315,6 +316,103 @@
     align-items: baseline;
     color: var(--muted);
     font-size: 0.8rem;
+}
+
+.lord-statuses {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 0.7rem;
+    min-width: 0;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--line);
+}
+
+.lord-status-heading {
+    min-width: 0;
+}
+
+.lord-status-heading > span,
+.lord-status-heading small {
+    display: block;
+}
+
+.lord-status-heading small {
+    margin-top: 0.18rem;
+    color: #7f8995;
+    font-size: 0.64rem;
+    line-height: 1.25;
+}
+
+.lord-statuses ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.65rem 1rem;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lord-status-item {
+    min-width: 0;
+    padding-left: 0.65rem;
+    border-left: 2px solid #5d6671;
+}
+
+.lord-status-item.status-buff {
+    border-left-color: #79c86f;
+}
+
+.lord-status-item.status-debuff {
+    border-left-color: #e97966;
+}
+
+.lord-status-item.status-attitude {
+    border-left-color: #67bed8;
+}
+
+.lord-status-item.status-special {
+    border-left-color: #c5a6ec;
+}
+
+.lord-status-title {
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    min-width: 0;
+}
+
+.lord-status-title strong {
+    color: #f3f5f7;
+    font-size: 0.78rem;
+    line-height: 1.25;
+}
+
+.status-category {
+    flex: none;
+    color: #8e98a4;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-buff .status-category { color: #8dd482; }
+.status-debuff .status-category { color: #f18d7b; }
+.status-attitude .status-category { color: #7bcae1; }
+.status-special .status-category { color: #cfb5ef; }
+
+.lord-status-item p,
+.lord-status-empty {
+    margin: 0.18rem 0 0;
+    color: #aeb7c1;
+    font-size: 0.72rem;
+    line-height: 1.42;
+}
+
+.lord-status-empty {
+    margin-top: 0;
 }
 
 .rank-number {
@@ -722,6 +820,15 @@
     .lord-spellset {
         grid-template-columns: 1fr;
         gap: 0.45rem;
+    }
+
+    .lord-statuses {
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
+    }
+
+    .lord-statuses ul {
+        grid-template-columns: 1fr;
     }
 
     .lord-spellset li {
