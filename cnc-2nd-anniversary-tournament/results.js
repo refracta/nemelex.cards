@@ -18,7 +18,7 @@ const speedrunRecords = [
         score: 51131902,
         turns: 29005,
         runes: 15,
-        gems: {ko: '11 (전부 온전)', en: '11 (all intact)'},
+        gems: {ko: '11 (all intact)', en: '11 (all intact)'},
         morgue: 'https://archive.nemelex.cards/morgue/Wong/morgue-Wong-20260624-133254.txt'
     },
     {
@@ -39,7 +39,7 @@ const speedrunRecords = [
         score: 39206878,
         turns: 38411,
         runes: 15,
-        gems: {ko: '11 (전부 온전)', en: '11 (all intact)'},
+        gems: {ko: '11 (all intact)', en: '11 (all intact)'},
         morgue: 'https://archive.nemelex.cards/morgue/opking/morgue-opking-20260619-054433.txt',
         screenshot: 'images/results/speedrun/opking.png'
     },
@@ -148,13 +148,16 @@ async function renderGoonkemon() {
             .sort(compareRankedCaptures);
         const bestRanked = selectBestPerParticipant(allRanked);
         const weakest = allRanked[allRanked.length - 1];
+        const detailById = await loadCaptureDetails([...bestRanked, weakest].filter(Boolean));
 
         document.querySelector('[data-goonkemon-participants]').textContent = String(bestRanked.length);
         document.querySelector('[data-goonkemon-captures]').textContent = String(allRanked.length);
         goonkemonRoot.innerHTML = bestRanked.length
-            ? bestRanked.map((item, index) => renderGoonkemonRow(item, index + 1)).join('')
+            ? bestRanked.map((item, index) => renderGoonkemonRow(item, index + 1, detailById.get(item.capture.id))).join('')
             : emptyResultMessage();
-        weakestRoot.innerHTML = weakest ? renderWeakestAward(weakest) : emptyResultMessage();
+        weakestRoot.innerHTML = weakest
+            ? renderWeakestAward(weakest, detailById.get(weakest.capture.id))
+            : emptyResultMessage();
     } catch (error) {
         const message = escapeHtml(error.message || error);
         goonkemonRoot.innerHTML = `<p class="results-error" role="alert">${message}</p>`;
@@ -162,7 +165,7 @@ async function renderGoonkemon() {
     }
 }
 
-function renderGoonkemonRow({capture, score}, rank) {
+function renderGoonkemonRow({capture, score}, rank, detail) {
     const title = score.title || capture.analysis?.title || capture.id;
     const detailUrl = goonkemonDetailUrl(capture.id);
     const tileUrl = goonkemonTileUrl(capture.id);
@@ -189,10 +192,11 @@ function renderGoonkemonRow({capture, score}, rank) {
                 <span class="ko">상세 보기</span><span class="en">Details</span>
             </a>
         </div>
+        ${renderGoonkemonDetails(capture, detail)}
     </article>`;
 }
 
-function renderWeakestAward({capture, score}) {
+function renderWeakestAward({capture, score}, detail) {
     const title = score.title || capture.analysis?.title || capture.id;
     return `<div class="award-result-card">
         <img class="goonkemon-tile" src="${escapeAttribute(goonkemonTileUrl(capture.id))}" width="56" height="84" alt="${escapeAttribute(title)} tile">
@@ -204,7 +208,101 @@ function renderWeakestAward({capture, score}) {
             </a>
         </div>
         <div class="result-score">${formatNumber(score.total)} pts</div>
+        ${renderGoonkemonDetails(capture, detail)}
     </div>`;
+}
+
+async function loadCaptureDetails(items) {
+    const details = new Map();
+    await Promise.all(items.map(async ({capture}) => {
+        try {
+            const response = await fetch(goonkemonDataUrl(capture.id), {cache: 'no-store'});
+            if (response.ok) {
+                details.set(capture.id, await response.json());
+            }
+        } catch (error) {
+            // The ranking remains usable if an individual lore file is unavailable.
+        }
+    }));
+    return details;
+}
+
+function renderGoonkemonDetails(capture, detail) {
+    const analysis = capture.analysis || {};
+    const lore = extractLore(detail?.monster?.body);
+    return `<div class="goonkemon-details">
+        ${lore ? `<p class="lord-description">${escapeHtml(lore)}</p>` : ''}
+        ${renderLordStats(analysis.stats || {})}
+        ${renderSpellset(capture.id, analysis.spells || [])}
+    </div>`;
+}
+
+function renderLordStats(stats) {
+    const values = [
+        ['HP', stats.hp?.value ?? stats.hp?.raw],
+        ['Will', stats.will?.pips],
+        ['AC', stats.ac?.pips],
+        ['EV', stats.ev?.pips],
+        ['rF', displayResist(stats.resists?.rF)],
+        ['rC', displayResist(stats.resists?.rC)],
+        ['rElec', displayResist(stats.resists?.rElec)],
+        ['Speed', Number.isFinite(Number(stats.speed?.percent)) ? `${Number(stats.speed.percent)}%` : '']
+    ].filter(([, value]) => value !== undefined && value !== null && value !== '');
+    const attacks = (stats.attacks?.items || [])
+        .map((attack) => `${attack.name || 'Hit'} ${attack.damageText || attack.damageTotal || ''}`.trim())
+        .filter(Boolean)
+        .join(', ');
+
+    return `<dl class="lord-stats">
+        ${values.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}
+        ${attacks ? `<div class="lord-stat-wide"><dt><span class="ko">공격</span><span class="en">Attack</span></dt><dd>${escapeHtml(attacks)}</dd></div>` : ''}
+    </dl>`;
+}
+
+function renderSpellset(captureId, spells) {
+    if (!spells.length) {
+        return `<div class="lord-spellset lord-spellset-empty">
+            <span class="spellset-label">Spellset</span>
+            <span><span class="ko">주문 없음</span><span class="en">No spells</span></span>
+        </div>`;
+    }
+    return `<div class="lord-spellset">
+        <span class="spellset-label">Spellset</span>
+        <ul>
+            ${spells.map((spell, index) => renderSpell(captureId, spell, index)).join('')}
+        </ul>
+    </div>`;
+}
+
+function renderSpell(captureId, spell, index) {
+    const level = Number.isFinite(Number(spell.level)) ? Number(spell.level) : 9;
+    const metadata = [`L${level}`, spell.schools].filter(Boolean).join(' · ');
+    const title = [spell.title, spell.effect, spell.range, spell.schools].filter(Boolean).join(' · ');
+    return `<li title="${escapeAttribute(title)}">
+        <img src="${escapeAttribute(goonkemonSpellIconUrl(captureId, index))}" width="32" height="32" alt="" aria-hidden="true">
+        <span>
+            <strong>${escapeHtml(spell.title || `Spell ${index + 1}`)}</strong>
+            <small>${escapeHtml(metadata)}</small>
+        </span>
+    </li>`;
+}
+
+function extractLore(body) {
+    return String(body || '')
+        .split(/\n\s*\n/, 1)[0]
+        .replace(/<[^>]+>/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+function displayResist(resist) {
+    if (!resist) {
+        return '';
+    }
+    if (String(resist.raw || '').includes('∞')) {
+        return '∞';
+    }
+    return Number.isFinite(Number(resist.value)) ? Number(resist.value) : resist.raw;
 }
 
 function safeScore(capture) {
@@ -270,8 +368,16 @@ function goonkemonDetailUrl(id) {
     return new URL(`../goonkemon/${encodeURIComponent(id)}/`, import.meta.url).href;
 }
 
+function goonkemonDataUrl(id) {
+    return new URL(`../goonkemon/data/${encodeURIComponent(id)}.json`, import.meta.url).href;
+}
+
 function goonkemonTileUrl(id) {
     return new URL(`images/results/goonkemon/${encodeURIComponent(id)}.png`, import.meta.url).href;
+}
+
+function goonkemonSpellIconUrl(id, index) {
+    return new URL(`images/results/spells/${encodeURIComponent(id)}-${index}.png`, import.meta.url).href;
 }
 
 function formatCaptureTime(value) {

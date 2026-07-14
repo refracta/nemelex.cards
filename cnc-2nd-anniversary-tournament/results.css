@@ -178,12 +178,143 @@
 }
 
 .speedrun-row {
-    grid-template-columns: 42px 58px minmax(180px, 1fr) 240px 136px 176px;
+    grid-template-columns: 42px 58px minmax(180px, 1fr) 276px 136px 172px;
 }
 
 .goonkemon-row {
     grid-template-columns: 42px 62px minmax(190px, 1fr) minmax(130px, auto) minmax(118px, auto) auto;
     min-height: 106px;
+}
+
+.goonkemon-details {
+    grid-column: 3 / -1;
+    display: grid;
+    grid-template-columns: minmax(250px, 0.8fr) minmax(380px, 1.2fr);
+    gap: 0.8rem 1.2rem;
+    min-width: 0;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.lord-description {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: #c4cbd4;
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+.lord-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0;
+    min-width: 0;
+    margin: 0;
+}
+
+.lord-stats div {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    padding: 0.15rem 0.55rem;
+    border-right: 1px solid var(--line);
+    white-space: nowrap;
+}
+
+.lord-stats div:first-child {
+    padding-left: 0;
+}
+
+.lord-stats dt,
+.spellset-label {
+    color: var(--muted);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.lord-stats dd {
+    margin: 0;
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.lord-stats .lord-stat-wide {
+    flex-basis: 100%;
+    margin-top: 0.25rem;
+    border-right: 0;
+    white-space: normal;
+}
+
+.lord-spellset {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 0.7rem;
+    min-width: 0;
+    padding-left: 1rem;
+    border-left: 1px solid var(--line);
+}
+
+.spellset-label {
+    padding-top: 0.25rem;
+}
+
+.lord-spellset ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 0.9rem;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lord-spellset li {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr);
+    align-items: center;
+    gap: 0.45rem;
+    flex: 1 1 168px;
+    min-width: 0;
+    max-width: 230px;
+}
+
+.lord-spellset img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+}
+
+.lord-spellset li > span {
+    min-width: 0;
+}
+
+.lord-spellset strong,
+.lord-spellset small {
+    display: block;
+    overflow-wrap: anywhere;
+}
+
+.lord-spellset strong {
+    color: #f3f5f7;
+    font-size: 0.78rem;
+    line-height: 1.25;
+}
+
+.lord-spellset small {
+    margin-top: 0.1rem;
+    color: var(--muted);
+    font-size: 0.66rem;
+    line-height: 1.25;
+}
+
+.lord-spellset-empty {
+    align-items: baseline;
+    color: var(--muted);
+    font-size: 0.8rem;
 }
 
 .rank-number {
@@ -256,7 +387,7 @@
 
 .run-metrics {
     display: grid;
-    grid-template-columns: repeat(3, minmax(60px, 1fr));
+    grid-template-columns: 70px 52px minmax(0, 1fr);
     gap: 0.55rem;
     margin: 0;
 }
@@ -277,6 +408,7 @@
     color: #fff;
     font-family: var(--font-mono);
     font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 .result-score {
@@ -373,6 +505,18 @@
     height: 84px;
 }
 
+.award-result-card .goonkemon-details {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+}
+
+.award-result-card .lord-spellset {
+    padding-top: 0.6rem;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+}
+
 .screenshot-dialog {
     width: min(92vw, 760px);
     max-height: 92vh;
@@ -431,7 +575,7 @@
 
 @media (max-width: 980px) {
     .speedrun-row {
-        grid-template-columns: 38px 58px minmax(150px, 1fr) 230px 136px;
+        grid-template-columns: 38px 58px minmax(150px, 1fr) 276px 136px;
     }
 
     .goonkemon-row {
@@ -440,6 +584,19 @@
 
     .result-actions {
         grid-column: 3 / -1;
+    }
+}
+
+@media (max-width: 900px) {
+    .goonkemon-details {
+        grid-template-columns: 1fr;
+    }
+
+    .lord-spellset {
+        padding-top: 0.7rem;
+        padding-left: 0;
+        border-top: 1px solid var(--line);
+        border-left: 0;
     }
 }
 
@@ -554,7 +711,21 @@
     }
 
     .run-metrics {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-column: 2 / -1;
+        grid-template-columns: 62px 44px minmax(0, 1fr);
+    }
+
+    .goonkemon-details {
+        grid-column: 1 / -1;
+    }
+
+    .lord-spellset {
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
+    }
+
+    .lord-spellset li {
+        flex-basis: 140px;
     }
 
     .award-result-card {
@@ -564,5 +735,11 @@
     .award-result-card .result-score {
         grid-column: 2;
         text-align: left;
+    }
+}
+
+@media (max-width: 360px) {
+    .run-metrics {
+        grid-column: 1 / -1;
     }
 }

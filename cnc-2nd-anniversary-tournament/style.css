@@ -134,6 +134,11 @@ body.lang-en .ko {
     transform: translateY(-1px);
 }
 
+.top-nav a[aria-current="page"] {
+    border-color: var(--gold);
+    background: rgba(202, 215, 0, 0.12);
+}
+
 .muted-link {
     color: var(--muted);
 }
