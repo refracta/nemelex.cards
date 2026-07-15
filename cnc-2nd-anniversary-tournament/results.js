@@ -373,9 +373,9 @@ function renderLordStats(stats) {
         ['Will', stats.will?.pips],
         ['AC', stats.ac?.pips],
         ['EV', stats.ev?.pips],
-        ['rF', displayResist(stats.resists?.rF)],
-        ['rC', displayResist(stats.resists?.rC)],
-        ['rElec', displayResist(stats.resists?.rElec)],
+        ['rF', displayResist(stats.resists?.rF), true],
+        ['rC', displayResist(stats.resists?.rC), true],
+        ['rElec', displayResist(stats.resists?.rElec), true],
         ['Speed', Number.isFinite(Number(stats.speed?.percent)) ? `${Number(stats.speed.percent)}%` : '']
     ].filter(([, value]) => value !== undefined && value !== null && value !== '');
     const attacks = (stats.attacks?.items || [])
@@ -384,7 +384,7 @@ function renderLordStats(stats) {
         .join(', ');
 
     return `<dl class="lord-stats">
-        ${values.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}
+        ${values.map(([label, value, preserveCase]) => `<div><dt${preserveCase ? ' class="resistance-label"' : ''}>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}
         ${attacks ? `<div class="lord-stat-wide"><dt>Attack</dt><dd>${escapeHtml(attacks)}</dd></div>` : ''}
     </dl>`;
 }
