@@ -35,6 +35,7 @@ const speedrunRecords = [
         runes: 15,
         gems: {ko: '11 (10 intact)', en: '11 (10 intact)'},
         morgue: 'https://archive.nemelex.cards/morgue/Tanach/morgue-Tanach-20260619-234000.txt',
+        post: 'https://gall.dcinside.com/board/view/?id=rlike&no=519791',
         screenshot: 'images/results/speedrun/tanach.png'
     },
     {
